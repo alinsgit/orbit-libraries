@@ -1,0 +1,29 @@
+{
+    "name": "orbit-libraries",
+    "version": "1.0.0",
+    "description": "Centralized library registry for Orbit - Local Development Environment",
+    "main": "scripts/fetch-versions.js",
+    "scripts": {
+        "fetch": "node scripts/fetch-versions.js",
+        "build": "npm run fetch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nicepkg/orbit-libraries"
+    },
+    "keywords": [
+        "orbit",
+        "php",
+        "nginx",
+        "mariadb",
+        "redis",
+        "development"
+    ],
+    "author": "Orbit Dev Team",
+    "license": "MIT",
+    "dependencies": {
+        "node-fetch": "^3.3.2",
+        "cheerio": "^1.0.0",
+        "semver": "^7.6.0"
+    }
+}
