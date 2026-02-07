@@ -147,38 +147,70 @@ async function fetchNginxVersions() {
 
 // ─── Apache ──────────────────────────────────────────────────────────────────
 
-async function fetchApacheVersion() {
-    console.log('Fetching Apache version...');
+async function fetchApacheVersions() {
+    console.log('Fetching Apache versions...');
 
-    let version = '2.4.66';
-    let filename = 'httpd-2.4.66-260131-win64-VS17.zip';
-    let url = `https://www.apachelounge.com/download/VS17/binaries/${filename}`;
+    const versions = {};
 
-    try {
-        const res = await fetch('https://www.apachelounge.com/download/');
-        const html = await res.text();
+    // Apache Lounge provides builds for multiple VS toolchains (VS17, VS18)
+    // These are different builds of the same Apache version, but VS version matters
+    // for PHP compatibility (PHP NTS requires matching VC runtime)
+    const pages = [
+        { label: 'VS18', url: 'https://www.apachelounge.com/download/' },
+        { label: 'VS17', url: 'https://www.apachelounge.com/download/VS17/' },
+    ];
 
-        // Find latest httpd download link
-        const match = html.match(/href="[^"]*\/(httpd-(\d+\.\d+\.\d+)-\d+-win64-VS\d+\.zip)"/);
-        if (match) {
-            filename = match[1];
-            version = match[2];
-            // Reconstruct URL from the matched path
-            const pathMatch = html.match(new RegExp(`href="([^"]*/${filename.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})"`));
-            if (pathMatch) {
-                url = pathMatch[1].startsWith('http') ? pathMatch[1] : `https://www.apachelounge.com${pathMatch[1]}`;
+    for (const page of pages) {
+        try {
+            const res = await fetch(page.url);
+            const html = await res.text();
+
+            // Find Win64 httpd zip links
+            const matches = [...html.matchAll(/href="([^"]*\/(httpd-(\d+\.\d+\.\d+)-(\d+)-[Ww]in64-VS(\d+)\.zip))"/gi)];
+
+            if (matches.length > 0) {
+                // Take the first (latest) match
+                const m = matches[0];
+                const filename = m[2];
+                const version = m[3];
+                const vsVersion = m[5];
+                const href = m[1].startsWith('http') ? m[1] : `https://www.apachelounge.com${m[1]}`;
+                const key = `${version}-VS${vsVersion}`;
+
+                if (!versions[key]) {
+                    versions[key] = {
+                        latest: version,
+                        windows: { url: href, filename }
+                    };
+                    console.log(`  Apache ${key}: ${version} (${filename})`);
+                }
             }
+        } catch (err) {
+            console.error(`  Error fetching Apache ${page.label}:`, err.message);
         }
-    } catch (err) {
-        console.error('  Error fetching Apache:', err.message);
     }
 
-    console.log(`  Apache: ${version}`);
+    // Fallback
+    if (Object.keys(versions).length === 0) {
+        versions['2.4.66-VS17'] = {
+            latest: '2.4.66',
+            windows: {
+                url: 'https://www.apachelounge.com/download/VS17/binaries/httpd-2.4.66-251206-Win64-VS17.zip',
+                filename: 'httpd-2.4.66-251206-Win64-VS17.zip'
+            }
+        };
+    }
+
     return {
         name: 'Apache HTTP Server',
         description: 'The most widely used web server',
-        latest: version,
-        windows: { url, filename }
+        availableVersions: Object.keys(versions).sort((a, b) => {
+            // Sort by VS version descending (VS18 first, VS17 second)
+            const vsA = parseInt(a.match(/VS(\d+)/)?.[1] || '0');
+            const vsB = parseInt(b.match(/VS(\d+)/)?.[1] || '0');
+            return vsB - vsA;
+        }),
+        versions
     };
 }
 
@@ -572,7 +604,7 @@ async function main() {
     const [php, nginx, apache, mariadb, nodejs, python, bun, redis, mailpit, composer] = await Promise.all([
         fetchPhpVersions(),
         fetchNginxVersions(),
-        fetchApacheVersion(),
+        fetchApacheVersions(),
         fetchMariaDbVersions(),
         fetchNodejsVersions(),
         fetchPythonVersions(),

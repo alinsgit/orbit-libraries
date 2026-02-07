@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/nicepkg/orbit-libraries/main/schema.json",
-  "updated": "2026-02-07T02:34:55.027Z",
+  "updated": "2026-02-07T03:11:54.424Z",
   "version": "1.1.0",
   "services": {
     "php": {
@@ -102,10 +102,25 @@
     "apache": {
       "name": "Apache HTTP Server",
       "description": "The most widely used web server",
-      "latest": "2.4.66",
-      "windows": {
-        "url": "https://www.apachelounge.com/download/VS17/binaries/httpd-2.4.66-260131-win64-VS17.zip",
-        "filename": "httpd-2.4.66-260131-win64-VS17.zip"
+      "availableVersions": [
+        "2.4.66-VS18",
+        "2.4.66-VS17"
+      ],
+      "versions": {
+        "2.4.66-VS18": {
+          "latest": "2.4.66",
+          "windows": {
+            "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.66-260131-Win64-VS18.zip",
+            "filename": "httpd-2.4.66-260131-Win64-VS18.zip"
+          }
+        },
+        "2.4.66-VS17": {
+          "latest": "2.4.66",
+          "windows": {
+            "url": "https://www.apachelounge.com/download/VS17/binaries/httpd-2.4.66-251206-Win64-VS17.zip",
+            "filename": "httpd-2.4.66-251206-Win64-VS17.zip"
+          }
+        }
       }
     },
     "mariadb": {
