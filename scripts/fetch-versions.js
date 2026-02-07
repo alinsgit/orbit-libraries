@@ -12,6 +12,17 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 
 const OUTPUT_FILE = path.join(__dirname, '..', 'dist', 'libraries.json');
 
+// ─── Helpers ────────────────────────────────────────────────────────────────
+
+function compareVersions(a, b) {
+    const pa = a.split('.').map(Number);
+    const pb = b.split('.').map(Number);
+    for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+        if ((pa[i] || 0) !== (pb[i] || 0)) return (pa[i] || 0) - (pb[i] || 0);
+    }
+    return 0;
+}
+
 // ─── PHP ─────────────────────────────────────────────────────────────────────
 
 async function fetchPhpVersions() {
@@ -70,7 +81,7 @@ async function fetchPhpVersions() {
     return {
         name: 'PHP',
         description: 'PHP Hypertext Preprocessor',
-        availableVersions: Object.keys(versions).sort((a, b) => parseFloat(b) - parseFloat(a)),
+        availableVersions: Object.keys(versions).sort((a, b) => compareVersions(b, a)),
         versions
     };
 }
@@ -86,30 +97,35 @@ async function fetchNginxVersions() {
         const res = await fetch('https://nginx.org/en/download.html');
         const html = await res.text();
 
-        // Mainline version (first match in "Mainline version" section)
-        const mainlineMatch = html.match(/Mainline version[\s\S]*?nginx-(\d+\.\d+\.\d+)/);
-        if (mainlineMatch) {
-            const v = mainlineMatch[1];
-            const major = v.split('.').slice(0, 2).join('.');
-            versions[major] = {
-                latest: v,
-                windows: { url: `https://nginx.org/download/nginx-${v}.zip`, filename: `nginx-${v}.zip` }
-            };
-            console.log(`  Nginx mainline: ${v}`);
+        // Parse all sections: Mainline, Stable, Legacy
+        // Each section has nginx-X.Y.Z links with .zip downloads for Windows
+        const sections = html.split(/<h4>/);
+
+        for (const section of sections) {
+            // Find all version links with .zip (Windows) downloads
+            const zipMatches = [...section.matchAll(/nginx-(\d+\.\d+\.\d+)\.zip/g)];
+
+            for (const match of zipMatches) {
+                const v = match[1];
+                const major = v.split('.').slice(0, 2).join('.');
+
+                // Only keep the latest patch for each major.minor
+                if (!versions[major] || compareVersions(v, versions[major].latest) > 0) {
+                    versions[major] = {
+                        latest: v,
+                        windows: { url: `https://nginx.org/download/nginx-${v}.zip`, filename: `nginx-${v}.zip` }
+                    };
+                }
+            }
         }
 
-        // Stable version
-        const stableMatch = html.match(/Stable version[\s\S]*?nginx-(\d+\.\d+\.\d+)/);
-        if (stableMatch) {
-            const v = stableMatch[1];
-            const major = v.split('.').slice(0, 2).join('.');
-            if (!versions[major]) {
-                versions[major] = {
-                    latest: v,
-                    windows: { url: `https://nginx.org/download/nginx-${v}.zip`, filename: `nginx-${v}.zip` }
-                };
-                console.log(`  Nginx stable: ${v}`);
-            }
+        // Keep only the top 5 most recent major.minor versions
+        const sorted = Object.keys(versions).sort((a, b) => compareVersions(b, a));
+        const remove = sorted.slice(5);
+        for (const key of remove) delete versions[key];
+
+        for (const key of sorted.slice(0, 5)) {
+            console.log(`  Nginx ${key}: ${versions[key].latest}`);
         }
     } catch (err) {
         console.error('  Error fetching Nginx:', err.message);
@@ -124,7 +140,7 @@ async function fetchNginxVersions() {
     return {
         name: 'Nginx',
         description: 'High-performance HTTP server',
-        availableVersions: Object.keys(versions).sort((a, b) => parseFloat(b) - parseFloat(a)),
+        availableVersions: Object.keys(versions).sort((a, b) => compareVersions(b, a)),
         versions
     };
 }
@@ -235,7 +251,7 @@ async function fetchMariaDbVersions() {
     return {
         name: 'MariaDB',
         description: 'Community-developed MySQL fork',
-        availableVersions: Object.keys(versions).sort((a, b) => parseFloat(b) - parseFloat(a)),
+        availableVersions: Object.keys(versions).sort((a, b) => compareVersions(b, a)),
         versions
     };
 }
@@ -291,7 +307,7 @@ async function fetchNodejsVersions() {
     return {
         name: 'Node.js',
         description: 'JavaScript runtime built on V8',
-        availableVersions: Object.keys(versions).sort((a, b) => Number(b) - Number(a)),
+        availableVersions: Object.keys(versions).sort((a, b) => compareVersions(b, a)),
         versions
     };
 }
@@ -361,42 +377,69 @@ async function fetchPythonVersions() {
     return {
         name: 'Python',
         description: 'General-purpose programming language',
-        availableVersions: Object.keys(versions).sort((a, b) => parseFloat(b) - parseFloat(a)),
+        availableVersions: Object.keys(versions).sort((a, b) => compareVersions(b, a)),
         versions
     };
 }
 
 // ─── Bun ─────────────────────────────────────────────────────────────────────
 
-async function fetchBunVersion() {
-    console.log('Fetching Bun version...');
+async function fetchBunVersions() {
+    console.log('Fetching Bun versions...');
 
-    let version = '1.3.8';
-    let url = `https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-windows-x64.zip`;
-    let filename = 'bun-windows-x64.zip';
+    const versions = {};
 
     try {
-        const res = await fetch('https://api.github.com/repos/oven-sh/bun/releases/latest');
-        const data = await res.json();
-        version = data.tag_name.replace('bun-v', '').replace('v', '');
+        // Fetch recent releases (non-prerelease, non-canary)
+        const res = await fetch('https://api.github.com/repos/oven-sh/bun/releases?per_page=50');
+        const releases = await res.json();
 
-        const asset = data.assets?.find(a => a.name === 'bun-windows-x64.zip');
-        if (asset) {
-            url = asset.browser_download_url;
-            filename = asset.name;
-        } else {
-            url = `https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-windows-x64.zip`;
+        // Filter stable releases only (no canary, no pre-release)
+        const stableReleases = releases.filter(r =>
+            !r.prerelease &&
+            !r.draft &&
+            r.tag_name.startsWith('bun-v') &&
+            !r.tag_name.includes('canary')
+        );
+
+        // Group by major.minor, keep latest patch of each
+        for (const release of stableReleases) {
+            const version = release.tag_name.replace('bun-v', '');
+            const parts = version.split('.');
+            if (parts.length < 2) continue;
+            const majorMinor = `${parts[0]}.${parts[1]}`;
+
+            if (!versions[majorMinor]) {
+                const winAsset = release.assets?.find(a => a.name === 'bun-windows-x64.zip');
+                const url = winAsset?.browser_download_url
+                    || `https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-windows-x64.zip`;
+
+                versions[majorMinor] = {
+                    latest: version,
+                    windows: { url, filename: 'bun-windows-x64.zip' }
+                };
+                console.log(`  Bun ${majorMinor}: ${version}`);
+            }
         }
     } catch (err) {
         console.error('  Error fetching Bun:', err.message);
     }
 
-    console.log(`  Bun: ${version}`);
+    if (Object.keys(versions).length === 0) {
+        versions['1.3'] = {
+            latest: '1.3.8',
+            windows: {
+                url: 'https://github.com/oven-sh/bun/releases/download/bun-v1.3.8/bun-windows-x64.zip',
+                filename: 'bun-windows-x64.zip'
+            }
+        };
+    }
+
     return {
         name: 'Bun',
         description: 'Fast JavaScript runtime and toolkit',
-        latest: version,
-        windows: { url, filename }
+        availableVersions: Object.keys(versions).sort((a, b) => compareVersions(b, a)),
+        versions
     };
 }
 
@@ -533,7 +576,7 @@ async function main() {
         fetchMariaDbVersions(),
         fetchNodejsVersions(),
         fetchPythonVersions(),
-        fetchBunVersion(),
+        fetchBunVersions(),
         fetchRedisVersion(),
         fetchMailpitVersion(),
         fetchComposerVersion()
