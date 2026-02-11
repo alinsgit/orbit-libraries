@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/nicepkg/orbit-libraries/main/schema.json",
-  "updated": "2026-02-10T01:57:25.175Z",
+  "updated": "2026-02-11T01:53:34.418Z",
   "version": "1.1.0",
   "services": {
     "php": {
@@ -246,17 +246,17 @@
           }
         },
         "24": {
-          "latest": "24.13.0",
+          "latest": "24.13.1",
           "windows": {
-            "url": "https://nodejs.org/dist/v24.13.0/node-v24.13.0-win-x64.zip",
-            "filename": "node-v24.13.0-win-x64.zip"
+            "url": "https://nodejs.org/dist/v24.13.1/node-v24.13.1-win-x64.zip",
+            "filename": "node-v24.13.1-win-x64.zip"
           }
         },
         "25": {
-          "latest": "25.6.0",
+          "latest": "25.6.1",
           "windows": {
-            "url": "https://nodejs.org/dist/v25.6.0/node-v25.6.0-win-x64.zip",
-            "filename": "node-v25.6.0-win-x64.zip"
+            "url": "https://nodejs.org/dist/v25.6.1/node-v25.6.1-win-x64.zip",
+            "filename": "node-v25.6.1-win-x64.zip"
           }
         }
       }
@@ -336,10 +336,10 @@
     "redis": {
       "name": "Redis",
       "description": "In-memory data structure store",
-      "latest": "8.4.1",
+      "latest": "8.6.0",
       "windows": {
-        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.4.1/Redis-8.4.1-Windows-x64-cygwin-with-Service.zip",
-        "filename": "Redis-8.4.1-Windows-x64-cygwin-with-Service.zip"
+        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.6.0/Redis-8.6.0-Windows-x64-cygwin-with-Service.zip",
+        "filename": "Redis-8.6.0-Windows-x64-cygwin-with-Service.zip"
       }
     },
     "mailpit": {
