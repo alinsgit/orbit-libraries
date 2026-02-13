@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/nicepkg/orbit-libraries/main/schema.json",
-  "updated": "2026-02-12T01:46:56.720Z",
+  "updated": "2026-02-13T01:49:13.027Z",
   "version": "1.1.0",
   "services": {
     "php": {
@@ -127,28 +127,28 @@
       "name": "MariaDB",
       "description": "Community-developed MySQL fork",
       "availableVersions": [
-        "12.1",
+        "12.2",
         "11.8",
         "11.4",
         "10.11",
         "10.6"
       ],
       "versions": {
-        "12.1": {
-          "latest": "12.1.2",
+        "12.2": {
+          "latest": "12.2.2",
           "windows": {
-            "url": "https://downloads.mariadb.org/f/mariadb-12.1.2/winx64-packages/mariadb-12.1.2-winx64.zip",
-            "filename": "mariadb-12.1.2-winx64.zip",
-            "sha256": "b3d11ae1edf0d00abeefb811f663df5a036ee237fc2df399f822a9b1f65537d8"
+            "url": "https://downloads.mariadb.org/f/mariadb-12.2.2/winx64-packages/mariadb-12.2.2-winx64.zip",
+            "filename": "mariadb-12.2.2-winx64.zip",
+            "sha256": "b34bb91f0dd4bd184f420288a12aace2b5fcb20734f2b880075c36150d4641c6"
           },
           "linux": {
-            "url": "https://downloads.mariadb.org/f/mariadb-12.1.2/bintar-linux-systemd-x86_64/mariadb-12.1.2-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-12.1.2-linux-systemd-x86_64.tar.gz",
-            "sha256": "225ac1e187b4f3a675dbe66061a5b17236fc46ee93a645fed9ae6a1dbbbdbea1"
+            "url": "https://downloads.mariadb.org/f/mariadb-12.2.2/bintar-linux-systemd-x86_64/mariadb-12.2.2-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-12.2.2-linux-systemd-x86_64.tar.gz",
+            "sha256": "2f1d4740e618b6990f28209b889f257e17ef2c66900e6bd7ce21a5718668a230"
           },
           "macos_arm64": {
-            "url": "https://downloads.mariadb.org/f/mariadb-12.1.2/macos-system-arm64/mariadb-12.1.2-macos13-arm64.tar.gz",
-            "filename": "mariadb-12.1.2-macos13-arm64.tar.gz"
+            "url": "https://downloads.mariadb.org/f/mariadb-12.2.2/macos-system-arm64/mariadb-12.2.2-macos13-arm64.tar.gz",
+            "filename": "mariadb-12.2.2-macos13-arm64.tar.gz"
           }
         },
         "11.8": {
