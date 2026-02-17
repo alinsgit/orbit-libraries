@@ -221,6 +221,16 @@ async function fetchMariaDbVersions() {
 
     const versions = {};
 
+    // MariaDB CDN mirror for direct file downloads
+    // downloads.mariadb.org/f/ serves HTML pages (mirror picker) which triggers CloudFlare protection
+    // dlm.mariadb.com is the official CDN that serves files directly
+    const MARIADB_MIRROR = 'https://dlm.mariadb.com/browse/mariadb_server';
+
+    // Helper: build direct download URL from MariaDB mirror
+    function mariadbUrl(version, subpath, filename) {
+        return `https://mirror.kumi.systems/mariadb/mariadb-${version}/${subpath}/${filename}`;
+    }
+
     try {
         const res = await fetch('https://downloads.mariadb.org/rest-api/mariadb/');
         const data = await res.json();
@@ -249,17 +259,17 @@ async function fetchMariaDbVersions() {
                     versions[majorVersion] = {
                         latest: v,
                         windows: winZip ? {
-                            url: `https://downloads.mariadb.org/f/mariadb-${v}/winx64-packages/mariadb-${v}-winx64.zip`,
+                            url: mariadbUrl(v, 'winx64-packages', `mariadb-${v}-winx64.zip`),
                             filename: `mariadb-${v}-winx64.zip`,
                             sha256: winZip.checksum?.sha256sum
                         } : undefined,
                         linux: linuxTar ? {
-                            url: `https://downloads.mariadb.org/f/mariadb-${v}/bintar-linux-systemd-x86_64/mariadb-${v}-linux-systemd-x86_64.tar.gz`,
+                            url: mariadbUrl(v, 'bintar-linux-systemd-x86_64', `mariadb-${v}-linux-systemd-x86_64.tar.gz`),
                             filename: `mariadb-${v}-linux-systemd-x86_64.tar.gz`,
                             sha256: linuxTar.checksum?.sha256sum
                         } : undefined,
                         macos_arm64: {
-                            url: `https://downloads.mariadb.org/f/mariadb-${v}/macos-system-arm64/mariadb-${v}-macos13-arm64.tar.gz`,
+                            url: mariadbUrl(v, 'macos-system-arm64', `mariadb-${v}-macos13-arm64.tar.gz`),
                             filename: `mariadb-${v}-macos13-arm64.tar.gz`
                         }
                     };
@@ -275,9 +285,9 @@ async function fetchMariaDbVersions() {
 
     if (Object.keys(versions).length === 0) {
         console.log('  Using fallback versions');
-        versions['12.1'] = { latest: '12.1.2', windows: { url: 'https://downloads.mariadb.org/f/mariadb-12.1.2/winx64-packages/mariadb-12.1.2-winx64.zip', filename: 'mariadb-12.1.2-winx64.zip' } };
-        versions['11.8'] = { latest: '11.8.6', windows: { url: 'https://downloads.mariadb.org/f/mariadb-11.8.6/winx64-packages/mariadb-11.8.6-winx64.zip', filename: 'mariadb-11.8.6-winx64.zip' } };
-        versions['11.4'] = { latest: '11.4.10', windows: { url: 'https://downloads.mariadb.org/f/mariadb-11.4.10/winx64-packages/mariadb-11.4.10-winx64.zip', filename: 'mariadb-11.4.10-winx64.zip' } };
+        versions['12.1'] = { latest: '12.1.2', windows: { url: mariadbUrl('12.1.2', 'winx64-packages', 'mariadb-12.1.2-winx64.zip'), filename: 'mariadb-12.1.2-winx64.zip' } };
+        versions['11.8'] = { latest: '11.8.6', windows: { url: mariadbUrl('11.8.6', 'winx64-packages', 'mariadb-11.8.6-winx64.zip'), filename: 'mariadb-11.8.6-winx64.zip' } };
+        versions['11.4'] = { latest: '11.4.10', windows: { url: mariadbUrl('11.4.10', 'winx64-packages', 'mariadb-11.4.10-winx64.zip'), filename: 'mariadb-11.4.10-winx64.zip' } };
     }
 
     return {
@@ -615,7 +625,7 @@ async function main() {
     ]);
 
     const libraries = {
-        $schema: 'https://raw.githubusercontent.com/nicepkg/orbit-libraries/main/schema.json',
+        $schema: 'https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json',
         updated: new Date().toISOString(),
         version: '1.1.0',
         services: {
