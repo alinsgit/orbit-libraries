@@ -605,13 +605,280 @@ async function fetchComposerVersion() {
     };
 }
 
+// ─── PostgreSQL ──────────────────────────────────────────────────────────────
+
+async function fetchPostgresVersions() {
+    console.log('Fetching PostgreSQL versions...');
+    const versions = {};
+    const targetSeries = ['16', '15', '14'];
+
+    try {
+        const res = await fetch('https://endoflife.date/api/postgresql.json');
+        const data = await res.json();
+        for (const series of targetSeries) {
+            const entry = data.find(e => e.cycle === series);
+            if (entry && entry.latest) {
+                const v = entry.latest;
+                let winUrl = null, macUrl = null, linuxUrl = null;
+                
+                for (let build = 1; build <= 3; build++) {
+                    const uWin = `https://get.enterprisedb.com/postgresql/postgresql-${v}-${build}-windows-x64-binaries.zip`;
+                    const uMac = `https://get.enterprisedb.com/postgresql/postgresql-${v}-${build}-osx-binaries.zip`;
+                    const uLin = `https://get.enterprisedb.com/postgresql/postgresql-${v}-${build}-linux-x64-binaries.tar.gz`;
+                    
+                    if (!winUrl) {
+                        try { if ((await fetch(uWin, { method: 'HEAD' })).ok) winUrl = uWin; } catch(e){}
+                    }
+                    if (!macUrl) {
+                        try { if ((await fetch(uMac, { method: 'HEAD' })).ok) macUrl = uMac; } catch(e){}
+                    }
+                    if (!linuxUrl) {
+                        try { if ((await fetch(uLin, { method: 'HEAD' })).ok) linuxUrl = uLin; } catch(e){}
+                    }
+                }
+                
+                if (winUrl || macUrl || linuxUrl) {
+                    versions[series] = { latest: v };
+                    if (winUrl) versions[series].windows = { url: winUrl, filename: `postgresql-${v}-windows-x64.zip` };
+                    if (macUrl) {
+                        versions[series].macos_arm64 = { url: macUrl, filename: `postgresql-${v}-osx.zip` };
+                        versions[series].macos_x64 = { url: macUrl, filename: `postgresql-${v}-osx.zip` };
+                    }
+                    if (linuxUrl) versions[series].linux = { url: linuxUrl, filename: `postgresql-${v}-linux-x64.tar.gz` };
+                    
+                    console.log(`  PostgreSQL ${series}: ${v}`);
+                }
+            }
+        }
+    } catch (err) {
+        console.error('  Error fetching PostgreSQL:', err.message);
+    }
+
+    if (Object.keys(versions).length === 0) {
+        versions['16'] = {
+            latest: '16.2',
+            windows: { url: 'https://get.enterprisedb.com/postgresql/postgresql-16.2-1-windows-x64-binaries.zip', filename: 'postgresql-16.2-1-windows-x64-binaries.zip' },
+            macos_arm64: { url: 'https://get.enterprisedb.com/postgresql/postgresql-16.2-1-osx-binaries.zip', filename: 'postgresql-16.2-1-osx-binaries.zip' },
+            linux: { url: 'https://get.enterprisedb.com/postgresql/postgresql-16.2-1-linux-x64-binaries.tar.gz', filename: 'postgresql-16.2-1-linux-x64-binaries.tar.gz' }
+        };
+    }
+
+    return {
+        name: 'PostgreSQL',
+        description: 'Advanced open source relational database',
+        availableVersions: Object.keys(versions).sort((a, b) => compareVersions(b, a)),
+        versions
+    };
+}
+
+// ─── MongoDB ─────────────────────────────────────────────────────────────────
+
+async function fetchMongoVersions() {
+    console.log('Fetching MongoDB versions...');
+    const versions = {};
+    const targetMajors = ['8.0', '7.0'];
+
+    try {
+        const res = await fetch('https://downloads.mongodb.org/current.json');
+        const data = await res.json();
+        
+        for (const major of targetMajors) {
+            const release = data.versions.find(v => v.version.startsWith(major) && v.production_release);
+            if (release) {
+                const winDl = release.downloads.find(d => d.target === 'windows' && d.archive.url.endsWith('.zip'));
+                const macDl = release.downloads.find(d => d.target === 'macos' && (d.arch === 'aarch64' || d.arch === 'arm64') && d.archive.url.endsWith('.tgz'));
+                const linDl = release.downloads.find(d => d.target === 'ubuntu2204' && d.arch === 'x86_64' && d.archive.url.endsWith('.tgz'));
+                
+                versions[major] = { latest: release.version };
+                if (winDl) versions[major].windows = { url: winDl.archive.url, filename: `mongodb-${release.version}-win.zip` };
+                if (macDl) versions[major].macos_arm64 = { url: macDl.archive.url, filename: `mongodb-${release.version}-mac.tgz` };
+                if (linDl) versions[major].linux = { url: linDl.archive.url, filename: `mongodb-${release.version}-linux.tgz` };
+                
+                console.log(`  MongoDB ${major}: ${release.version}`);
+            }
+        }
+    } catch (err) {
+        console.error('  Error fetching MongoDB:', err.message);
+    }
+
+    if (Object.keys(versions).length === 0) {
+        versions['8.0'] = {
+            latest: '8.0.0',
+            windows: { url: 'https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.0.zip', filename: 'mongodb-8.0.0.zip' },
+            macos_arm64: { url: 'https://fastdl.mongodb.org/osx/mongodb-macos-aarch64-8.0.0.tgz', filename: 'mongodb-macos-8.0.0.tgz' },
+            linux: { url: 'https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu2204-8.0.0.tgz', filename: 'mongodb-linux-8.0.0.tgz' }
+        };
+    }
+
+    return {
+        name: 'MongoDB',
+        description: 'NoSQL document database',
+        availableVersions: Object.keys(versions).sort((a, b) => compareVersions(b, a)),
+        versions
+    };
+}
+
+// ─── Go ──────────────────────────────────────────────────────────────────────
+
+async function fetchGoVersions() {
+    console.log('Fetching Go versions...');
+    const versions = {};
+
+    try {
+        const res = await fetch('https://go.dev/dl/?mode=json');
+        const data = await res.json();
+        
+        for (const release of data) {
+            const v = release.version.replace('go', '');
+            const parts = v.split('.');
+            if (parts.length < 2) continue;
+            const majorMinor = `${parts[0]}.${parts[1]}`;
+            
+            if (!versions[majorMinor]) {
+                const winFile = release.files.find(f => f.os === 'windows' && f.arch === 'amd64' && f.kind === 'archive');
+                const macArmFile = release.files.find(f => f.os === 'darwin' && f.arch === 'arm64' && f.kind === 'archive');
+                const macX64File = release.files.find(f => f.os === 'darwin' && f.arch === 'amd64' && f.kind === 'archive');
+                const linFile = release.files.find(f => f.os === 'linux' && f.arch === 'amd64' && f.kind === 'archive');
+                
+                if (winFile || macArmFile || linFile) {
+                    versions[majorMinor] = { latest: v };
+                    if (winFile) versions[majorMinor].windows = { url: `https://dl.google.com/go/${winFile.filename}`, filename: winFile.filename };
+                    if (macArmFile) versions[majorMinor].macos_arm64 = { url: `https://dl.google.com/go/${macArmFile.filename}`, filename: macArmFile.filename };
+                    if (macX64File) versions[majorMinor].macos_x64 = { url: `https://dl.google.com/go/${macX64File.filename}`, filename: macX64File.filename };
+                    if (linFile) versions[majorMinor].linux = { url: `https://dl.google.com/go/${linFile.filename}`, filename: linFile.filename };
+                    
+                    console.log(`  Go ${majorMinor}: ${v}`);
+                }
+            }
+        }
+    } catch (err) {
+        console.error('  Error fetching Go:', err.message);
+    }
+
+    // Fallback
+    if (Object.keys(versions).length === 0) {
+        versions['1.22'] = {
+            latest: '1.22.1',
+            windows: { url: 'https://dl.google.com/go/go1.22.1.windows-amd64.zip', filename: 'go1.22.1.windows-amd64.zip' }
+        };
+    }
+
+    // Keep top 3
+    const sortedKeys = Object.keys(versions).sort((a, b) => compareVersions(b, a)).slice(0, 3);
+    const finalVersions = {};
+    for (const k of sortedKeys) finalVersions[k] = versions[k];
+
+    return {
+        name: 'Go',
+        description: 'Statically typed, compiled programming language',
+        availableVersions: sortedKeys,
+        versions: finalVersions
+    };
+}
+
+// ─── Deno ────────────────────────────────────────────────────────────────────
+
+async function fetchDenoVersions() {
+    console.log('Fetching Deno version...');
+    
+    let version = '2.1.0';
+    let winAsset = { browser_download_url: 'https://github.com/denoland/deno/releases/download/v2.1.0/deno-x86_64-pc-windows-msvc.zip', name: 'deno-x86_64-pc-windows-msvc.zip' };
+    let macArmAsset = { browser_download_url: 'https://github.com/denoland/deno/releases/download/v2.1.0/deno-aarch64-apple-darwin.zip', name: 'deno-aarch64-apple-darwin.zip' };
+    let macX64Asset = { browser_download_url: 'https://github.com/denoland/deno/releases/download/v2.1.0/deno-x86_64-apple-darwin.zip', name: 'deno-x86_64-apple-darwin.zip' };
+    let linAsset = { browser_download_url: 'https://github.com/denoland/deno/releases/download/v2.1.0/deno-x86_64-unknown-linux-gnu.zip', name: 'deno-x86_64-unknown-linux-gnu.zip' };
+
+    try {
+        const res = await fetch('https://api.github.com/repos/denoland/deno/releases/latest');
+        const data = await res.json();
+        version = data.tag_name.replace('v', '');
+        
+        const tryWin = data.assets?.find(a => a.name === 'deno-x86_64-pc-windows-msvc.zip');
+        const tryMacA = data.assets?.find(a => a.name === 'deno-aarch64-apple-darwin.zip');
+        const tryMacX = data.assets?.find(a => a.name === 'deno-x86_64-apple-darwin.zip');
+        const tryLin = data.assets?.find(a => a.name === 'deno-x86_64-unknown-linux-gnu.zip');
+        
+        if (tryWin) winAsset = tryWin;
+        if (tryMacA) macArmAsset = tryMacA;
+        if (tryMacX) macX64Asset = tryMacX;
+        if (tryLin) linAsset = tryLin;
+    } catch (err) {
+        console.error('  Error fetching Deno:', err.message);
+    }
+    
+    console.log(`  Deno: ${version}`);
+    return {
+        name: 'Deno',
+        description: 'Next-generation JavaScript runtime',
+        latest: version,
+        windows: { url: winAsset.browser_download_url, filename: winAsset.name },
+        macos_arm64: { url: macArmAsset.browser_download_url, filename: macArmAsset.name },
+        macos_x64: { url: macX64Asset.browser_download_url, filename: macX64Asset.name },
+        linux: { url: linAsset.browser_download_url, filename: linAsset.name }
+    };
+}
+
+// ─── Rust ────────────────────────────────────────────────────────────────────
+
+async function fetchRustVersions() {
+    console.log('Fetching Rust version info...');
+    // Rustup manages versions itself, we distribute the initializer
+    return {
+        name: 'Rust (rustup)',
+        description: 'Systems programming language toolchain',
+        latest: 'latest',
+        windows: {
+            url: 'https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe',
+            filename: 'rustup-init.exe'
+        },
+        macos_arm64: {
+            url: 'https://static.rust-lang.org/rustup/dist/aarch64-apple-darwin/rustup-init',
+            filename: 'rustup-init'
+        },
+        macos_x64: {
+            url: 'https://static.rust-lang.org/rustup/dist/x86_64-apple-darwin/rustup-init',
+            filename: 'rustup-init'
+        },
+        linux: {
+            url: 'https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init',
+            filename: 'rustup-init'
+        }
+    };
+}
+
+// ─── Ngrok ───────────────────────────────────────────────────────────────────
+
+async function fetchNgrokVersions() {
+    console.log('Fetching Ngrok version info...');
+    return {
+        name: 'Ngrok',
+        description: 'Secure introspectable tunnels to localhost',
+        latest: 'v3',
+        windows: {
+            url: 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip',
+            filename: 'ngrok-v3-stable-windows-amd64.zip'
+        },
+        macos_arm64: {
+            url: 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-darwin-arm64.zip',
+            filename: 'ngrok-v3-stable-darwin-arm64.zip'
+        },
+        macos_x64: {
+            url: 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-darwin-amd64.zip',
+            filename: 'ngrok-v3-stable-darwin-amd64.zip'
+        },
+        linux: {
+            url: 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz',
+            filename: 'ngrok-v3-stable-linux-amd64.tgz'
+        }
+    };
+}
+
 // ─── Main ────────────────────────────────────────────────────────────────────
 
 async function main() {
     console.log('=== Orbit Libraries Version Fetcher ===\n');
     console.log(`Date: ${new Date().toISOString()}\n`);
 
-    const [php, nginx, apache, mariadb, nodejs, python, bun, redis, mailpit, composer] = await Promise.all([
+    const [php, nginx, apache, mariadb, nodejs, python, bun, redis, mailpit, composer, postgresql, mongodb, go, deno, rust, ngrok] = await Promise.all([
         fetchPhpVersions(),
         fetchNginxVersions(),
         fetchApacheVersions(),
@@ -621,24 +888,36 @@ async function main() {
         fetchBunVersions(),
         fetchRedisVersion(),
         fetchMailpitVersion(),
-        fetchComposerVersion()
+        fetchComposerVersion(),
+        fetchPostgresVersions(),
+        fetchMongoVersions(),
+        fetchGoVersions(),
+        fetchDenoVersions(),
+        fetchRustVersions(),
+        fetchNgrokVersions()
     ]);
 
     const libraries = {
         $schema: 'https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json',
         updated: new Date().toISOString(),
-        version: '1.1.0',
+        version: '1.2.0',
         services: {
             php,
             nginx,
             apache,
             mariadb,
+            postgresql,
+            mongodb,
             nodejs,
             python,
             bun,
+            go,
+            deno,
+            rust,
             redis,
             mailpit,
-            composer
+            composer,
+            ngrok
         }
     };
 
