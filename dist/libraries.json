@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-02-23T01:44:58.857Z",
+  "updated": "2026-02-24T01:42:57.865Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -110,8 +110,8 @@
         "2.4.66-VS18": {
           "latest": "2.4.66",
           "windows": {
-            "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.66-260131-Win64-VS18.zip",
-            "filename": "httpd-2.4.66-260131-Win64-VS18.zip"
+            "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.66-260223-Win64-VS18.zip",
+            "filename": "httpd-2.4.66-260223-Win64-VS18.zip"
           }
         },
         "2.4.66-VS17": {
@@ -522,10 +522,10 @@
     "redis": {
       "name": "Redis",
       "description": "In-memory data structure store",
-      "latest": "8.6.0",
+      "latest": "8.6.1",
       "windows": {
-        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.6.0/Redis-8.6.0-Windows-x64-cygwin-with-Service.zip",
-        "filename": "Redis-8.6.0-Windows-x64-cygwin-with-Service.zip"
+        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.6.1/Redis-8.6.1-Windows-x64-cygwin-with-Service.zip",
+        "filename": "Redis-8.6.1-Windows-x64-cygwin-with-Service.zip"
       }
     },
     "mailpit": {
