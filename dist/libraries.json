@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-02-24T01:42:57.865Z",
+  "updated": "2026-02-25T01:45:09.458Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -342,17 +342,17 @@
           }
         },
         "24": {
-          "latest": "24.13.1",
+          "latest": "24.14.0",
           "windows": {
-            "url": "https://nodejs.org/dist/v24.13.1/node-v24.13.1-win-x64.zip",
-            "filename": "node-v24.13.1-win-x64.zip"
+            "url": "https://nodejs.org/dist/v24.14.0/node-v24.14.0-win-x64.zip",
+            "filename": "node-v24.14.0-win-x64.zip"
           }
         },
         "25": {
-          "latest": "25.6.1",
+          "latest": "25.7.0",
           "windows": {
-            "url": "https://nodejs.org/dist/v25.6.1/node-v25.6.1-win-x64.zip",
-            "filename": "node-v25.6.1-win-x64.zip"
+            "url": "https://nodejs.org/dist/v25.7.0/node-v25.7.0-win-x64.zip",
+            "filename": "node-v25.7.0-win-x64.zip"
           }
         }
       }
@@ -531,17 +531,17 @@
     "mailpit": {
       "name": "Mailpit",
       "description": "Email testing tool for developers",
-      "latest": "1.29.1",
+      "latest": "1.29.2",
       "windows": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.1/mailpit-windows-amd64.zip",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.2/mailpit-windows-amd64.zip",
         "filename": "mailpit-windows-amd64.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.1/mailpit-darwin-arm64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.2/mailpit-darwin-arm64.tar.gz",
         "filename": "mailpit-darwin-arm64.tar.gz"
       },
       "linux": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.1/mailpit-linux-amd64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.2/mailpit-linux-amd64.tar.gz",
         "filename": "mailpit-linux-amd64.tar.gz"
       }
     },
