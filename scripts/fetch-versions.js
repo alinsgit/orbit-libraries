@@ -572,6 +572,53 @@ async function fetchMailpitVersion() {
     };
 }
 
+// ─── Meilisearch ────────────────────────────────────────────────────────
+
+async function fetchMeilisearchVersion() {
+    console.log('Fetching Meilisearch version...');
+
+    try {
+        const res = await fetch('https://api.github.com/repos/meilisearch/meilisearch/releases/latest');
+        const data = await res.json();
+        const version = data.tag_name.replace('v', '');
+
+        const winAsset = data.assets?.find(a => a.name === 'meilisearch-windows-amd64.exe');
+        const macArmAsset = data.assets?.find(a => a.name === 'meilisearch-macos-apple-silicon');
+        const linAsset = data.assets?.find(a => a.name === 'meilisearch-linux-amd64');
+
+        console.log(`  Meilisearch: ${version}`);
+        return {
+            name: 'Meilisearch',
+            description: 'Fast, typo-tolerant search engine',
+            latest: version,
+            windows: {
+                url: winAsset?.browser_download_url || `https://github.com/meilisearch/meilisearch/releases/download/v${version}/meilisearch-windows-amd64.exe`,
+                filename: 'meilisearch-windows-amd64.exe'
+            },
+            macos_arm64: {
+                url: macArmAsset?.browser_download_url || `https://github.com/meilisearch/meilisearch/releases/download/v${version}/meilisearch-macos-apple-silicon`,
+                filename: 'meilisearch-macos-apple-silicon'
+            },
+            linux: {
+                url: linAsset?.browser_download_url || `https://github.com/meilisearch/meilisearch/releases/download/v${version}/meilisearch-linux-amd64`,
+                filename: 'meilisearch-linux-amd64'
+            }
+        };
+    } catch (err) {
+        console.error('  Error fetching Meilisearch:', err.message);
+    }
+
+    return {
+        name: 'Meilisearch',
+        description: 'Fast, typo-tolerant search engine',
+        latest: '1.36.0',
+        windows: {
+            url: 'https://github.com/meilisearch/meilisearch/releases/download/v1.36.0/meilisearch-windows-amd64.exe',
+            filename: 'meilisearch-windows-amd64.exe'
+        }
+    };
+}
+
 // ─── Composer ────────────────────────────────────────────────────────────────
 
 async function fetchComposerVersion() {
@@ -878,7 +925,7 @@ async function main() {
     console.log('=== Orbit Libraries Version Fetcher ===\n');
     console.log(`Date: ${new Date().toISOString()}\n`);
 
-    const [php, nginx, apache, mariadb, nodejs, python, bun, redis, mailpit, composer, postgresql, mongodb, go, deno, rust, ngrok] = await Promise.all([
+    const [php, nginx, apache, mariadb, nodejs, python, bun, redis, mailpit, meilisearch, composer, postgresql, mongodb, go, deno, rust, ngrok] = await Promise.all([
         fetchPhpVersions(),
         fetchNginxVersions(),
         fetchApacheVersions(),
@@ -888,6 +935,7 @@ async function main() {
         fetchBunVersions(),
         fetchRedisVersion(),
         fetchMailpitVersion(),
+        fetchMeilisearchVersion(),
         fetchComposerVersion(),
         fetchPostgresVersions(),
         fetchMongoVersions(),
@@ -916,6 +964,7 @@ async function main() {
             rust,
             redis,
             mailpit,
+            meilisearch,
             composer,
             ngrok
         }
