@@ -571,6 +571,23 @@
         "filename": "composer.phar"
       }
     },
+    "mongosh": {
+      "name": "MongoDB Shell",
+      "description": "MongoDB interactive shell (mongosh) - required for database management",
+      "latest": "2.3.8",
+      "windows": {
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.3.8-win32-x64.zip",
+        "filename": "mongosh-2.3.8-win32-x64.zip"
+      },
+      "macos_arm64": {
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.3.8-darwin-arm64.zip",
+        "filename": "mongosh-2.3.8-darwin-arm64.zip"
+      },
+      "linux": {
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.3.8-linux-x64.tgz",
+        "filename": "mongosh-2.3.8-linux-x64.tgz"
+      }
+    },
     "ngrok": {
       "name": "Ngrok",
       "description": "Secure introspectable tunnels to localhost",

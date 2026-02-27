@@ -892,6 +892,57 @@ async function fetchRustVersions() {
     };
 }
 
+// ─── MongoDB Shell (mongosh) ──────────────────────────────────────────────────
+
+async function fetchMongoshVersion() {
+    console.log('Fetching mongosh version...');
+
+    try {
+        const res = await fetch('https://api.github.com/repos/mongodb-js/mongosh/releases/latest');
+        const data = await res.json();
+        const version = data.tag_name.replace('v', '');
+
+        console.log(`  mongosh: ${version}`);
+        return {
+            name: 'MongoDB Shell',
+            description: 'MongoDB interactive shell (mongosh) - required for database management',
+            latest: version,
+            windows: {
+                url: `https://downloads.mongodb.com/compass/mongosh-${version}-win32-x64.zip`,
+                filename: `mongosh-${version}-win32-x64.zip`
+            },
+            macos_arm64: {
+                url: `https://downloads.mongodb.com/compass/mongosh-${version}-darwin-arm64.zip`,
+                filename: `mongosh-${version}-darwin-arm64.zip`
+            },
+            linux: {
+                url: `https://downloads.mongodb.com/compass/mongosh-${version}-linux-x64.tgz`,
+                filename: `mongosh-${version}-linux-x64.tgz`
+            }
+        };
+    } catch (err) {
+        console.error('  Error fetching mongosh:', err.message);
+    }
+
+    return {
+        name: 'MongoDB Shell',
+        description: 'MongoDB interactive shell (mongosh) - required for database management',
+        latest: '2.3.8',
+        windows: {
+            url: 'https://downloads.mongodb.com/compass/mongosh-2.3.8-win32-x64.zip',
+            filename: 'mongosh-2.3.8-win32-x64.zip'
+        },
+        macos_arm64: {
+            url: 'https://downloads.mongodb.com/compass/mongosh-2.3.8-darwin-arm64.zip',
+            filename: 'mongosh-2.3.8-darwin-arm64.zip'
+        },
+        linux: {
+            url: 'https://downloads.mongodb.com/compass/mongosh-2.3.8-linux-x64.tgz',
+            filename: 'mongosh-2.3.8-linux-x64.tgz'
+        }
+    };
+}
+
 // ─── Ngrok ───────────────────────────────────────────────────────────────────
 
 async function fetchNgrokVersions() {
@@ -925,7 +976,7 @@ async function main() {
     console.log('=== Orbit Libraries Version Fetcher ===\n');
     console.log(`Date: ${new Date().toISOString()}\n`);
 
-    const [php, nginx, apache, mariadb, nodejs, python, bun, redis, mailpit, meilisearch, composer, postgresql, mongodb, go, deno, rust, ngrok] = await Promise.all([
+    const [php, nginx, apache, mariadb, nodejs, python, bun, redis, mailpit, meilisearch, composer, postgresql, mongodb, go, deno, rust, ngrok, mongosh] = await Promise.all([
         fetchPhpVersions(),
         fetchNginxVersions(),
         fetchApacheVersions(),
@@ -942,7 +993,8 @@ async function main() {
         fetchGoVersions(),
         fetchDenoVersions(),
         fetchRustVersions(),
-        fetchNgrokVersions()
+        fetchNgrokVersions(),
+        fetchMongoshVersion()
     ]);
 
     const libraries = {
@@ -956,6 +1008,7 @@ async function main() {
             mariadb,
             postgresql,
             mongodb,
+            mongosh,
             nodejs,
             python,
             bun,
