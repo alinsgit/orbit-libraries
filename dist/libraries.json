@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-02-27T01:27:52.059Z",
+  "updated": "2026-02-28T01:22:03.313Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -361,10 +361,19 @@
       "name": "Python",
       "description": "General-purpose programming language",
       "availableVersions": [
+        "3.14",
         "3.13",
-        "3.12"
+        "3.12",
+        "3.11"
       ],
       "versions": {
+        "3.14": {
+          "latest": "3.14.3",
+          "windows": {
+            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-embed-amd64.zip",
+            "filename": "python-3.14.3-embed-amd64.zip"
+          }
+        },
         "3.13": {
           "latest": "3.13.12",
           "windows": {
@@ -373,10 +382,17 @@
           }
         },
         "3.12": {
-          "latest": "3.12.8",
+          "latest": "3.12.10",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-embed-amd64.zip",
-            "filename": "python-3.12.8-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip",
+            "filename": "python-3.12.10-embed-amd64.zip"
+          }
+        },
+        "3.11": {
+          "latest": "3.11.9",
+          "windows": {
+            "url": "https://www.python.org/ftp/python/3.11.9/python-3.11.9-embed-amd64.zip",
+            "filename": "python-3.11.9-embed-amd64.zip"
           }
         }
       }
