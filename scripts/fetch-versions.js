@@ -113,7 +113,9 @@ async function fetchNginxVersions() {
                 if (!versions[major] || compareVersions(v, versions[major].latest) > 0) {
                     versions[major] = {
                         latest: v,
-                        windows: { url: `https://nginx.org/download/nginx-${v}.zip`, filename: `nginx-${v}.zip` }
+                        windows: { url: `https://nginx.org/download/nginx-${v}.zip`, filename: `nginx-${v}.zip` },
+                        linux: { url: `https://nginx.org/download/nginx-${v}.tar.gz`, filename: `nginx-${v}.tar.gz` },
+                        macos_arm64: { url: `https://nginx.org/download/nginx-${v}.tar.gz`, filename: `nginx-${v}.tar.gz` }
                     };
                 }
             }
@@ -332,6 +334,18 @@ async function fetchNodejsVersions() {
                 windows: {
                     url: `https://nodejs.org/dist/v${v}/node-v${v}-win-x64.zip`,
                     filename: `node-v${v}-win-x64.zip`
+                },
+                linux: {
+                    url: `https://nodejs.org/dist/v${v}/node-v${v}-linux-x64.tar.gz`,
+                    filename: `node-v${v}-linux-x64.tar.gz`
+                },
+                macos_arm64: {
+                    url: `https://nodejs.org/dist/v${v}/node-v${v}-darwin-arm64.tar.gz`,
+                    filename: `node-v${v}-darwin-arm64.tar.gz`
+                },
+                macos_x64: {
+                    url: `https://nodejs.org/dist/v${v}/node-v${v}-darwin-x64.tar.gz`,
+                    filename: `node-v${v}-darwin-x64.tar.gz`
                 }
             };
             console.log(`  Node.js ${major}: ${v}`);
@@ -370,11 +384,20 @@ async function fetchPythonVersions() {
             const entry = data.find(e => e.cycle === series);
             if (entry && entry.latest) {
                 const v = entry.latest;
+                // Python embed (Windows-only) + cpython tarballs (Linux/macOS)
                 versions[series] = {
                     latest: v,
                     windows: {
                         url: `https://www.python.org/ftp/python/${v}/python-${v}-embed-amd64.zip`,
                         filename: `python-${v}-embed-amd64.zip`
+                    },
+                    linux: {
+                        url: `https://www.python.org/ftp/python/${v}/Python-${v}.tgz`,
+                        filename: `Python-${v}.tgz`
+                    },
+                    macos_arm64: {
+                        url: `https://www.python.org/ftp/python/${v}/python-${v}-macos11.pkg`,
+                        filename: `python-${v}-macos11.pkg`
                     }
                 };
                 console.log(`  Python ${series}: ${v}`);
@@ -453,12 +476,21 @@ async function fetchBunVersions() {
 
             if (!versions[majorMinor]) {
                 const winAsset = release.assets?.find(a => a.name === 'bun-windows-x64.zip');
-                const url = winAsset?.browser_download_url
-                    || `https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-windows-x64.zip`;
+                const linAsset = release.assets?.find(a => a.name === 'bun-linux-x64.zip');
+                const macArmAsset = release.assets?.find(a => a.name === 'bun-darwin-aarch64.zip');
+                const macX64Asset = release.assets?.find(a => a.name === 'bun-darwin-x64.zip');
+
+                const winUrl = winAsset?.browser_download_url || `https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-windows-x64.zip`;
+                const linUrl = linAsset?.browser_download_url || `https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-linux-x64.zip`;
+                const macArmUrl = macArmAsset?.browser_download_url || `https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-darwin-aarch64.zip`;
+                const macX64Url = macX64Asset?.browser_download_url || `https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-darwin-x64.zip`;
 
                 versions[majorMinor] = {
                     latest: version,
-                    windows: { url, filename: 'bun-windows-x64.zip' }
+                    windows: { url: winUrl, filename: 'bun-windows-x64.zip' },
+                    linux: { url: linUrl, filename: 'bun-linux-x64.zip' },
+                    macos_arm64: { url: macArmUrl, filename: 'bun-darwin-aarch64.zip' },
+                    macos_x64: { url: macX64Url, filename: 'bun-darwin-x64.zip' }
                 };
                 console.log(`  Bun ${majorMinor}: ${version}`);
             }
@@ -667,23 +699,23 @@ async function fetchPostgresVersions() {
             if (entry && entry.latest) {
                 const v = entry.latest;
                 let winUrl = null, macUrl = null, linuxUrl = null;
-                
+
                 for (let build = 1; build <= 3; build++) {
                     const uWin = `https://get.enterprisedb.com/postgresql/postgresql-${v}-${build}-windows-x64-binaries.zip`;
                     const uMac = `https://get.enterprisedb.com/postgresql/postgresql-${v}-${build}-osx-binaries.zip`;
                     const uLin = `https://get.enterprisedb.com/postgresql/postgresql-${v}-${build}-linux-x64-binaries.tar.gz`;
-                    
+
                     if (!winUrl) {
-                        try { if ((await fetch(uWin, { method: 'HEAD' })).ok) winUrl = uWin; } catch(e){}
+                        try { if ((await fetch(uWin, { method: 'HEAD' })).ok) winUrl = uWin; } catch (e) { }
                     }
                     if (!macUrl) {
-                        try { if ((await fetch(uMac, { method: 'HEAD' })).ok) macUrl = uMac; } catch(e){}
+                        try { if ((await fetch(uMac, { method: 'HEAD' })).ok) macUrl = uMac; } catch (e) { }
                     }
                     if (!linuxUrl) {
-                        try { if ((await fetch(uLin, { method: 'HEAD' })).ok) linuxUrl = uLin; } catch(e){}
+                        try { if ((await fetch(uLin, { method: 'HEAD' })).ok) linuxUrl = uLin; } catch (e) { }
                     }
                 }
-                
+
                 if (winUrl || macUrl || linuxUrl) {
                     versions[series] = { latest: v };
                     if (winUrl) versions[series].windows = { url: winUrl, filename: `postgresql-${v}-windows-x64.zip` };
@@ -692,7 +724,7 @@ async function fetchPostgresVersions() {
                         versions[series].macos_x64 = { url: macUrl, filename: `postgresql-${v}-osx.zip` };
                     }
                     if (linuxUrl) versions[series].linux = { url: linuxUrl, filename: `postgresql-${v}-linux-x64.tar.gz` };
-                    
+
                     console.log(`  PostgreSQL ${series}: ${v}`);
                 }
             }
@@ -728,19 +760,19 @@ async function fetchMongoVersions() {
     try {
         const res = await fetch('https://downloads.mongodb.org/current.json');
         const data = await res.json();
-        
+
         for (const major of targetMajors) {
             const release = data.versions.find(v => v.version.startsWith(major) && v.production_release);
             if (release) {
                 const winDl = release.downloads.find(d => d.target === 'windows' && d.archive.url.endsWith('.zip'));
                 const macDl = release.downloads.find(d => d.target === 'macos' && (d.arch === 'aarch64' || d.arch === 'arm64') && d.archive.url.endsWith('.tgz'));
                 const linDl = release.downloads.find(d => d.target === 'ubuntu2204' && d.arch === 'x86_64' && d.archive.url.endsWith('.tgz'));
-                
+
                 versions[major] = { latest: release.version };
                 if (winDl) versions[major].windows = { url: winDl.archive.url, filename: `mongodb-${release.version}-win.zip` };
                 if (macDl) versions[major].macos_arm64 = { url: macDl.archive.url, filename: `mongodb-${release.version}-mac.tgz` };
                 if (linDl) versions[major].linux = { url: linDl.archive.url, filename: `mongodb-${release.version}-linux.tgz` };
-                
+
                 console.log(`  MongoDB ${major}: ${release.version}`);
             }
         }
@@ -774,26 +806,26 @@ async function fetchGoVersions() {
     try {
         const res = await fetch('https://go.dev/dl/?mode=json');
         const data = await res.json();
-        
+
         for (const release of data) {
             const v = release.version.replace('go', '');
             const parts = v.split('.');
             if (parts.length < 2) continue;
             const majorMinor = `${parts[0]}.${parts[1]}`;
-            
+
             if (!versions[majorMinor]) {
                 const winFile = release.files.find(f => f.os === 'windows' && f.arch === 'amd64' && f.kind === 'archive');
                 const macArmFile = release.files.find(f => f.os === 'darwin' && f.arch === 'arm64' && f.kind === 'archive');
                 const macX64File = release.files.find(f => f.os === 'darwin' && f.arch === 'amd64' && f.kind === 'archive');
                 const linFile = release.files.find(f => f.os === 'linux' && f.arch === 'amd64' && f.kind === 'archive');
-                
+
                 if (winFile || macArmFile || linFile) {
                     versions[majorMinor] = { latest: v };
                     if (winFile) versions[majorMinor].windows = { url: `https://dl.google.com/go/${winFile.filename}`, filename: winFile.filename };
                     if (macArmFile) versions[majorMinor].macos_arm64 = { url: `https://dl.google.com/go/${macArmFile.filename}`, filename: macArmFile.filename };
                     if (macX64File) versions[majorMinor].macos_x64 = { url: `https://dl.google.com/go/${macX64File.filename}`, filename: macX64File.filename };
                     if (linFile) versions[majorMinor].linux = { url: `https://dl.google.com/go/${linFile.filename}`, filename: linFile.filename };
-                    
+
                     console.log(`  Go ${majorMinor}: ${v}`);
                 }
             }
@@ -827,7 +859,7 @@ async function fetchGoVersions() {
 
 async function fetchDenoVersions() {
     console.log('Fetching Deno version...');
-    
+
     let version = '2.1.0';
     let winAsset = { browser_download_url: 'https://github.com/denoland/deno/releases/download/v2.1.0/deno-x86_64-pc-windows-msvc.zip', name: 'deno-x86_64-pc-windows-msvc.zip' };
     let macArmAsset = { browser_download_url: 'https://github.com/denoland/deno/releases/download/v2.1.0/deno-aarch64-apple-darwin.zip', name: 'deno-aarch64-apple-darwin.zip' };
@@ -838,12 +870,12 @@ async function fetchDenoVersions() {
         const res = await fetch('https://api.github.com/repos/denoland/deno/releases/latest');
         const data = await res.json();
         version = data.tag_name.replace('v', '');
-        
+
         const tryWin = data.assets?.find(a => a.name === 'deno-x86_64-pc-windows-msvc.zip');
         const tryMacA = data.assets?.find(a => a.name === 'deno-aarch64-apple-darwin.zip');
         const tryMacX = data.assets?.find(a => a.name === 'deno-x86_64-apple-darwin.zip');
         const tryLin = data.assets?.find(a => a.name === 'deno-x86_64-unknown-linux-gnu.zip');
-        
+
         if (tryWin) winAsset = tryWin;
         if (tryMacA) macArmAsset = tryMacA;
         if (tryMacX) macX64Asset = tryMacX;
@@ -851,7 +883,7 @@ async function fetchDenoVersions() {
     } catch (err) {
         console.error('  Error fetching Deno:', err.message);
     }
-    
+
     console.log(`  Deno: ${version}`);
     return {
         name: 'Deno',
