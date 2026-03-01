@@ -197,8 +197,7 @@ jobs:
           brew install \
             autoconf bison re2c pkg-config \
             openssl@3 curl libzip zlib libpng jpeg webp freetype \
-            oniguruma sqlite readline gmp libsodium libffi libxslt \
-            postgresql libldap krb5
+            oniguruma sqlite readline gmp libsodium libffi libxslt
 
           # Ensure bison 3.x is used (macOS ships older bison)
           echo "$(brew --prefix bison)/bin" >> $GITHUB_PATH
