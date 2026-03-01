@@ -197,7 +197,7 @@ jobs:
           brew install \
             autoconf bison re2c pkg-config \
             openssl@3 curl libzip zlib libpng jpeg webp freetype \
-            oniguruma sqlite readline gmp libsodium libffi libxslt
+            oniguruma sqlite readline gmp libsodium libffi libxslt libiconv
 
           # Ensure bison 3.x is used (macOS ships older bison)
           echo "$(brew --prefix bison)/bin" >> $GITHUB_PATH
@@ -242,6 +242,7 @@ jobs:
             --enable-cli \
             --disable-phpdbg \
             --with-openssl=$(brew --prefix openssl@3) \
+            --with-iconv=$(brew --prefix libiconv) \
             --with-curl \
             --with-zlib \
             --with-zip \
@@ -249,9 +250,8 @@ jobs:
             --with-jpeg \
             --with-webp=$(brew --prefix webp) \
             --with-freetype \
-            --with-mbstring \
+            --enable-mbstring \
             --enable-mbregex \
-            --with-mysql=mysqlnd \
             --with-mysqli=mysqlnd \
             --with-pdo-mysql=mysqlnd \
             --with-pdo-sqlite \
@@ -310,7 +310,7 @@ jobs:
           brew install \
             autoconf bison re2c pkg-config \
             openssl@3 curl libzip zlib libpng jpeg webp freetype \
-            oniguruma sqlite readline gmp libsodium libffi libxslt
+            oniguruma sqlite readline gmp libsodium libffi libxslt libiconv
 
           echo "$(brew --prefix bison)/bin" >> $GITHUB_PATH
 
@@ -350,6 +350,7 @@ jobs:
             --enable-cli \
             --disable-phpdbg \
             --with-openssl=/usr/local/opt/openssl@3 \
+            --with-iconv=/usr/local/opt/libiconv \
             --with-curl \
             --with-zlib \
             --with-zip \
@@ -357,9 +358,8 @@ jobs:
             --with-jpeg \
             --with-webp=$(brew --prefix webp) \
             --with-freetype \
-            --with-mbstring \
+            --enable-mbstring \
             --enable-mbregex \
-            --with-mysql=mysqlnd \
             --with-mysqli=mysqlnd \
             --with-pdo-mysql=mysqlnd \
             --with-pdo-sqlite \
