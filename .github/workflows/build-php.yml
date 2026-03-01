@@ -1,0 +1,521 @@
+name: Build PHP Binaries
+
+# Runs weekly on Sunday + manual trigger.
+# Also triggered when a new PHP version tag is pushed (e.g. php-8.4.17).
+on:
+  schedule:
+    - cron: '0 2 * * 0'   # Every Sunday at 02:00 UTC
+  workflow_dispatch:
+    inputs:
+      php_version:
+        description: 'PHP version to build (e.g. 8.4.5). Leave blank to auto-detect latest.'
+        required: false
+        default: ''
+      major_versions:
+        description: 'Comma-separated major versions to build (e.g. 8.4,8.3). Leave blank for all.'
+        required: false
+        default: ''
+
+jobs:
+  # ── Step 1: Resolve which PHP versions to build ──────────────────────────────
+  resolve-versions:
+    name: Resolve PHP versions
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.versions.outputs.matrix }}
+    steps:
+      - name: Determine versions
+        id: versions
+        run: |
+          TARGETS="${{ github.event.inputs.major_versions }}"
+          if [ -z "$TARGETS" ]; then
+            TARGETS="8.5,8.4,8.3,8.2,8.1"
+          fi
+
+          # For each major.minor, fetch the latest patch from php.net
+          MATRIX="["
+          FIRST=true
+          IFS=',' read -ra MAJORS <<< "$TARGETS"
+          for MAJOR in "${MAJORS[@]}"; do
+            MAJOR=$(echo "$MAJOR" | tr -d ' ')
+
+            # Fetch latest patch version from php.net downloads page
+            OVERRIDE="${{ github.event.inputs.php_version }}"
+            if [ -n "$OVERRIDE" ]; then
+              PATCH="$OVERRIDE"
+            else
+              PATCH=$(curl -fsSL "https://windows.php.net/downloads/releases/" \
+                | grep -oP "php-${MAJOR//./\\.}\\.\\d+(?=-nts)" \
+                | sort -V | tail -1 \
+                | sed 's/php-//')
+            fi
+
+            if [ -z "$PATCH" ]; then
+              echo "Could not resolve latest for PHP $MAJOR, skipping"
+              continue
+            fi
+
+            # Check if this exact version is already released
+            TAG="php-${PATCH}"
+            EXISTS=$(curl -fsSL \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/${{ github.repository }}/releases/tags/${TAG}" \
+              2>/dev/null | jq -r '.tag_name // ""')
+
+            if [ "$EXISTS" = "$TAG" ]; then
+              echo "PHP $PATCH already released, skipping"
+              continue
+            fi
+
+            if [ "$FIRST" = "true" ]; then FIRST=false; else MATRIX+=","; fi
+            MATRIX+="{\"major\":\"${MAJOR}\",\"version\":\"${PATCH}\",\"tag\":\"php-${PATCH}\"}"
+          done
+          MATRIX+="]"
+          echo "matrix={\"include\":${MATRIX}}" >> $GITHUB_OUTPUT
+          echo "Resolved: $MATRIX"
+
+  # ── Step 2: Build on Linux ────────────────────────────────────────────────────
+  build-linux:
+    name: Build PHP ${{ matrix.version }} (Linux x86_64)
+    needs: resolve-versions
+    if: ${{ needs.resolve-versions.outputs.matrix != '{"include":[]}' && needs.resolve-versions.outputs.matrix != '{"include":[""]}' }}
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.resolve-versions.outputs.matrix) }}
+    steps:
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            build-essential autoconf bison re2c pkg-config \
+            libxml2-dev libssl-dev libcurl4-openssl-dev \
+            libpng-dev libjpeg-dev libwebp-dev libavif-dev libfreetype6-dev \
+            libzip-dev zlib1g-dev libonig-dev libsqlite3-dev \
+            libreadline-dev libgmp-dev libsodium-dev \
+            libargon2-dev libffi-dev libxslt1-dev \
+            libpq-dev libldap2-dev \
+            libc-client-dev libkrb5-dev
+
+      - name: Download PHP ${{ matrix.version }} source
+        run: |
+          URL="https://www.php.net/distributions/php-${{ matrix.version }}.tar.gz"
+          echo "Downloading $URL"
+          curl -fsSL "$URL" -o php.tar.gz
+          tar -xzf php.tar.gz
+          mv php-${{ matrix.version }} php-src
+
+      - name: Configure & build PHP
+        working-directory: php-src
+        run: |
+          ./buildconf --force
+          ./configure \
+            --prefix=/opt/php-${{ matrix.version }} \
+            --enable-fpm \
+            --enable-cgi \
+            --enable-cli \
+            --disable-phpdbg \
+            --with-openssl \
+            --with-curl \
+            --with-zlib \
+            --with-zip \
+            --with-gd \
+            --with-jpeg \
+            --with-webp \
+            --with-freetype \
+            --with-mbstring \
+            --enable-mbregex \
+            --with-mysql=mysqlnd \
+            --with-mysqli=mysqlnd \
+            --with-pdo-mysql=mysqlnd \
+            --with-pdo-sqlite \
+            --enable-pdo \
+            --enable-opcache \
+            --enable-sockets \
+            --enable-intl \
+            --enable-pcntl \
+            --enable-bcmath \
+            --enable-calendar \
+            --enable-exif \
+            --with-gmp \
+            --with-sodium \
+            --with-ffi \
+            --with-xsl \
+            --with-readline \
+            --without-pear \
+            --enable-static \
+            --disable-shared
+
+          make -j$(nproc)
+          sudo make install
+
+      - name: Package binaries
+        run: |
+          VERSION="${{ matrix.version }}"
+          OUTDIR="php-${VERSION}-linux-x86_64"
+          mkdir -p "$OUTDIR/bin" "$OUTDIR/lib/php"
+
+          # Copy binaries
+          cp /opt/php-${VERSION}/bin/php       "$OUTDIR/bin/"
+          cp /opt/php-${VERSION}/bin/php-cgi   "$OUTDIR/bin/"
+          cp /opt/php-${VERSION}/bin/php-fpm   "$OUTDIR/bin/" 2>/dev/null || true
+
+          # Copy default ini templates
+          cp php-src/php.ini-development "$OUTDIR/"
+          cp php-src/php.ini-production  "$OUTDIR/"
+
+          # Copy extension stubs if any (static build won't have .so but include dir)
+          cp -r /opt/php-${VERSION}/include/php "$OUTDIR/include" 2>/dev/null || true
+
+          # Create archive
+          ARCHIVE="${OUTDIR}.tar.gz"
+          tar -czf "$ARCHIVE" "$OUTDIR"
+          sha256sum "$ARCHIVE" > "${ARCHIVE}.sha256"
+          echo "ARCHIVE=$ARCHIVE" >> $GITHUB_ENV
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: php-${{ matrix.version }}-linux-x86_64
+          path: |
+            php-${{ matrix.version }}-linux-x86_64.tar.gz
+            php-${{ matrix.version }}-linux-x86_64.tar.gz.sha256
+
+  # ── Step 3: Build on macOS ARM64 ─────────────────────────────────────────────
+  build-macos-arm64:
+    name: Build PHP ${{ matrix.version }} (macOS arm64)
+    needs: resolve-versions
+    if: ${{ needs.resolve-versions.outputs.matrix != '{"include":[]}' }}
+    runs-on: macos-14   # Apple Silicon runner
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.resolve-versions.outputs.matrix) }}
+    steps:
+      - name: Install build dependencies
+        run: |
+          brew install \
+            autoconf bison re2c pkg-config \
+            openssl@3 curl libzip zlib libpng jpeg libwebp libavif freetype \
+            oniguruma sqlite readline gmp libsodium libffi libxslt \
+            postgresql libldap krb5
+
+          # Ensure bison 3.x is used (macOS ships older bison)
+          echo "$(brew --prefix bison)/bin" >> $GITHUB_PATH
+          echo "$(brew --prefix openssl@3)/bin" >> $GITHUB_PATH
+
+      - name: Download PHP ${{ matrix.version }} source
+        run: |
+          curl -fsSL "https://www.php.net/distributions/php-${{ matrix.version }}.tar.gz" -o php.tar.gz
+          tar -xzf php.tar.gz
+          mv php-${{ matrix.version }} php-src
+
+      - name: Configure & build PHP
+        working-directory: php-src
+        env:
+          PKG_CONFIG_PATH: >-
+            /opt/homebrew/opt/openssl@3/lib/pkgconfig:
+            /opt/homebrew/opt/curl/lib/pkgconfig:
+            /opt/homebrew/opt/libzip/lib/pkgconfig:
+            /opt/homebrew/opt/oniguruma/lib/pkgconfig:
+            /opt/homebrew/opt/libpng/lib/pkgconfig:
+            /opt/homebrew/opt/jpeg/lib/pkgconfig:
+            /opt/homebrew/opt/freetype/lib/pkgconfig:
+            /opt/homebrew/opt/gmp/lib/pkgconfig:
+            /opt/homebrew/opt/libsodium/lib/pkgconfig:
+            /opt/homebrew/opt/libffi/lib/pkgconfig:
+            /opt/homebrew/opt/libxslt/lib/pkgconfig:
+            /opt/homebrew/opt/readline/lib/pkgconfig
+          LDFLAGS: >-
+            -L/opt/homebrew/opt/openssl@3/lib
+            -L/opt/homebrew/opt/curl/lib
+            -L/opt/homebrew/opt/readline/lib
+          CPPFLAGS: >-
+            -I/opt/homebrew/opt/openssl@3/include
+            -I/opt/homebrew/opt/curl/include
+            -I/opt/homebrew/opt/readline/include
+        run: |
+          ./buildconf --force
+          ./configure \
+            --prefix=/opt/php-${{ matrix.version }} \
+            --enable-fpm \
+            --enable-cgi \
+            --enable-cli \
+            --disable-phpdbg \
+            --with-openssl=$(brew --prefix openssl@3) \
+            --with-curl \
+            --with-zlib \
+            --with-zip \
+            --enable-gd \
+            --with-jpeg \
+            --with-webp \
+            --with-freetype \
+            --with-mbstring \
+            --enable-mbregex \
+            --with-mysql=mysqlnd \
+            --with-mysqli=mysqlnd \
+            --with-pdo-mysql=mysqlnd \
+            --with-pdo-sqlite \
+            --enable-pdo \
+            --enable-opcache \
+            --enable-sockets \
+            --enable-bcmath \
+            --enable-calendar \
+            --enable-exif \
+            --with-gmp \
+            --with-sodium \
+            --with-ffi \
+            --with-xsl \
+            --with-readline=$(brew --prefix readline) \
+            --without-pear
+
+          make -j$(sysctl -n hw.ncpu)
+          sudo make install
+
+      - name: Package binaries
+        run: |
+          VERSION="${{ matrix.version }}"
+          OUTDIR="php-${VERSION}-macos-arm64"
+          mkdir -p "$OUTDIR/bin"
+
+          cp /opt/php-${VERSION}/bin/php      "$OUTDIR/bin/"
+          cp /opt/php-${VERSION}/bin/php-cgi  "$OUTDIR/bin/"
+          cp /opt/php-${VERSION}/bin/php-fpm  "$OUTDIR/bin/" 2>/dev/null || true
+          cp php-src/php.ini-development "$OUTDIR/"
+          cp php-src/php.ini-production  "$OUTDIR/"
+
+          ARCHIVE="${OUTDIR}.tar.gz"
+          tar -czf "$ARCHIVE" "$OUTDIR"
+          sha256sum "$ARCHIVE" > "${ARCHIVE}.sha256"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: php-${{ matrix.version }}-macos-arm64
+          path: |
+            php-${{ matrix.version }}-macos-arm64.tar.gz
+            php-${{ matrix.version }}-macos-arm64.tar.gz.sha256
+
+  # ── Step 4: Build on macOS x86_64 ────────────────────────────────────────────
+  build-macos-x64:
+    name: Build PHP ${{ matrix.version }} (macOS x86_64)
+    needs: resolve-versions
+    if: ${{ needs.resolve-versions.outputs.matrix != '{"include":[]}' }}
+    runs-on: macos-13   # Intel runner
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.resolve-versions.outputs.matrix) }}
+    steps:
+      - name: Install build dependencies
+        run: |
+          brew install \
+            autoconf bison re2c pkg-config \
+            openssl@3 curl libzip zlib libpng jpeg libwebp freetype \
+            oniguruma sqlite readline gmp libsodium libffi libxslt
+
+          echo "$(brew --prefix bison)/bin" >> $GITHUB_PATH
+
+      - name: Download PHP ${{ matrix.version }} source
+        run: |
+          curl -fsSL "https://www.php.net/distributions/php-${{ matrix.version }}.tar.gz" -o php.tar.gz
+          tar -xzf php.tar.gz
+          mv php-${{ matrix.version }} php-src
+
+      - name: Configure & build PHP
+        working-directory: php-src
+        env:
+          PKG_CONFIG_PATH: >-
+            /usr/local/opt/openssl@3/lib/pkgconfig:
+            /usr/local/opt/curl/lib/pkgconfig:
+            /usr/local/opt/libzip/lib/pkgconfig:
+            /usr/local/opt/oniguruma/lib/pkgconfig:
+            /usr/local/opt/libpng/lib/pkgconfig:
+            /usr/local/opt/jpeg/lib/pkgconfig:
+            /usr/local/opt/freetype/lib/pkgconfig:
+            /usr/local/opt/gmp/lib/pkgconfig:
+            /usr/local/opt/libsodium/lib/pkgconfig:
+            /usr/local/opt/libffi/lib/pkgconfig:
+            /usr/local/opt/libxslt/lib/pkgconfig:
+            /usr/local/opt/readline/lib/pkgconfig
+          LDFLAGS: >-
+            -L/usr/local/opt/openssl@3/lib
+            -L/usr/local/opt/readline/lib
+          CPPFLAGS: >-
+            -I/usr/local/opt/openssl@3/include
+            -I/usr/local/opt/readline/include
+        run: |
+          ./buildconf --force
+          ./configure \
+            --prefix=/opt/php-${{ matrix.version }} \
+            --enable-cgi \
+            --enable-cli \
+            --disable-phpdbg \
+            --with-openssl=/usr/local/opt/openssl@3 \
+            --with-curl \
+            --with-zlib \
+            --with-zip \
+            --enable-gd \
+            --with-jpeg \
+            --with-webp \
+            --with-freetype \
+            --with-mbstring \
+            --enable-mbregex \
+            --with-mysql=mysqlnd \
+            --with-mysqli=mysqlnd \
+            --with-pdo-mysql=mysqlnd \
+            --with-pdo-sqlite \
+            --enable-pdo \
+            --enable-opcache \
+            --enable-sockets \
+            --enable-bcmath \
+            --enable-calendar \
+            --with-gmp \
+            --with-sodium \
+            --with-ffi \
+            --with-xsl \
+            --with-readline=/usr/local/opt/readline \
+            --without-pear
+
+          make -j$(sysctl -n hw.ncpu)
+          sudo make install
+
+      - name: Package binaries
+        run: |
+          VERSION="${{ matrix.version }}"
+          OUTDIR="php-${VERSION}-macos-x86_64"
+          mkdir -p "$OUTDIR/bin"
+          cp /opt/php-${VERSION}/bin/php      "$OUTDIR/bin/"
+          cp /opt/php-${VERSION}/bin/php-cgi  "$OUTDIR/bin/"
+          cp /opt/php-${VERSION}/bin/php-fpm  "$OUTDIR/bin/" 2>/dev/null || true
+          cp php-src/php.ini-development "$OUTDIR/"
+          cp php-src/php.ini-production  "$OUTDIR/"
+          ARCHIVE="${OUTDIR}.tar.gz"
+          tar -czf "$ARCHIVE" "$OUTDIR"
+          sha256sum "$ARCHIVE" > "${ARCHIVE}.sha256"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: php-${{ matrix.version }}-macos-x86_64
+          path: |
+            php-${{ matrix.version }}-macos-x86_64.tar.gz
+            php-${{ matrix.version }}-macos-x86_64.tar.gz.sha256
+
+  # ── Step 5: Create GitHub Release & update libraries.json ────────────────────
+  release:
+    name: Publish release & update libraries.json
+    needs: [resolve-versions, build-linux, build-macos-arm64, build-macos-x64]
+    if: always() && needs.resolve-versions.outputs.matrix != '{"include":[]}'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.resolve-versions.outputs.matrix) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download all artifacts for this version
+        uses: actions/download-artifact@v4
+        with:
+          pattern: php-${{ matrix.version }}-*
+          merge-multiple: true
+          path: artifacts/
+
+      - name: List artifacts
+        run: ls -lh artifacts/
+
+      - name: Create or update GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ matrix.tag }}
+          name: "PHP ${{ matrix.version }} Binaries"
+          body: |
+            Precompiled PHP ${{ matrix.version }} binaries for Orbit local dev environment.
+
+            **Platforms:**
+            - 🐧 Linux x86_64
+            - 🍎 macOS arm64 (Apple Silicon)
+            - 🍎 macOS x86_64 (Intel)
+
+            **Contents of each archive:**
+            ```
+            bin/php
+            bin/php-cgi
+            bin/php-fpm  (Linux & macOS arm64)
+            php.ini-development
+            php.ini-production
+            ```
+
+            Built from official PHP ${{ matrix.version }} source: https://www.php.net/distributions/php-${{ matrix.version }}.tar.gz
+          files: artifacts/*
+          fail_on_unmatched_files: false
+
+      - name: Update libraries.json with new release URLs
+        run: |
+          VERSION="${{ matrix.version }}"
+          MAJOR=$(echo "$VERSION" | cut -d. -f1-2)
+          REPO="${{ github.repository }}"
+          TAG="${{ matrix.tag }}"
+          BASE="https://github.com/${REPO}/releases/download/${TAG}"
+
+          LINUX_ARCHIVE="php-${VERSION}-linux-x86_64.tar.gz"
+          MACOS_ARM64_ARCHIVE="php-${VERSION}-macos-arm64.tar.gz"
+          MACOS_X64_ARCHIVE="php-${VERSION}-macos-x86_64.tar.gz"
+
+          # Read sha256 files if they exist
+          LINUX_SHA=""
+          MACOS_ARM64_SHA=""
+          MACOS_X64_SHA=""
+          [ -f "artifacts/${LINUX_ARCHIVE}.sha256" ]      && LINUX_SHA=$(cut -d' ' -f1 "artifacts/${LINUX_ARCHIVE}.sha256")
+          [ -f "artifacts/${MACOS_ARM64_ARCHIVE}.sha256" ] && MACOS_ARM64_SHA=$(cut -d' ' -f1 "artifacts/${MACOS_ARM64_ARCHIVE}.sha256")
+          [ -f "artifacts/${MACOS_X64_ARCHIVE}.sha256" ]   && MACOS_X64_SHA=$(cut -d' ' -f1 "artifacts/${MACOS_X64_ARCHIVE}.sha256")
+
+          # Use jq to update libraries.json in place
+          TMPFILE=$(mktemp)
+
+          jq \
+            --arg major   "$MAJOR" \
+            --arg version "$VERSION" \
+            --arg linuxUrl         "${BASE}/${LINUX_ARCHIVE}" \
+            --arg linuxFilename    "$LINUX_ARCHIVE" \
+            --arg linuxSha256      "$LINUX_SHA" \
+            --arg macArmUrl        "${BASE}/${MACOS_ARM64_ARCHIVE}" \
+            --arg macArmFilename   "$MACOS_ARM64_ARCHIVE" \
+            --arg macArmSha256     "$MACOS_ARM64_SHA" \
+            --arg macX64Url        "${BASE}/${MACOS_X64_ARCHIVE}" \
+            --arg macX64Filename   "$MACOS_X64_ARCHIVE" \
+            --arg macX64Sha256     "$MACOS_X64_SHA" \
+            '
+            .services.php.versions[$major].latest = $version |
+            .services.php.versions[$major].linux = {
+              "url": $linuxUrl,
+              "filename": $linuxFilename,
+              "sha256": $linuxSha256
+            } |
+            .services.php.versions[$major].macos_arm64 = {
+              "url": $macArmUrl,
+              "filename": $macArmFilename,
+              "sha256": $macArmSha256
+            } |
+            .services.php.versions[$major].macos_x64 = {
+              "url": $macX64Url,
+              "filename": $macX64Filename,
+              "sha256": $macX64Sha256
+            }
+            ' dist/libraries.json > "$TMPFILE" && mv "$TMPFILE" dist/libraries.json
+
+          echo "Updated libraries.json for PHP $MAJOR ($VERSION)"
+          cat dist/libraries.json | jq ".services.php.versions[\"$MAJOR\"]"
+
+      - name: Commit updated libraries.json
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git pull --rebase origin main
+          git add dist/libraries.json
+          git diff --cached --quiet || git commit -m "chore: add PHP ${{ matrix.version }} mac/linux binaries"
+          git push

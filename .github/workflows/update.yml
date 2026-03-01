@@ -2,9 +2,8 @@ name: Update Libraries
 
 on:
   schedule:
-    # Run daily at 00:00 UTC
-    - cron: '0 0 * * *'
-  workflow_dispatch: # Allow manual trigger
+    - cron: '0 0 * * *'   # Daily at 00:00 UTC
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
@@ -14,31 +13,83 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-    
+
     permissions:
       contents: write
-    
+      actions: write   # Required to trigger build-php.yml
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-          
+
       - name: Install dependencies
         run: npm ci
-        
+
+      # Snapshot PHP patch versions before fetching new data
+      - name: Snapshot current PHP versions
+        id: before
+        run: |
+          SNAPSHOT=$(jq -r '
+            .services.php.versions
+            | to_entries[]
+            | "\(.key)=\(.value.latest)"
+          ' dist/libraries.json 2>/dev/null | sort | tr '\n' ',' || echo "")
+          echo "snapshot=$SNAPSHOT" >> $GITHUB_OUTPUT
+          echo "PHP before: $SNAPSHOT"
+
       - name: Fetch versions
         run: npm run fetch
-        
+
+      # Compare old vs new. Find majors that got a new patch or are missing mac/linux builds.
+      - name: Detect PHP versions that need a build
+        id: php-changes
+        run: |
+          BEFORE="${{ steps.before.outputs.snapshot }}"
+          CHANGED_MAJORS=""
+
+          while IFS='=' read -r MAJOR NEW_VERSION; do
+            [ -z "$MAJOR" ] && continue
+
+            OLD_VERSION=$(echo "$BEFORE" | tr ',' '\n' | grep "^${MAJOR}=" | cut -d= -f2)
+
+            # New patch release?
+            VERSION_CHANGED=false
+            [ "$OLD_VERSION" != "$NEW_VERSION" ] && VERSION_CHANGED=true
+
+            # Linux build missing or pointing to an older version?
+            LINUX_URL=$(jq -r ".services.php.versions[\"$MAJOR\"].linux.url // \"\"" dist/libraries.json)
+            LINUX_MISSING=false
+            if [ -z "$LINUX_URL" ]; then
+              LINUX_MISSING=true
+            else
+              # Extract version from URL like .../php-8.4.16-linux-x86_64.tar.gz
+              LINUX_VER=$(echo "$LINUX_URL" | grep -oP 'php-\K[\d.]+(?=-)' | head -1)
+              [ "$LINUX_VER" != "$NEW_VERSION" ] && LINUX_MISSING=true
+            fi
+
+            if $VERSION_CHANGED || $LINUX_MISSING; then
+              echo "PHP $MAJOR: $OLD_VERSION → $NEW_VERSION (linux_missing=$LINUX_MISSING) → NEEDS BUILD"
+              CHANGED_MAJORS="${CHANGED_MAJORS}${MAJOR},"
+            else
+              echo "PHP $MAJOR: $NEW_VERSION  ✓ up-to-date"
+            fi
+          done < <(jq -r '.services.php.versions | to_entries[] | "\(.key)=\(.value.latest)"' dist/libraries.json)
+
+          CHANGED_MAJORS="${CHANGED_MAJORS%,}"
+          echo "changed_majors=$CHANGED_MAJORS" >> $GITHUB_OUTPUT
+          echo "Majors needing build: '$CHANGED_MAJORS'"
+
       - name: Check for changes
         id: git-check
         run: |
           git diff --exit-code dist/libraries.json || echo "changed=true" >> $GITHUB_OUTPUT
-          
+
       - name: Commit and push
         if: steps.git-check.outputs.changed == 'true'
         run: |
@@ -47,11 +98,34 @@ jobs:
           git add dist/libraries.json
           git commit -m "chore: update libraries $(date +'%Y-%m-%d')"
           git push
-          
+
+      # Auto-trigger PHP build for any major that changed or is missing builds
+      - name: Trigger PHP build for new/missing versions
+        if: steps.php-changes.outputs.changed_majors != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          MAJORS="${{ steps.php-changes.outputs.changed_majors }}"
+          echo "🔨 Triggering build-php.yml for: $MAJORS"
+          gh workflow run build-php.yml \
+            --ref main \
+            --field major_versions="$MAJORS"
+
       - name: Create summary
         run: |
           echo "## Libraries Update Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
+
+          CHANGED="${{ steps.php-changes.outputs.changed_majors }}"
+          if [ -n "$CHANGED" ]; then
+            echo "### 🔨 PHP Build Triggered" >> $GITHUB_STEP_SUMMARY
+            echo "PHP majors queued for Linux/macOS build: \`$CHANGED\`" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ All PHP platforms up-to-date, no build needed." >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+          fi
+
           echo "\`\`\`json" >> $GITHUB_STEP_SUMMARY
           cat dist/libraries.json | head -50 >> $GITHUB_STEP_SUMMARY
           echo "..." >> $GITHUB_STEP_SUMMARY
