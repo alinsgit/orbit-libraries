@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-03-01T01:50:31.377Z",
+  "updated": "2026-03-01T19:45:05.825Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -317,6 +317,23 @@
         }
       }
     },
+    "mongosh": {
+      "name": "MongoDB Shell",
+      "description": "MongoDB interactive shell (mongosh) - required for database management",
+      "latest": "2.7.0",
+      "windows": {
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.7.0-win32-x64.zip",
+        "filename": "mongosh-2.7.0-win32-x64.zip"
+      },
+      "macos_arm64": {
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.7.0-darwin-arm64.zip",
+        "filename": "mongosh-2.7.0-darwin-arm64.zip"
+      },
+      "linux": {
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.7.0-linux-x64.tgz",
+        "filename": "mongosh-2.7.0-linux-x64.tgz"
+      }
+    },
     "nodejs": {
       "name": "Node.js",
       "description": "JavaScript runtime built on V8",
@@ -569,23 +586,6 @@
       "all_platforms": {
         "url": "https://getcomposer.org/download/2.9.5/composer.phar",
         "filename": "composer.phar"
-      }
-    },
-    "mongosh": {
-      "name": "MongoDB Shell",
-      "description": "MongoDB interactive shell (mongosh) - required for database management",
-      "latest": "2.3.8",
-      "windows": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.3.8-win32-x64.zip",
-        "filename": "mongosh-2.3.8-win32-x64.zip"
-      },
-      "macos_arm64": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.3.8-darwin-arm64.zip",
-        "filename": "mongosh-2.3.8-darwin-arm64.zip"
-      },
-      "linux": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.3.8-linux-x64.tgz",
-        "filename": "mongosh-2.3.8-linux-x64.tgz"
       }
     },
     "ngrok": {
