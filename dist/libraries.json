@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-03-01T19:45:05.825Z",
+  "updated": "2026-03-01T21:22:10.017Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -19,21 +19,6 @@
           "windows": {
             "url": "https://windows.php.net/downloads/releases/php-8.5.1-nts-Win32-vs17-x64.zip",
             "filename": "php-8.5.1-nts-Win32-vs17-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.1/php-8.5.1-linux-x86_64.tar.gz",
-            "filename": "php-8.5.1-linux-x86_64.tar.gz",
-            "sha256": "942ea05740b79637fcfa4d9a1b540b1a8210e9febe8f8bc6010521012ee762ac"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.1/php-8.5.1-macos-arm64.tar.gz",
-            "filename": "php-8.5.1-macos-arm64.tar.gz",
-            "sha256": "24fd38f68fcad992dd3e0b8ce25d3347420540ba2943ce2af8f69499e648a41f"
-          },
-          "macos_x64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.1/php-8.5.1-macos-x86_64.tar.gz",
-            "filename": "php-8.5.1-macos-x86_64.tar.gz",
-            "sha256": ""
           }
         },
         "8.4": {
@@ -41,21 +26,6 @@
           "windows": {
             "url": "https://windows.php.net/downloads/releases/php-8.4.16-nts-Win32-vs17-x64.zip",
             "filename": "php-8.4.16-nts-Win32-vs17-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.16/php-8.4.16-linux-x86_64.tar.gz",
-            "filename": "php-8.4.16-linux-x86_64.tar.gz",
-            "sha256": "b9920a60831ab6b440e17dd7ce4f51a3f0dfe5c65f6099379f02d68b1cab90fb"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.16/php-8.4.16-macos-arm64.tar.gz",
-            "filename": "php-8.4.16-macos-arm64.tar.gz",
-            "sha256": "fda900f96711c106682733891408fa23fe69723e6021b218651d2574e861d6af"
-          },
-          "macos_x64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.16/php-8.4.16-macos-x86_64.tar.gz",
-            "filename": "php-8.4.16-macos-x86_64.tar.gz",
-            "sha256": ""
           }
         },
         "8.3": {
@@ -63,21 +33,6 @@
           "windows": {
             "url": "https://windows.php.net/downloads/releases/php-8.3.29-nts-Win32-vs16-x64.zip",
             "filename": "php-8.3.29-nts-Win32-vs16-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.3.29/php-8.3.29-linux-x86_64.tar.gz",
-            "filename": "php-8.3.29-linux-x86_64.tar.gz",
-            "sha256": "541d9e5cf484380458c96b967ba7bd54aa37e36c6cf4484e4eea8e6d857d5f9e"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.3.29/php-8.3.29-macos-arm64.tar.gz",
-            "filename": "php-8.3.29-macos-arm64.tar.gz",
-            "sha256": "bc556bc90ab6134d1dbb366b8c086b3307322dbb00665710b7680122de7fc7a8"
-          },
-          "macos_x64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.3.29/php-8.3.29-macos-x86_64.tar.gz",
-            "filename": "php-8.3.29-macos-x86_64.tar.gz",
-            "sha256": ""
           }
         },
         "8.2": {
@@ -85,21 +40,6 @@
           "windows": {
             "url": "https://windows.php.net/downloads/releases/php-8.2.30-nts-Win32-vs16-x64.zip",
             "filename": "php-8.2.30-nts-Win32-vs16-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.2.30/php-8.2.30-linux-x86_64.tar.gz",
-            "filename": "php-8.2.30-linux-x86_64.tar.gz",
-            "sha256": "fa331e715d1a83fde1ce2f9ada75a7d54b72b6e79294d45b3e926072f3a604da"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.2.30/php-8.2.30-macos-arm64.tar.gz",
-            "filename": "php-8.2.30-macos-arm64.tar.gz",
-            "sha256": "000e8cb9005bcae5699bd8cc218e864db617204635a461c7e4a47325d68546e0"
-          },
-          "macos_x64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.2.30/php-8.2.30-macos-x86_64.tar.gz",
-            "filename": "php-8.2.30-macos-x86_64.tar.gz",
-            "sha256": ""
           }
         },
         "8.1": {
@@ -107,21 +47,6 @@
           "windows": {
             "url": "https://windows.php.net/downloads/releases/php-8.1.34-nts-Win32-vs16-x64.zip",
             "filename": "php-8.1.34-nts-Win32-vs16-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.1.34/php-8.1.34-linux-x86_64.tar.gz",
-            "filename": "php-8.1.34-linux-x86_64.tar.gz",
-            "sha256": "85884bcf00b77bee8ac1828f011ef1462b56cd7fb3b11907cf144ccbc57b5c0b"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.1.34/php-8.1.34-macos-arm64.tar.gz",
-            "filename": "php-8.1.34-macos-arm64.tar.gz",
-            "sha256": "94299f94a52bddac0a4b1d25bad5da2ac08f0c5996d4736c891068a97ba48c5d"
-          },
-          "macos_x64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.1.34/php-8.1.34-macos-x86_64.tar.gz",
-            "filename": "php-8.1.34-macos-x86_64.tar.gz",
-            "sha256": ""
           }
         }
       }
@@ -142,6 +67,14 @@
           "windows": {
             "url": "https://nginx.org/download/nginx-1.29.5.zip",
             "filename": "nginx-1.29.5.zip"
+          },
+          "linux": {
+            "url": "https://nginx.org/download/nginx-1.29.5.tar.gz",
+            "filename": "nginx-1.29.5.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nginx.org/download/nginx-1.29.5.tar.gz",
+            "filename": "nginx-1.29.5.tar.gz"
           }
         },
         "1.28": {
@@ -149,6 +82,14 @@
           "windows": {
             "url": "https://nginx.org/download/nginx-1.28.2.zip",
             "filename": "nginx-1.28.2.zip"
+          },
+          "linux": {
+            "url": "https://nginx.org/download/nginx-1.28.2.tar.gz",
+            "filename": "nginx-1.28.2.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nginx.org/download/nginx-1.28.2.tar.gz",
+            "filename": "nginx-1.28.2.tar.gz"
           }
         },
         "1.26": {
@@ -156,6 +97,14 @@
           "windows": {
             "url": "https://nginx.org/download/nginx-1.26.3.zip",
             "filename": "nginx-1.26.3.zip"
+          },
+          "linux": {
+            "url": "https://nginx.org/download/nginx-1.26.3.tar.gz",
+            "filename": "nginx-1.26.3.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nginx.org/download/nginx-1.26.3.tar.gz",
+            "filename": "nginx-1.26.3.tar.gz"
           }
         },
         "1.24": {
@@ -163,6 +112,14 @@
           "windows": {
             "url": "https://nginx.org/download/nginx-1.24.0.zip",
             "filename": "nginx-1.24.0.zip"
+          },
+          "linux": {
+            "url": "https://nginx.org/download/nginx-1.24.0.tar.gz",
+            "filename": "nginx-1.24.0.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nginx.org/download/nginx-1.24.0.tar.gz",
+            "filename": "nginx-1.24.0.tar.gz"
           }
         },
         "1.22": {
@@ -170,6 +127,14 @@
           "windows": {
             "url": "https://nginx.org/download/nginx-1.22.1.zip",
             "filename": "nginx-1.22.1.zip"
+          },
+          "linux": {
+            "url": "https://nginx.org/download/nginx-1.22.1.tar.gz",
+            "filename": "nginx-1.22.1.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nginx.org/download/nginx-1.22.1.tar.gz",
+            "filename": "nginx-1.22.1.tar.gz"
           }
         }
       }
@@ -424,6 +389,18 @@
           "windows": {
             "url": "https://nodejs.org/dist/v20.20.0/node-v20.20.0-win-x64.zip",
             "filename": "node-v20.20.0-win-x64.zip"
+          },
+          "linux": {
+            "url": "https://nodejs.org/dist/v20.20.0/node-v20.20.0-linux-x64.tar.gz",
+            "filename": "node-v20.20.0-linux-x64.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nodejs.org/dist/v20.20.0/node-v20.20.0-darwin-arm64.tar.gz",
+            "filename": "node-v20.20.0-darwin-arm64.tar.gz"
+          },
+          "macos_x64": {
+            "url": "https://nodejs.org/dist/v20.20.0/node-v20.20.0-darwin-x64.tar.gz",
+            "filename": "node-v20.20.0-darwin-x64.tar.gz"
           }
         },
         "22": {
@@ -431,6 +408,18 @@
           "windows": {
             "url": "https://nodejs.org/dist/v22.22.0/node-v22.22.0-win-x64.zip",
             "filename": "node-v22.22.0-win-x64.zip"
+          },
+          "linux": {
+            "url": "https://nodejs.org/dist/v22.22.0/node-v22.22.0-linux-x64.tar.gz",
+            "filename": "node-v22.22.0-linux-x64.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nodejs.org/dist/v22.22.0/node-v22.22.0-darwin-arm64.tar.gz",
+            "filename": "node-v22.22.0-darwin-arm64.tar.gz"
+          },
+          "macos_x64": {
+            "url": "https://nodejs.org/dist/v22.22.0/node-v22.22.0-darwin-x64.tar.gz",
+            "filename": "node-v22.22.0-darwin-x64.tar.gz"
           }
         },
         "24": {
@@ -438,6 +427,18 @@
           "windows": {
             "url": "https://nodejs.org/dist/v24.14.0/node-v24.14.0-win-x64.zip",
             "filename": "node-v24.14.0-win-x64.zip"
+          },
+          "linux": {
+            "url": "https://nodejs.org/dist/v24.14.0/node-v24.14.0-linux-x64.tar.gz",
+            "filename": "node-v24.14.0-linux-x64.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nodejs.org/dist/v24.14.0/node-v24.14.0-darwin-arm64.tar.gz",
+            "filename": "node-v24.14.0-darwin-arm64.tar.gz"
+          },
+          "macos_x64": {
+            "url": "https://nodejs.org/dist/v24.14.0/node-v24.14.0-darwin-x64.tar.gz",
+            "filename": "node-v24.14.0-darwin-x64.tar.gz"
           }
         },
         "25": {
@@ -445,6 +446,18 @@
           "windows": {
             "url": "https://nodejs.org/dist/v25.7.0/node-v25.7.0-win-x64.zip",
             "filename": "node-v25.7.0-win-x64.zip"
+          },
+          "linux": {
+            "url": "https://nodejs.org/dist/v25.7.0/node-v25.7.0-linux-x64.tar.gz",
+            "filename": "node-v25.7.0-linux-x64.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nodejs.org/dist/v25.7.0/node-v25.7.0-darwin-arm64.tar.gz",
+            "filename": "node-v25.7.0-darwin-arm64.tar.gz"
+          },
+          "macos_x64": {
+            "url": "https://nodejs.org/dist/v25.7.0/node-v25.7.0-darwin-x64.tar.gz",
+            "filename": "node-v25.7.0-darwin-x64.tar.gz"
           }
         }
       }
@@ -464,6 +477,14 @@
           "windows": {
             "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-embed-amd64.zip",
             "filename": "python-3.14.3-embed-amd64.zip"
+          },
+          "linux": {
+            "url": "https://www.python.org/ftp/python/3.14.3/Python-3.14.3.tgz",
+            "filename": "Python-3.14.3.tgz"
+          },
+          "macos_arm64": {
+            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-macos11.pkg",
+            "filename": "python-3.14.3-macos11.pkg"
           }
         },
         "3.13": {
@@ -471,6 +492,14 @@
           "windows": {
             "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-embed-amd64.zip",
             "filename": "python-3.13.12-embed-amd64.zip"
+          },
+          "linux": {
+            "url": "https://www.python.org/ftp/python/3.13.12/Python-3.13.12.tgz",
+            "filename": "Python-3.13.12.tgz"
+          },
+          "macos_arm64": {
+            "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-macos11.pkg",
+            "filename": "python-3.13.12-macos11.pkg"
           }
         },
         "3.12": {
@@ -503,6 +532,18 @@
           "windows": {
             "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.10/bun-windows-x64.zip",
             "filename": "bun-windows-x64.zip"
+          },
+          "linux": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.10/bun-linux-x64.zip",
+            "filename": "bun-linux-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.10/bun-darwin-aarch64.zip",
+            "filename": "bun-darwin-aarch64.zip"
+          },
+          "macos_x64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.10/bun-darwin-x64.zip",
+            "filename": "bun-darwin-x64.zip"
           }
         },
         "1.2": {
@@ -510,6 +551,18 @@
           "windows": {
             "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.2.23/bun-windows-x64.zip",
             "filename": "bun-windows-x64.zip"
+          },
+          "linux": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.2.23/bun-linux-x64.zip",
+            "filename": "bun-linux-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.2.23/bun-darwin-aarch64.zip",
+            "filename": "bun-darwin-aarch64.zip"
+          },
+          "macos_x64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.2.23/bun-darwin-x64.zip",
+            "filename": "bun-darwin-x64.zip"
           }
         },
         "1.1": {
@@ -517,6 +570,18 @@
           "windows": {
             "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.1.45/bun-windows-x64.zip",
             "filename": "bun-windows-x64.zip"
+          },
+          "linux": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.1.45/bun-linux-x64.zip",
+            "filename": "bun-linux-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.1.45/bun-darwin-aarch64.zip",
+            "filename": "bun-darwin-aarch64.zip"
+          },
+          "macos_x64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.1.45/bun-darwin-x64.zip",
+            "filename": "bun-darwin-x64.zip"
           }
         }
       }
