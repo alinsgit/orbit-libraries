@@ -28,6 +28,14 @@ function compareVersions(a, b) {
 async function fetchPhpVersions() {
     console.log('Fetching PHP versions...');
 
+    // Load existing libraries.json to preserve linux/macos_arm64 URLs
+    // (these are set by build-php.yml and must not be overwritten by this script)
+    let existing = {};
+    try {
+        const raw = fs.readFileSync(OUTPUT_FILE, 'utf8');
+        existing = JSON.parse(raw).services?.php?.versions || {};
+    } catch { /* first run, no file yet */ }
+
     const versions = {};
     const targetVersions = ['8.5', '8.4', '8.3', '8.2', '8.1'];
 
@@ -52,6 +60,8 @@ async function fetchPhpVersions() {
 
                 const fullVersion = latestMatch[1];
                 const vsVersion = latestMatch[0].includes('vs17') ? 'vs17' : 'vs16';
+                const prev = existing[majorVersion] || {};
+
                 versions[majorVersion] = {
                     latest: fullVersion,
                     windows: {
@@ -59,6 +69,13 @@ async function fetchPhpVersions() {
                         filename: `php-${fullVersion}-nts-Win32-${vsVersion}-x64.zip`
                     }
                 };
+
+                // Preserve linux/macos_arm64 if the patch version hasn't changed
+                if (prev.latest === fullVersion) {
+                    if (prev.linux) versions[majorVersion].linux = prev.linux;
+                    if (prev.macos_arm64) versions[majorVersion].macos_arm64 = prev.macos_arm64;
+                }
+
                 console.log(`  PHP ${majorVersion}: ${fullVersion}`);
             }
         }
@@ -75,7 +92,14 @@ async function fetchPhpVersions() {
         '8.1': { latest: '8.1.34', windows: { url: 'https://windows.php.net/downloads/releases/php-8.1.34-nts-Win32-vs16-x64.zip', filename: 'php-8.1.34-nts-Win32-vs16-x64.zip' } }
     };
     for (const [v, data] of Object.entries(fallbacks)) {
-        if (!versions[v]) versions[v] = data;
+        if (!versions[v]) {
+            const prev = existing[v] || {};
+            versions[v] = { ...data };
+            if (prev.latest === data.latest) {
+                if (prev.linux) versions[v].linux = prev.linux;
+                if (prev.macos_arm64) versions[v].macos_arm64 = prev.macos_arm64;
+            }
+        }
     }
 
     return {
