@@ -1,93 +1,31 @@
-# Orbit Libraries
+# orbit-libraries
 
-Centralized library registry for [Orbit](https://github.com/alinsgit/orbit) - Local Development Environment.
+Backend manifest and build infrastructure for [Orbit](https://github.com/alinsgit/orbit).
 
-## Purpose
+## What's here
 
-This repository maintains an up-to-date JSON manifest with download URLs and version info for all services supported by Orbit. It also builds and distributes pre-compiled PHP binaries for Windows, Linux, and macOS.
+- **`dist/libraries.json`** — version manifest fetched by the Orbit app at runtime
+- **`scripts/`** — Node.js scripts that scrape official sources for latest versions
+- **`.github/workflows/update.yml`** — runs weekly, updates the manifest
+- **`.github/workflows/build-php.yml`** — compiles PHP from source for Linux and macOS, publishes GitHub Releases
 
-## Services
+## Workflows
 
-| Service | Source | Platforms |
-|---------|--------|-----------|
-| **PHP** (multi-version) | Built from source | Windows, Linux, macOS (arm64) |
-| **Nginx** | nginx.org | Windows |
-| **MariaDB** | mariadb.org | Windows |
-| **Redis** | Redis releases | Windows |
-| **Mailpit** | GitHub releases | Windows |
-| **Composer** | getcomposer.org | All |
+### update.yml (weekly)
+Checks for new versions of all services and commits updated `dist/libraries.json`. Automatically triggers `build-php.yml` when new PHP versions are detected.
 
-## How It Works
+### build-php.yml (triggered by update.yml or manually)
+Builds PHP from source for:
+- Linux x86_64 (`.tar.gz`)
+- macOS arm64 / Apple Silicon (`.tar.gz`)
 
-1. **`update.yml`** runs weekly — fetches latest versions of all services and commits changes to `dist/libraries.json`
-2. When new PHP versions are detected, **`build-php.yml`** is automatically triggered
-3. **`build-php.yml`** compiles PHP from source for each platform, packages binaries as `.tar.gz` / `.zip`, and creates a GitHub Release
-4. The **Orbit app** fetches `libraries.json` at runtime to resolve download URLs
+Windows PHP binaries come directly from [windows.php.net](https://windows.php.net).
 
-## PHP Builds
-
-PHP binaries are compiled from official php.net source tarballs and distributed as GitHub Release assets.
-
-**Supported platforms:**
-- `php-{version}-windows-x64.zip` — Windows (from windows.php.net)
-- `php-{version}-linux-x86_64.tar.gz` — Linux x86_64
-- `php-{version}-macos-arm64.tar.gz` — macOS Apple Silicon (M1/M2/M3/M4)
-
-**Included extensions:** OpenSSL, cURL, GD (JPEG/WebP/FreeType), MBString, MySQLi/PDO-MySQL, PDO-SQLite, GMP, Sodium, FFI, XSL, Readline, Zip, BCMath, Sockets, Calendar, Exif, Opcache
-
-## Libraries Manifest
-
-Orbit fetches the manifest from:
-```
-https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/dist/libraries.json
-```
-
-## Manual Update
+## Manual trigger
 
 ```bash
-npm install
-npm run fetch
-```
-
-## Triggering a PHP Build
-
-```bash
-# Build all active PHP major versions
-gh workflow run build-php.yml --ref main
-
-# Build specific versions only
+# Build specific PHP major versions
 gh workflow run build-php.yml --ref main --field major_versions="8.3,8.4"
-```
-
-## JSON Format
-
-```json
-{
-  "updated": "2026-03-01T00:00:00Z",
-  "services": {
-    "php": {
-      "versions": {
-        "8.4": {
-          "version": "8.4.16",
-          "windows": {
-            "url": "https://windows.php.net/downloads/...",
-            "sha256": "..."
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.16/php-8.4.16-linux-x86_64.tar.gz",
-            "sha256": "..."
-          },
-          "macos": {
-            "arm64": {
-              "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.16/php-8.4.16-macos-arm64.tar.gz",
-              "sha256": "..."
-            }
-          }
-        }
-      }
-    }
-  }
-}
 ```
 
 ## License
