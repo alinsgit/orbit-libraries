@@ -261,7 +261,7 @@ jobs:
             --enable-bcmath \
             --enable-calendar \
             --enable-exif \
-            --with-gmp \
+            --with-gmp=$(brew --prefix gmp) \
             --with-sodium \
             --with-ffi \
             --with-xsl \
