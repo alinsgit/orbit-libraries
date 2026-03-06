@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-03-05T01:42:09.973Z",
+  "updated": "2026-03-06T01:44:15.032Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -425,41 +425,41 @@
       ],
       "versions": {
         "20": {
-          "latest": "20.20.0",
+          "latest": "20.20.1",
           "windows": {
-            "url": "https://nodejs.org/dist/v20.20.0/node-v20.20.0-win-x64.zip",
-            "filename": "node-v20.20.0-win-x64.zip"
+            "url": "https://nodejs.org/dist/v20.20.1/node-v20.20.1-win-x64.zip",
+            "filename": "node-v20.20.1-win-x64.zip"
           },
           "linux": {
-            "url": "https://nodejs.org/dist/v20.20.0/node-v20.20.0-linux-x64.tar.gz",
-            "filename": "node-v20.20.0-linux-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v20.20.1/node-v20.20.1-linux-x64.tar.gz",
+            "filename": "node-v20.20.1-linux-x64.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nodejs.org/dist/v20.20.0/node-v20.20.0-darwin-arm64.tar.gz",
-            "filename": "node-v20.20.0-darwin-arm64.tar.gz"
+            "url": "https://nodejs.org/dist/v20.20.1/node-v20.20.1-darwin-arm64.tar.gz",
+            "filename": "node-v20.20.1-darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://nodejs.org/dist/v20.20.0/node-v20.20.0-darwin-x64.tar.gz",
-            "filename": "node-v20.20.0-darwin-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v20.20.1/node-v20.20.1-darwin-x64.tar.gz",
+            "filename": "node-v20.20.1-darwin-x64.tar.gz"
           }
         },
         "22": {
-          "latest": "22.22.0",
+          "latest": "22.22.1",
           "windows": {
-            "url": "https://nodejs.org/dist/v22.22.0/node-v22.22.0-win-x64.zip",
-            "filename": "node-v22.22.0-win-x64.zip"
+            "url": "https://nodejs.org/dist/v22.22.1/node-v22.22.1-win-x64.zip",
+            "filename": "node-v22.22.1-win-x64.zip"
           },
           "linux": {
-            "url": "https://nodejs.org/dist/v22.22.0/node-v22.22.0-linux-x64.tar.gz",
-            "filename": "node-v22.22.0-linux-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v22.22.1/node-v22.22.1-linux-x64.tar.gz",
+            "filename": "node-v22.22.1-linux-x64.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nodejs.org/dist/v22.22.0/node-v22.22.0-darwin-arm64.tar.gz",
-            "filename": "node-v22.22.0-darwin-arm64.tar.gz"
+            "url": "https://nodejs.org/dist/v22.22.1/node-v22.22.1-darwin-arm64.tar.gz",
+            "filename": "node-v22.22.1-darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://nodejs.org/dist/v22.22.0/node-v22.22.0-darwin-x64.tar.gz",
-            "filename": "node-v22.22.0-darwin-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v22.22.1/node-v22.22.1-darwin-x64.tar.gz",
+            "filename": "node-v22.22.1-darwin-x64.tar.gz"
           }
         },
         "24": {
@@ -635,41 +635,41 @@
       ],
       "versions": {
         "1.26": {
-          "latest": "1.26.0",
+          "latest": "1.26.1",
           "windows": {
-            "url": "https://dl.google.com/go/go1.26.0.windows-amd64.zip",
-            "filename": "go1.26.0.windows-amd64.zip"
+            "url": "https://dl.google.com/go/go1.26.1.windows-amd64.zip",
+            "filename": "go1.26.1.windows-amd64.zip"
           },
           "macos_arm64": {
-            "url": "https://dl.google.com/go/go1.26.0.darwin-arm64.tar.gz",
-            "filename": "go1.26.0.darwin-arm64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.1.darwin-arm64.tar.gz",
+            "filename": "go1.26.1.darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://dl.google.com/go/go1.26.0.darwin-amd64.tar.gz",
-            "filename": "go1.26.0.darwin-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.1.darwin-amd64.tar.gz",
+            "filename": "go1.26.1.darwin-amd64.tar.gz"
           },
           "linux": {
-            "url": "https://dl.google.com/go/go1.26.0.linux-amd64.tar.gz",
-            "filename": "go1.26.0.linux-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.1.linux-amd64.tar.gz",
+            "filename": "go1.26.1.linux-amd64.tar.gz"
           }
         },
         "1.25": {
-          "latest": "1.25.7",
+          "latest": "1.25.8",
           "windows": {
-            "url": "https://dl.google.com/go/go1.25.7.windows-amd64.zip",
-            "filename": "go1.25.7.windows-amd64.zip"
+            "url": "https://dl.google.com/go/go1.25.8.windows-amd64.zip",
+            "filename": "go1.25.8.windows-amd64.zip"
           },
           "macos_arm64": {
-            "url": "https://dl.google.com/go/go1.25.7.darwin-arm64.tar.gz",
-            "filename": "go1.25.7.darwin-arm64.tar.gz"
+            "url": "https://dl.google.com/go/go1.25.8.darwin-arm64.tar.gz",
+            "filename": "go1.25.8.darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://dl.google.com/go/go1.25.7.darwin-amd64.tar.gz",
-            "filename": "go1.25.7.darwin-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.25.8.darwin-amd64.tar.gz",
+            "filename": "go1.25.8.darwin-amd64.tar.gz"
           },
           "linux": {
-            "url": "https://dl.google.com/go/go1.25.7.linux-amd64.tar.gz",
-            "filename": "go1.25.7.linux-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.25.8.linux-amd64.tar.gz",
+            "filename": "go1.25.8.linux-amd64.tar.gz"
           }
         }
       }
@@ -677,21 +677,21 @@
     "deno": {
       "name": "Deno",
       "description": "Next-generation JavaScript runtime",
-      "latest": "2.7.3",
+      "latest": "2.7.4",
       "windows": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.7.3/deno-x86_64-pc-windows-msvc.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.7.4/deno-x86_64-pc-windows-msvc.zip",
         "filename": "deno-x86_64-pc-windows-msvc.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.7.3/deno-aarch64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.7.4/deno-aarch64-apple-darwin.zip",
         "filename": "deno-aarch64-apple-darwin.zip"
       },
       "macos_x64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.7.3/deno-x86_64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.7.4/deno-x86_64-apple-darwin.zip",
         "filename": "deno-x86_64-apple-darwin.zip"
       },
       "linux": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.7.3/deno-x86_64-unknown-linux-gnu.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.7.4/deno-x86_64-unknown-linux-gnu.zip",
         "filename": "deno-x86_64-unknown-linux-gnu.zip"
       }
     },
@@ -719,9 +719,9 @@
     "redis": {
       "name": "Redis",
       "description": "In-memory data structure store",
-      "latest": "8.6.1",
+      "latest": "8.6.1.1",
       "windows": {
-        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.6.1/Redis-8.6.1-Windows-x64-cygwin-with-Service.zip",
+        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.6.1.1/Redis-8.6.1-Windows-x64-cygwin-with-Service.zip",
         "filename": "Redis-8.6.1-Windows-x64-cygwin-with-Service.zip"
       }
     },
