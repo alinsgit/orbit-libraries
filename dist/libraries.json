@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-03-10T01:25:59.856Z",
+  "updated": "2026-03-11T01:26:02.642Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -103,18 +103,18 @@
       ],
       "versions": {
         "1.29": {
-          "latest": "1.29.5",
+          "latest": "1.29.6",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.29.5.zip",
-            "filename": "nginx-1.29.5.zip"
+            "url": "https://nginx.org/download/nginx-1.29.6.zip",
+            "filename": "nginx-1.29.6.zip"
           },
           "linux": {
-            "url": "https://nginx.org/download/nginx-1.29.5.tar.gz",
-            "filename": "nginx-1.29.5.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.29.6.tar.gz",
+            "filename": "nginx-1.29.6.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.29.5.tar.gz",
-            "filename": "nginx-1.29.5.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.29.6.tar.gz",
+            "filename": "nginx-1.29.6.tar.gz"
           }
         },
         "1.28": {
@@ -728,17 +728,17 @@
     "mailpit": {
       "name": "Mailpit",
       "description": "Email testing tool for developers",
-      "latest": "1.29.2",
+      "latest": "1.29.3",
       "windows": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.2/mailpit-windows-amd64.zip",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.3/mailpit-windows-amd64.zip",
         "filename": "mailpit-windows-amd64.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.2/mailpit-darwin-arm64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.3/mailpit-darwin-arm64.tar.gz",
         "filename": "mailpit-darwin-arm64.tar.gz"
       },
       "linux": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.2/mailpit-linux-amd64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.3/mailpit-linux-amd64.tar.gz",
         "filename": "mailpit-linux-amd64.tar.gz"
       }
     },
