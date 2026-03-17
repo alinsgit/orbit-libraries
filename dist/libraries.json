@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-03-16T01:55:17.607Z",
+  "updated": "2026-03-17T01:43:32.505Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -400,18 +400,18 @@
     "mongosh": {
       "name": "MongoDB Shell",
       "description": "MongoDB interactive shell (mongosh) - required for database management",
-      "latest": "2.7.0",
+      "latest": "2.8.1",
       "windows": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.7.0-win32-x64.zip",
-        "filename": "mongosh-2.7.0-win32-x64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.8.1-win32-x64.zip",
+        "filename": "mongosh-2.8.1-win32-x64.zip"
       },
       "macos_arm64": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.7.0-darwin-arm64.zip",
-        "filename": "mongosh-2.7.0-darwin-arm64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.8.1-darwin-arm64.zip",
+        "filename": "mongosh-2.8.1-darwin-arm64.zip"
       },
       "linux": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.7.0-linux-x64.tgz",
-        "filename": "mongosh-2.7.0-linux-x64.tgz"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.8.1-linux-x64.tgz",
+        "filename": "mongosh-2.8.1-linux-x64.tgz"
       }
     },
     "nodejs": {
@@ -745,17 +745,17 @@
     "meilisearch": {
       "name": "Meilisearch",
       "description": "Fast, typo-tolerant search engine",
-      "latest": "1.38.2",
+      "latest": "1.39.0",
       "windows": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.38.2/meilisearch-windows-amd64.exe",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.39.0/meilisearch-windows-amd64.exe",
         "filename": "meilisearch-windows-amd64.exe"
       },
       "macos_arm64": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.38.2/meilisearch-macos-apple-silicon",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.39.0/meilisearch-macos-apple-silicon",
         "filename": "meilisearch-macos-apple-silicon"
       },
       "linux": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.38.2/meilisearch-linux-amd64",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.39.0/meilisearch-linux-amd64",
         "filename": "meilisearch-linux-amd64"
       }
     },
