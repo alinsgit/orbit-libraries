@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-03-20T01:43:14.765Z",
+  "updated": "2026-03-21T01:26:10.157Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -15,48 +15,24 @@
       ],
       "versions": {
         "8.5": {
-          "latest": "8.5.1",
+          "latest": "8.5.4",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.5.1-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.5.1-nts-Win32-vs17-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.1/php-8.5.1-linux-x86_64.tar.gz",
-            "filename": "php-8.5.1-linux-x86_64.tar.gz"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.1/php-8.5.1-macos-arm64.tar.gz",
-            "filename": "php-8.5.1-macos-arm64.tar.gz"
+            "url": "https://windows.php.net/downloads/releases/php-8.5.4-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.5.4-nts-Win32-vs17-x64.zip"
           }
         },
         "8.4": {
-          "latest": "8.4.16",
+          "latest": "8.4.19",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.4.16-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.4.16-nts-Win32-vs17-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.16/php-8.4.16-linux-x86_64.tar.gz",
-            "filename": "php-8.4.16-linux-x86_64.tar.gz"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.16/php-8.4.16-macos-arm64.tar.gz",
-            "filename": "php-8.4.16-macos-arm64.tar.gz"
+            "url": "https://windows.php.net/downloads/releases/php-8.4.19-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.4.19-nts-Win32-vs17-x64.zip"
           }
         },
         "8.3": {
-          "latest": "8.3.29",
+          "latest": "8.3.30",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.3.29-nts-Win32-vs16-x64.zip",
-            "filename": "php-8.3.29-nts-Win32-vs16-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.3.29/php-8.3.29-linux-x86_64.tar.gz",
-            "filename": "php-8.3.29-linux-x86_64.tar.gz"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.3.29/php-8.3.29-macos-arm64.tar.gz",
-            "filename": "php-8.3.29-macos-arm64.tar.gz"
+            "url": "https://windows.php.net/downloads/releases/php-8.3.30-nts-Win32-vs16-x64.zip",
+            "filename": "php-8.3.30-nts-Win32-vs16-x64.zip"
           }
         },
         "8.2": {
@@ -506,54 +482,22 @@
       "name": "Python",
       "description": "General-purpose programming language",
       "availableVersions": [
-        "3.14",
         "3.13",
-        "3.12",
-        "3.11"
+        "3.12"
       ],
       "versions": {
-        "3.14": {
-          "latest": "3.14.3",
-          "windows": {
-            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-embed-amd64.zip",
-            "filename": "python-3.14.3-embed-amd64.zip"
-          },
-          "linux": {
-            "url": "https://www.python.org/ftp/python/3.14.3/Python-3.14.3.tgz",
-            "filename": "Python-3.14.3.tgz"
-          },
-          "macos_arm64": {
-            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-macos11.pkg",
-            "filename": "python-3.14.3-macos11.pkg"
-          }
-        },
         "3.13": {
           "latest": "3.13.12",
           "windows": {
             "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-embed-amd64.zip",
             "filename": "python-3.13.12-embed-amd64.zip"
-          },
-          "linux": {
-            "url": "https://www.python.org/ftp/python/3.13.12/Python-3.13.12.tgz",
-            "filename": "Python-3.13.12.tgz"
-          },
-          "macos_arm64": {
-            "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-macos11.pkg",
-            "filename": "python-3.13.12-macos11.pkg"
           }
         },
         "3.12": {
-          "latest": "3.12.10",
+          "latest": "3.12.8",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip",
-            "filename": "python-3.12.10-embed-amd64.zip"
-          }
-        },
-        "3.11": {
-          "latest": "3.11.9",
-          "windows": {
-            "url": "https://www.python.org/ftp/python/3.11.9/python-3.11.9-embed-amd64.zip",
-            "filename": "python-3.11.9-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-embed-amd64.zip",
+            "filename": "python-3.12.8-embed-amd64.zip"
           }
         }
       }
