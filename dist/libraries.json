@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-03-22T01:52:34.375Z",
+  "updated": "2026-03-23T01:49:01.656Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -492,22 +492,54 @@
       "name": "Python",
       "description": "General-purpose programming language",
       "availableVersions": [
+        "3.14",
         "3.13",
-        "3.12"
+        "3.12",
+        "3.11"
       ],
       "versions": {
+        "3.14": {
+          "latest": "3.14.3",
+          "windows": {
+            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-embed-amd64.zip",
+            "filename": "python-3.14.3-embed-amd64.zip"
+          },
+          "linux": {
+            "url": "https://www.python.org/ftp/python/3.14.3/Python-3.14.3.tgz",
+            "filename": "Python-3.14.3.tgz"
+          },
+          "macos_arm64": {
+            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-macos11.pkg",
+            "filename": "python-3.14.3-macos11.pkg"
+          }
+        },
         "3.13": {
           "latest": "3.13.12",
           "windows": {
             "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-embed-amd64.zip",
             "filename": "python-3.13.12-embed-amd64.zip"
+          },
+          "linux": {
+            "url": "https://www.python.org/ftp/python/3.13.12/Python-3.13.12.tgz",
+            "filename": "Python-3.13.12.tgz"
+          },
+          "macos_arm64": {
+            "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-macos11.pkg",
+            "filename": "python-3.13.12-macos11.pkg"
           }
         },
         "3.12": {
-          "latest": "3.12.8",
+          "latest": "3.12.10",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-embed-amd64.zip",
-            "filename": "python-3.12.8-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip",
+            "filename": "python-3.12.10-embed-amd64.zip"
+          }
+        },
+        "3.11": {
+          "latest": "3.11.9",
+          "windows": {
+            "url": "https://www.python.org/ftp/python/3.11.9/python-3.11.9-embed-amd64.zip",
+            "filename": "python-3.11.9-embed-amd64.zip"
           }
         }
       }
@@ -682,17 +714,17 @@
     "mailpit": {
       "name": "Mailpit",
       "description": "Email testing tool for developers",
-      "latest": "1.29.3",
+      "latest": "1.29.4",
       "windows": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.3/mailpit-windows-amd64.zip",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.4/mailpit-windows-amd64.zip",
         "filename": "mailpit-windows-amd64.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.3/mailpit-darwin-arm64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.4/mailpit-darwin-arm64.tar.gz",
         "filename": "mailpit-darwin-arm64.tar.gz"
       },
       "linux": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.3/mailpit-linux-amd64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.4/mailpit-linux-amd64.tar.gz",
         "filename": "mailpit-linux-amd64.tar.gz"
       }
     },
