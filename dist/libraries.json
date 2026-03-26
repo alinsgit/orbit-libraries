@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-03-25T01:46:46.378Z",
+  "updated": "2026-03-26T01:53:00.622Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -386,18 +386,18 @@
     "mongosh": {
       "name": "MongoDB Shell",
       "description": "MongoDB interactive shell (mongosh) - required for database management",
-      "latest": "2.3.8",
+      "latest": "2.8.1",
       "windows": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.3.8-win32-x64.zip",
-        "filename": "mongosh-2.3.8-win32-x64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.8.1-win32-x64.zip",
+        "filename": "mongosh-2.8.1-win32-x64.zip"
       },
       "macos_arm64": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.3.8-darwin-arm64.zip",
-        "filename": "mongosh-2.3.8-darwin-arm64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.8.1-darwin-arm64.zip",
+        "filename": "mongosh-2.8.1-darwin-arm64.zip"
       },
       "linux": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.3.8-linux-x64.tgz",
-        "filename": "mongosh-2.3.8-linux-x64.tgz"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.8.1-linux-x64.tgz",
+        "filename": "mongosh-2.8.1-linux-x64.tgz"
       }
     },
     "nodejs": {
@@ -548,14 +548,66 @@
       "name": "Bun",
       "description": "Fast JavaScript runtime and toolkit",
       "availableVersions": [
-        "1.3"
+        "1.3",
+        "1.2",
+        "1.1"
       ],
       "versions": {
         "1.3": {
-          "latest": "1.3.8",
+          "latest": "1.3.11",
           "windows": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.8/bun-windows-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.11/bun-windows-x64.zip",
             "filename": "bun-windows-x64.zip"
+          },
+          "linux": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.11/bun-linux-x64.zip",
+            "filename": "bun-linux-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.11/bun-darwin-aarch64.zip",
+            "filename": "bun-darwin-aarch64.zip"
+          },
+          "macos_x64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.11/bun-darwin-x64.zip",
+            "filename": "bun-darwin-x64.zip"
+          }
+        },
+        "1.2": {
+          "latest": "1.2.23",
+          "windows": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.2.23/bun-windows-x64.zip",
+            "filename": "bun-windows-x64.zip"
+          },
+          "linux": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.2.23/bun-linux-x64.zip",
+            "filename": "bun-linux-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.2.23/bun-darwin-aarch64.zip",
+            "filename": "bun-darwin-aarch64.zip"
+          },
+          "macos_x64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.2.23/bun-darwin-x64.zip",
+            "filename": "bun-darwin-x64.zip"
+          }
+        },
+        "1.1": {
+          "latest": "1.1.45",
+          "windows": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.1.45/bun-windows-x64.zip",
+            "filename": "bun-windows-x64.zip"
+          },
+          "linux": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.1.45/bun-linux-x64.zip",
+            "filename": "bun-linux-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.1.45/bun-darwin-aarch64.zip",
+            "filename": "bun-darwin-aarch64.zip"
+          },
+          "macos_x64": {
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.1.45/bun-darwin-x64.zip",
+            "filename": "bun-darwin-x64.zip"
           }
         }
       }
@@ -611,21 +663,21 @@
     "deno": {
       "name": "Deno",
       "description": "Next-generation JavaScript runtime",
-      "latest": "2.1.0",
+      "latest": "2.7.8",
       "windows": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.1.0/deno-x86_64-pc-windows-msvc.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.7.8/deno-x86_64-pc-windows-msvc.zip",
         "filename": "deno-x86_64-pc-windows-msvc.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.1.0/deno-aarch64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.7.8/deno-aarch64-apple-darwin.zip",
         "filename": "deno-aarch64-apple-darwin.zip"
       },
       "macos_x64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.1.0/deno-x86_64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.7.8/deno-x86_64-apple-darwin.zip",
         "filename": "deno-x86_64-apple-darwin.zip"
       },
       "linux": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.1.0/deno-x86_64-unknown-linux-gnu.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.7.8/deno-x86_64-unknown-linux-gnu.zip",
         "filename": "deno-x86_64-unknown-linux-gnu.zip"
       }
     },
@@ -653,27 +705,44 @@
     "redis": {
       "name": "Redis",
       "description": "In-memory data structure store",
+      "latest": "8.6.2",
       "windows": {
-        "url": "https://github.com/redis-windows/redis-windows/releases/download/undefined/Redis-undefined-Windows-x64-cygwin-with-Service.zip",
-        "filename": "Redis-undefined-Windows-x64-cygwin-with-Service.zip"
+        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.6.2/Redis-8.6.2-Windows-x64-cygwin-with-Service.zip",
+        "filename": "Redis-8.6.2-Windows-x64-cygwin-with-Service.zip"
       }
     },
     "mailpit": {
       "name": "Mailpit",
       "description": "Email testing tool for developers",
-      "latest": "1.29.0",
+      "latest": "1.29.4",
       "windows": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.0/mailpit-windows-amd64.zip",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.4/mailpit-windows-amd64.zip",
         "filename": "mailpit-windows-amd64.zip"
+      },
+      "macos_arm64": {
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.4/mailpit-darwin-arm64.tar.gz",
+        "filename": "mailpit-darwin-arm64.tar.gz"
+      },
+      "linux": {
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.4/mailpit-linux-amd64.tar.gz",
+        "filename": "mailpit-linux-amd64.tar.gz"
       }
     },
     "meilisearch": {
       "name": "Meilisearch",
       "description": "Fast, typo-tolerant search engine",
-      "latest": "1.36.0",
+      "latest": "1.40.0",
       "windows": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.36.0/meilisearch-windows-amd64.exe",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.40.0/meilisearch-windows-amd64.exe",
         "filename": "meilisearch-windows-amd64.exe"
+      },
+      "macos_arm64": {
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.40.0/meilisearch-macos-apple-silicon",
+        "filename": "meilisearch-macos-apple-silicon"
+      },
+      "linux": {
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.40.0/meilisearch-linux-amd64",
+        "filename": "meilisearch-linux-amd64"
       }
     },
     "composer": {
