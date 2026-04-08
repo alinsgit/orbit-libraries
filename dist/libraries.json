@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-04-07T01:55:07.521Z",
+  "updated": "2026-04-08T01:55:44.444Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -15,10 +15,10 @@
       ],
       "versions": {
         "8.5": {
-          "latest": "8.5.4",
+          "latest": "8.5.5",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.5.4-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.5.4-nts-Win32-vs17-x64.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.5.5-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.5.5-nts-Win32-vs17-x64.zip"
           }
         },
         "8.4": {
@@ -89,18 +89,18 @@
       ],
       "versions": {
         "1.29": {
-          "latest": "1.29.7",
+          "latest": "1.29.8",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.29.7.zip",
-            "filename": "nginx-1.29.7.zip"
+            "url": "https://nginx.org/download/nginx-1.29.8.zip",
+            "filename": "nginx-1.29.8.zip"
           },
           "linux": {
-            "url": "https://nginx.org/download/nginx-1.29.7.tar.gz",
-            "filename": "nginx-1.29.7.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.29.8.tar.gz",
+            "filename": "nginx-1.29.8.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.29.7.tar.gz",
-            "filename": "nginx-1.29.7.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.29.8.tar.gz",
+            "filename": "nginx-1.29.8.tar.gz"
           }
         },
         "1.28": {
@@ -499,18 +499,18 @@
       ],
       "versions": {
         "3.14": {
-          "latest": "3.14.3",
+          "latest": "3.14.4",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-embed-amd64.zip",
-            "filename": "python-3.14.3-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-amd64.zip",
+            "filename": "python-3.14.4-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://www.python.org/ftp/python/3.14.3/Python-3.14.3.tgz",
-            "filename": "Python-3.14.3.tgz"
+            "url": "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz",
+            "filename": "Python-3.14.4.tgz"
           },
           "macos_arm64": {
-            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-macos11.pkg",
-            "filename": "python-3.14.3-macos11.pkg"
+            "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-macos11.pkg",
+            "filename": "python-3.14.4-macos11.pkg"
           }
         },
         "3.13": {
@@ -621,41 +621,41 @@
       ],
       "versions": {
         "1.26": {
-          "latest": "1.26.1",
+          "latest": "1.26.2",
           "windows": {
-            "url": "https://dl.google.com/go/go1.26.1.windows-amd64.zip",
-            "filename": "go1.26.1.windows-amd64.zip"
+            "url": "https://dl.google.com/go/go1.26.2.windows-amd64.zip",
+            "filename": "go1.26.2.windows-amd64.zip"
           },
           "macos_arm64": {
-            "url": "https://dl.google.com/go/go1.26.1.darwin-arm64.tar.gz",
-            "filename": "go1.26.1.darwin-arm64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.2.darwin-arm64.tar.gz",
+            "filename": "go1.26.2.darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://dl.google.com/go/go1.26.1.darwin-amd64.tar.gz",
-            "filename": "go1.26.1.darwin-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.2.darwin-amd64.tar.gz",
+            "filename": "go1.26.2.darwin-amd64.tar.gz"
           },
           "linux": {
-            "url": "https://dl.google.com/go/go1.26.1.linux-amd64.tar.gz",
-            "filename": "go1.26.1.linux-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.2.linux-amd64.tar.gz",
+            "filename": "go1.26.2.linux-amd64.tar.gz"
           }
         },
         "1.25": {
-          "latest": "1.25.8",
+          "latest": "1.25.9",
           "windows": {
-            "url": "https://dl.google.com/go/go1.25.8.windows-amd64.zip",
-            "filename": "go1.25.8.windows-amd64.zip"
+            "url": "https://dl.google.com/go/go1.25.9.windows-amd64.zip",
+            "filename": "go1.25.9.windows-amd64.zip"
           },
           "macos_arm64": {
-            "url": "https://dl.google.com/go/go1.25.8.darwin-arm64.tar.gz",
-            "filename": "go1.25.8.darwin-arm64.tar.gz"
+            "url": "https://dl.google.com/go/go1.25.9.darwin-arm64.tar.gz",
+            "filename": "go1.25.9.darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://dl.google.com/go/go1.25.8.darwin-amd64.tar.gz",
-            "filename": "go1.25.8.darwin-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.25.9.darwin-amd64.tar.gz",
+            "filename": "go1.25.9.darwin-amd64.tar.gz"
           },
           "linux": {
-            "url": "https://dl.google.com/go/go1.25.8.linux-amd64.tar.gz",
-            "filename": "go1.25.8.linux-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.25.9.linux-amd64.tar.gz",
+            "filename": "go1.25.9.linux-amd64.tar.gz"
           }
         }
       }
