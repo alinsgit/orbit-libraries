@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-04-08T01:55:44.444Z",
+  "updated": "2026-04-09T01:48:07.837Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -29,28 +29,13 @@
             "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.5/php-8.5.5-macos-arm64.tar.gz",
             "filename": "php-8.5.5-macos-arm64.tar.gz",
             "sha256": "b789eb9c6f1052cf9b1c80e361d29a54d33e4867e1ddf05fc78ba07d7214c77c"
-          },
-          "macos_x64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.5/php-8.5.5-macos-x86_64.tar.gz",
-            "filename": "php-8.5.5-macos-x86_64.tar.gz",
-            "sha256": ""
           }
         },
         "8.4": {
-          "latest": "8.4.19",
+          "latest": "8.4.20",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.4.19-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.4.19-nts-Win32-vs17-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.19/php-8.4.19-linux-x86_64.tar.gz",
-            "filename": "php-8.4.19-linux-x86_64.tar.gz",
-            "sha256": "05a1cd59613a101edeb6d46a9f0c2825f7e39879e6b018fbad87b628b1c7553f"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.19/php-8.4.19-macos-arm64.tar.gz",
-            "filename": "php-8.4.19-macos-arm64.tar.gz",
-            "sha256": "a4ebca82c616e303905e1ed07fc5a1eb78952e7b827f2ade1f6a9ec646b963a2"
+            "url": "https://windows.php.net/downloads/releases/php-8.4.20-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.4.20-nts-Win32-vs17-x64.zip"
           }
         },
         "8.3": {
@@ -306,54 +291,22 @@
       "name": "PostgreSQL",
       "description": "Advanced open source relational database",
       "availableVersions": [
-        "16",
-        "15",
-        "14"
+        "16"
       ],
       "versions": {
-        "14": {
-          "latest": "14.22",
-          "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.22-1-windows-x64-binaries.zip",
-            "filename": "postgresql-14.22-windows-x64.zip"
-          },
-          "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.22-1-osx-binaries.zip",
-            "filename": "postgresql-14.22-osx.zip"
-          },
-          "macos_x64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.22-1-osx-binaries.zip",
-            "filename": "postgresql-14.22-osx.zip"
-          }
-        },
-        "15": {
-          "latest": "15.17",
-          "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.17-1-windows-x64-binaries.zip",
-            "filename": "postgresql-15.17-windows-x64.zip"
-          },
-          "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.17-1-osx-binaries.zip",
-            "filename": "postgresql-15.17-osx.zip"
-          },
-          "macos_x64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.17-1-osx-binaries.zip",
-            "filename": "postgresql-15.17-osx.zip"
-          }
-        },
         "16": {
-          "latest": "16.13",
+          "latest": "16.2",
           "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.13-1-windows-x64-binaries.zip",
-            "filename": "postgresql-16.13-windows-x64.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-windows-x64-binaries.zip",
+            "filename": "postgresql-16.2-1-windows-x64-binaries.zip"
           },
           "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.13-1-osx-binaries.zip",
-            "filename": "postgresql-16.13-osx.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-osx-binaries.zip",
+            "filename": "postgresql-16.2-1-osx-binaries.zip"
           },
-          "macos_x64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.13-1-osx-binaries.zip",
-            "filename": "postgresql-16.13-osx.zip"
+          "linux": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-linux-x64-binaries.tar.gz",
+            "filename": "postgresql-16.2-1-linux-x64-binaries.tar.gz"
           }
         }
       }
@@ -529,18 +482,18 @@
           }
         },
         "3.13": {
-          "latest": "3.13.12",
+          "latest": "3.13.13",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-embed-amd64.zip",
-            "filename": "python-3.13.12-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.13.13/python-3.13.13-embed-amd64.zip",
+            "filename": "python-3.13.13-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://www.python.org/ftp/python/3.13.12/Python-3.13.12.tgz",
-            "filename": "Python-3.13.12.tgz"
+            "url": "https://www.python.org/ftp/python/3.13.13/Python-3.13.13.tgz",
+            "filename": "Python-3.13.13.tgz"
           },
           "macos_arm64": {
-            "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-macos11.pkg",
-            "filename": "python-3.13.12-macos11.pkg"
+            "url": "https://www.python.org/ftp/python/3.13.13/python-3.13.13-macos11.pkg",
+            "filename": "python-3.13.13-macos11.pkg"
           }
         },
         "3.12": {
