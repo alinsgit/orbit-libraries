@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-04-09T01:48:07.837Z",
+  "updated": "2026-04-10T02:00:21.465Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -46,11 +46,6 @@
             "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.20/php-8.4.20-macos-arm64.tar.gz",
             "filename": "php-8.4.20-macos-arm64.tar.gz",
             "sha256": "b02d64270ca6245b742edbca2693a640a3e53bc6701c7de5fb69a4245a90e11a"
-          },
-          "macos_x64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.20/php-8.4.20-macos-x86_64.tar.gz",
-            "filename": "php-8.4.20-macos-x86_64.tar.gz",
-            "sha256": ""
           }
         },
         "8.3": {
@@ -184,17 +179,9 @@
       "name": "Apache HTTP Server",
       "description": "The most widely used web server",
       "availableVersions": [
-        "2.4.66-VS18",
         "2.4.66-VS17"
       ],
       "versions": {
-        "2.4.66-VS18": {
-          "latest": "2.4.66",
-          "windows": {
-            "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.66-260223-Win64-VS18.zip",
-            "filename": "httpd-2.4.66-260223-Win64-VS18.zip"
-          }
-        },
         "2.4.66-VS17": {
           "latest": "2.4.66",
           "windows": {
@@ -306,22 +293,54 @@
       "name": "PostgreSQL",
       "description": "Advanced open source relational database",
       "availableVersions": [
-        "16"
+        "16",
+        "15",
+        "14"
       ],
       "versions": {
-        "16": {
-          "latest": "16.2",
+        "14": {
+          "latest": "14.22",
           "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-windows-x64-binaries.zip",
-            "filename": "postgresql-16.2-1-windows-x64-binaries.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.22-1-windows-x64-binaries.zip",
+            "filename": "postgresql-14.22-windows-x64.zip"
           },
           "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-osx-binaries.zip",
-            "filename": "postgresql-16.2-1-osx-binaries.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.22-1-osx-binaries.zip",
+            "filename": "postgresql-14.22-osx.zip"
           },
-          "linux": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-linux-x64-binaries.tar.gz",
-            "filename": "postgresql-16.2-1-linux-x64-binaries.tar.gz"
+          "macos_x64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.22-1-osx-binaries.zip",
+            "filename": "postgresql-14.22-osx.zip"
+          }
+        },
+        "15": {
+          "latest": "15.17",
+          "windows": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.17-1-windows-x64-binaries.zip",
+            "filename": "postgresql-15.17-windows-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.17-1-osx-binaries.zip",
+            "filename": "postgresql-15.17-osx.zip"
+          },
+          "macos_x64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.17-1-osx-binaries.zip",
+            "filename": "postgresql-15.17-osx.zip"
+          }
+        },
+        "16": {
+          "latest": "16.13",
+          "windows": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.13-1-windows-x64-binaries.zip",
+            "filename": "postgresql-16.13-windows-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.13-1-osx-binaries.zip",
+            "filename": "postgresql-16.13-osx.zip"
+          },
+          "macos_x64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.13-1-osx-binaries.zip",
+            "filename": "postgresql-16.13-osx.zip"
           }
         }
       }
@@ -646,21 +665,21 @@
     "deno": {
       "name": "Deno",
       "description": "Next-generation JavaScript runtime",
-      "latest": "2.7.11",
+      "latest": "2.7.12",
       "windows": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.7.11/deno-x86_64-pc-windows-msvc.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.7.12/deno-x86_64-pc-windows-msvc.zip",
         "filename": "deno-x86_64-pc-windows-msvc.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.7.11/deno-aarch64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.7.12/deno-aarch64-apple-darwin.zip",
         "filename": "deno-aarch64-apple-darwin.zip"
       },
       "macos_x64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.7.11/deno-x86_64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.7.12/deno-x86_64-apple-darwin.zip",
         "filename": "deno-x86_64-apple-darwin.zip"
       },
       "linux": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.7.11/deno-x86_64-unknown-linux-gnu.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.7.12/deno-x86_64-unknown-linux-gnu.zip",
         "filename": "deno-x86_64-unknown-linux-gnu.zip"
       }
     },
