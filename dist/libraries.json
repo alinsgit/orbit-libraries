@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-04-20T02:07:03.761Z",
+  "updated": "2026-04-21T02:03:21.917Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -564,21 +564,21 @@
       ],
       "versions": {
         "1.3": {
-          "latest": "1.3.12",
+          "latest": "1.3.13",
           "windows": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.12/bun-windows-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.13/bun-windows-x64.zip",
             "filename": "bun-windows-x64.zip"
           },
           "linux": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.12/bun-linux-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.13/bun-linux-x64.zip",
             "filename": "bun-linux-x64.zip"
           },
           "macos_arm64": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.12/bun-darwin-aarch64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.13/bun-darwin-aarch64.zip",
             "filename": "bun-darwin-aarch64.zip"
           },
           "macos_x64": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.12/bun-darwin-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.13/bun-darwin-x64.zip",
             "filename": "bun-darwin-x64.zip"
           }
         },
