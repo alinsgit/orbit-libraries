@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-05-04T02:24:11.995Z",
+  "updated": "2026-05-05T02:12:55.381Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -179,15 +179,15 @@
       "name": "Apache HTTP Server",
       "description": "The most widely used web server",
       "availableVersions": [
-        "2.4.66-VS18",
+        "2.4.67-VS18",
         "2.4.66-VS17"
       ],
       "versions": {
-        "2.4.66-VS18": {
-          "latest": "2.4.66",
+        "2.4.67-VS18": {
+          "latest": "2.4.67",
           "windows": {
-            "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.66-260223-Win64-VS18.zip",
-            "filename": "httpd-2.4.66-260223-Win64-VS18.zip"
+            "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.67-260504-Win64-VS18.zip",
+            "filename": "httpd-2.4.67-260504-Win64-VS18.zip"
           }
         },
         "2.4.66-VS17": {
@@ -741,17 +741,17 @@
     "meilisearch": {
       "name": "Meilisearch",
       "description": "Fast, typo-tolerant search engine",
-      "latest": "1.42.1",
+      "latest": "1.43.0",
       "windows": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.42.1/meilisearch-windows-amd64.exe",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.43.0/meilisearch-windows-amd64.exe",
         "filename": "meilisearch-windows-amd64.exe"
       },
       "macos_arm64": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.42.1/meilisearch-macos-apple-silicon",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.43.0/meilisearch-macos-apple-silicon",
         "filename": "meilisearch-macos-apple-silicon"
       },
       "linux": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.42.1/meilisearch-linux-amd64",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.43.0/meilisearch-linux-amd64",
         "filename": "meilisearch-linux-amd64"
       }
     },
