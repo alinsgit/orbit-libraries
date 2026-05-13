@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-05-12T02:30:47.764Z",
+  "updated": "2026-05-13T02:37:26.513Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -344,33 +344,33 @@
       ],
       "versions": {
         "8.0": {
-          "latest": "8.0.21",
+          "latest": "8.0.23",
           "windows": {
-            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.21.zip",
-            "filename": "mongodb-8.0.21-win.zip"
+            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.23.zip",
+            "filename": "mongodb-8.0.23-win.zip"
           },
           "macos_arm64": {
-            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-8.0.21.tgz",
-            "filename": "mongodb-8.0.21-mac.tgz"
+            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-8.0.23.tgz",
+            "filename": "mongodb-8.0.23-mac.tgz"
           },
           "linux": {
-            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-8.0.21.tgz",
-            "filename": "mongodb-8.0.21-linux.tgz"
+            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-8.0.23.tgz",
+            "filename": "mongodb-8.0.23-linux.tgz"
           }
         },
         "7.0": {
-          "latest": "7.0.32",
+          "latest": "7.0.34",
           "windows": {
-            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.32.zip",
-            "filename": "mongodb-7.0.32-win.zip"
+            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.34.zip",
+            "filename": "mongodb-7.0.34-win.zip"
           },
           "macos_arm64": {
-            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-7.0.32.tgz",
-            "filename": "mongodb-7.0.32-mac.tgz"
+            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-7.0.34.tgz",
+            "filename": "mongodb-7.0.34-mac.tgz"
           },
           "linux": {
-            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-7.0.32.tgz",
-            "filename": "mongodb-7.0.32-linux.tgz"
+            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-7.0.34.tgz",
+            "filename": "mongodb-7.0.34-linux.tgz"
           }
         }
       }
@@ -703,17 +703,17 @@
     "meilisearch": {
       "name": "Meilisearch",
       "description": "Fast, typo-tolerant search engine",
-      "latest": "1.43.0",
+      "latest": "1.43.1",
       "windows": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.43.0/meilisearch-windows-amd64.exe",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.43.1/meilisearch-windows-amd64.exe",
         "filename": "meilisearch-windows-amd64.exe"
       },
       "macos_arm64": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.43.0/meilisearch-macos-apple-silicon",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.43.1/meilisearch-macos-apple-silicon",
         "filename": "meilisearch-macos-apple-silicon"
       },
       "linux": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.43.0/meilisearch-linux-amd64",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.43.1/meilisearch-linux-amd64",
         "filename": "meilisearch-linux-amd64"
       }
     },
