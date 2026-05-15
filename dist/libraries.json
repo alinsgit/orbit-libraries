@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-05-14T02:38:09.320Z",
+  "updated": "2026-05-15T02:38:10.268Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -283,22 +283,54 @@
       "name": "PostgreSQL",
       "description": "Advanced open source relational database",
       "availableVersions": [
-        "16"
+        "16",
+        "15",
+        "14"
       ],
       "versions": {
-        "16": {
-          "latest": "16.2",
+        "14": {
+          "latest": "14.23",
           "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-windows-x64-binaries.zip",
-            "filename": "postgresql-16.2-1-windows-x64-binaries.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.23-1-windows-x64-binaries.zip",
+            "filename": "postgresql-14.23-windows-x64.zip"
           },
           "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-osx-binaries.zip",
-            "filename": "postgresql-16.2-1-osx-binaries.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.23-1-osx-binaries.zip",
+            "filename": "postgresql-14.23-osx.zip"
           },
-          "linux": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-linux-x64-binaries.tar.gz",
-            "filename": "postgresql-16.2-1-linux-x64-binaries.tar.gz"
+          "macos_x64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.23-1-osx-binaries.zip",
+            "filename": "postgresql-14.23-osx.zip"
+          }
+        },
+        "15": {
+          "latest": "15.18",
+          "windows": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.18-1-windows-x64-binaries.zip",
+            "filename": "postgresql-15.18-windows-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.18-1-osx-binaries.zip",
+            "filename": "postgresql-15.18-osx.zip"
+          },
+          "macos_x64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.18-1-osx-binaries.zip",
+            "filename": "postgresql-15.18-osx.zip"
+          }
+        },
+        "16": {
+          "latest": "16.14",
+          "windows": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.14-1-windows-x64-binaries.zip",
+            "filename": "postgresql-16.14-windows-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.14-1-osx-binaries.zip",
+            "filename": "postgresql-16.14-osx.zip"
+          },
+          "macos_x64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.14-1-osx-binaries.zip",
+            "filename": "postgresql-16.14-osx.zip"
           }
         }
       }
@@ -654,17 +686,17 @@
     "mailpit": {
       "name": "Mailpit",
       "description": "Email testing tool for developers",
-      "latest": "1.29.7",
+      "latest": "1.30.0",
       "windows": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.7/mailpit-windows-amd64.zip",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.0/mailpit-windows-amd64.zip",
         "filename": "mailpit-windows-amd64.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.7/mailpit-darwin-arm64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.0/mailpit-darwin-arm64.tar.gz",
         "filename": "mailpit-darwin-arm64.tar.gz"
       },
       "linux": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.29.7/mailpit-linux-amd64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.0/mailpit-linux-amd64.tar.gz",
         "filename": "mailpit-linux-amd64.tar.gz"
       }
     },
