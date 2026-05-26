@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-05-25T02:52:07.024Z",
+  "updated": "2026-05-26T02:40:10.042Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -667,10 +667,10 @@
     "redis": {
       "name": "Redis",
       "description": "In-memory data structure store",
-      "latest": "8.6.3",
+      "latest": "8.8.0",
       "windows": {
-        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.6.3/Redis-8.6.3-Windows-x64-cygwin-with-Service.zip",
-        "filename": "Redis-8.6.3-Windows-x64-cygwin-with-Service.zip"
+        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.8.0/Redis-8.8.0-Windows-x64-cygwin-with-Service.zip",
+        "filename": "Redis-8.8.0-Windows-x64-cygwin-with-Service.zip"
       }
     },
     "mailpit": {
