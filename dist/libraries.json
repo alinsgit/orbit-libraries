@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-05-27T02:50:44.099Z",
+  "updated": "2026-05-28T02:38:09.276Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -454,54 +454,22 @@
       "name": "Python",
       "description": "General-purpose programming language",
       "availableVersions": [
-        "3.14",
         "3.13",
-        "3.12",
-        "3.11"
+        "3.12"
       ],
       "versions": {
-        "3.14": {
-          "latest": "3.14.5",
-          "windows": {
-            "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5-embed-amd64.zip",
-            "filename": "python-3.14.5-embed-amd64.zip"
-          },
-          "linux": {
-            "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5.tgz",
-            "filename": "Python-3.14.5.tgz"
-          },
-          "macos_arm64": {
-            "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5-macos11.pkg",
-            "filename": "python-3.14.5-macos11.pkg"
-          }
-        },
         "3.13": {
-          "latest": "3.13.13",
+          "latest": "3.13.12",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.13.13/python-3.13.13-embed-amd64.zip",
-            "filename": "python-3.13.13-embed-amd64.zip"
-          },
-          "linux": {
-            "url": "https://www.python.org/ftp/python/3.13.13/Python-3.13.13.tgz",
-            "filename": "Python-3.13.13.tgz"
-          },
-          "macos_arm64": {
-            "url": "https://www.python.org/ftp/python/3.13.13/python-3.13.13-macos11.pkg",
-            "filename": "python-3.13.13-macos11.pkg"
+            "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-embed-amd64.zip",
+            "filename": "python-3.13.12-embed-amd64.zip"
           }
         },
         "3.12": {
-          "latest": "3.12.10",
+          "latest": "3.12.8",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip",
-            "filename": "python-3.12.10-embed-amd64.zip"
-          }
-        },
-        "3.11": {
-          "latest": "3.11.9",
-          "windows": {
-            "url": "https://www.python.org/ftp/python/3.11.9/python-3.11.9-embed-amd64.zip",
-            "filename": "python-3.11.9-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-embed-amd64.zip",
+            "filename": "python-3.12.8-embed-amd64.zip"
           }
         }
       }
@@ -625,21 +593,21 @@
     "deno": {
       "name": "Deno",
       "description": "Next-generation JavaScript runtime",
-      "latest": "2.8.0",
+      "latest": "2.8.1",
       "windows": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.8.0/deno-x86_64-pc-windows-msvc.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.8.1/deno-x86_64-pc-windows-msvc.zip",
         "filename": "deno-x86_64-pc-windows-msvc.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.8.0/deno-aarch64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.8.1/deno-aarch64-apple-darwin.zip",
         "filename": "deno-aarch64-apple-darwin.zip"
       },
       "macos_x64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.8.0/deno-x86_64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.8.1/deno-x86_64-apple-darwin.zip",
         "filename": "deno-x86_64-apple-darwin.zip"
       },
       "linux": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.8.0/deno-x86_64-unknown-linux-gnu.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.8.1/deno-x86_64-unknown-linux-gnu.zip",
         "filename": "deno-x86_64-unknown-linux-gnu.zip"
       }
     },
