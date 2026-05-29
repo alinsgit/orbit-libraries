@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-05-28T02:38:09.276Z",
+  "updated": "2026-05-29T02:41:35.794Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -234,37 +234,37 @@
           }
         },
         "10.11": {
-          "latest": "10.11.17",
+          "latest": "10.11.18",
           "windows": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.17/winx64-packages/mariadb-10.11.17-winx64.zip",
-            "filename": "mariadb-10.11.17-winx64.zip",
-            "sha256": "de457d1c18c20f6d8e84882ce1b33205ec44e7ca18de47778741e441ed346213"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.18/winx64-packages/mariadb-10.11.18-winx64.zip",
+            "filename": "mariadb-10.11.18-winx64.zip",
+            "sha256": "1e36bb0834718e56fd53e150978b55429e5da921a97c07c16b41086c0c61099c"
           },
           "linux": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.17/bintar-linux-systemd-x86_64/mariadb-10.11.17-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-10.11.17-linux-systemd-x86_64.tar.gz",
-            "sha256": "ce0cac40d94f15366182893246326a850e6616e480f4c069d78470f852d97f04"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.18/bintar-linux-systemd-x86_64/mariadb-10.11.18-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-10.11.18-linux-systemd-x86_64.tar.gz",
+            "sha256": "6766e45500266d8fba2253fcf99da5aad0338cba4bf1f13a0ee03da5407b3d71"
           },
           "macos_arm64": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.17/macos-system-arm64/mariadb-10.11.17-macos13-arm64.tar.gz",
-            "filename": "mariadb-10.11.17-macos13-arm64.tar.gz"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.18/macos-system-arm64/mariadb-10.11.18-macos13-arm64.tar.gz",
+            "filename": "mariadb-10.11.18-macos13-arm64.tar.gz"
           }
         },
         "10.6": {
-          "latest": "10.6.26",
+          "latest": "10.6.27",
           "windows": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.26/winx64-packages/mariadb-10.6.26-winx64.zip",
-            "filename": "mariadb-10.6.26-winx64.zip",
-            "sha256": "9e8efff6327cf87e63dc78ee008ba38b192a09022fda5e1ddcffebf7c51493b1"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.27/winx64-packages/mariadb-10.6.27-winx64.zip",
+            "filename": "mariadb-10.6.27-winx64.zip",
+            "sha256": "cc18bc6a0d42df6990ed91d1d7695e893b15168779272df43adf45dd75705a50"
           },
           "linux": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.26/bintar-linux-systemd-x86_64/mariadb-10.6.26-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-10.6.26-linux-systemd-x86_64.tar.gz",
-            "sha256": "7bae128cac80b940d2ead2933cd25e81a56dcf91725a9e1519951e9226013b64"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.27/bintar-linux-systemd-x86_64/mariadb-10.6.27-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-10.6.27-linux-systemd-x86_64.tar.gz",
+            "sha256": "dd5dd6b7d123a95db5bbd929ab66d18bd6d9c12d5ec85bd9577c03dd33ef8900"
           },
           "macos_arm64": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.26/macos-system-arm64/mariadb-10.6.26-macos13-arm64.tar.gz",
-            "filename": "mariadb-10.6.26-macos13-arm64.tar.gz"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.27/macos-system-arm64/mariadb-10.6.27-macos13-arm64.tar.gz",
+            "filename": "mariadb-10.6.27-macos13-arm64.tar.gz"
           }
         }
       }
@@ -454,22 +454,54 @@
       "name": "Python",
       "description": "General-purpose programming language",
       "availableVersions": [
+        "3.14",
         "3.13",
-        "3.12"
+        "3.12",
+        "3.11"
       ],
       "versions": {
-        "3.13": {
-          "latest": "3.13.12",
+        "3.14": {
+          "latest": "3.14.5",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-embed-amd64.zip",
-            "filename": "python-3.13.12-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5-embed-amd64.zip",
+            "filename": "python-3.14.5-embed-amd64.zip"
+          },
+          "linux": {
+            "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5.tgz",
+            "filename": "Python-3.14.5.tgz"
+          },
+          "macos_arm64": {
+            "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5-macos11.pkg",
+            "filename": "python-3.14.5-macos11.pkg"
+          }
+        },
+        "3.13": {
+          "latest": "3.13.13",
+          "windows": {
+            "url": "https://www.python.org/ftp/python/3.13.13/python-3.13.13-embed-amd64.zip",
+            "filename": "python-3.13.13-embed-amd64.zip"
+          },
+          "linux": {
+            "url": "https://www.python.org/ftp/python/3.13.13/Python-3.13.13.tgz",
+            "filename": "Python-3.13.13.tgz"
+          },
+          "macos_arm64": {
+            "url": "https://www.python.org/ftp/python/3.13.13/python-3.13.13-macos11.pkg",
+            "filename": "python-3.13.13-macos11.pkg"
           }
         },
         "3.12": {
-          "latest": "3.12.8",
+          "latest": "3.12.10",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-embed-amd64.zip",
-            "filename": "python-3.12.8-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip",
+            "filename": "python-3.12.10-embed-amd64.zip"
+          }
+        },
+        "3.11": {
+          "latest": "3.11.9",
+          "windows": {
+            "url": "https://www.python.org/ftp/python/3.11.9/python-3.11.9-embed-amd64.zip",
+            "filename": "python-3.11.9-embed-amd64.zip"
           }
         }
       }
@@ -644,43 +676,43 @@
     "mailpit": {
       "name": "Mailpit",
       "description": "Email testing tool for developers",
-      "latest": "1.30.0",
+      "latest": "1.30.1",
       "windows": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.0/mailpit-windows-amd64.zip",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.1/mailpit-windows-amd64.zip",
         "filename": "mailpit-windows-amd64.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.0/mailpit-darwin-arm64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.1/mailpit-darwin-arm64.tar.gz",
         "filename": "mailpit-darwin-arm64.tar.gz"
       },
       "linux": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.0/mailpit-linux-amd64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.1/mailpit-linux-amd64.tar.gz",
         "filename": "mailpit-linux-amd64.tar.gz"
       }
     },
     "meilisearch": {
       "name": "Meilisearch",
       "description": "Fast, typo-tolerant search engine",
-      "latest": "1.45.0",
+      "latest": "1.45.1",
       "windows": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.45.0/meilisearch-windows-amd64.exe",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.45.1/meilisearch-windows-amd64.exe",
         "filename": "meilisearch-windows-amd64.exe"
       },
       "macos_arm64": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.45.0/meilisearch-macos-apple-silicon",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.45.1/meilisearch-macos-apple-silicon",
         "filename": "meilisearch-macos-apple-silicon"
       },
       "linux": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.45.0/meilisearch-linux-amd64",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.45.1/meilisearch-linux-amd64",
         "filename": "meilisearch-linux-amd64"
       }
     },
     "composer": {
       "name": "Composer",
       "description": "PHP dependency manager",
-      "latest": "2.9.8",
+      "latest": "2.10.0",
       "all_platforms": {
-        "url": "https://getcomposer.org/download/2.9.8/composer.phar",
+        "url": "https://getcomposer.org/download/2.10.0/composer.phar",
         "filename": "composer.phar"
       }
     },
