@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-05-29T02:41:35.794Z",
+  "updated": "2026-05-30T02:35:38.860Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -185,52 +185,62 @@
       "name": "MariaDB",
       "description": "Community-developed MySQL fork",
       "availableVersions": [
-        "12.2",
+        "12.3",
         "11.8",
         "11.4",
         "10.11",
         "10.6"
       ],
       "versions": {
-        "12.2": {
-          "latest": "12.2.2",
+        "12.3": {
+          "latest": "12.3.2",
           "windows": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-12.2.2/winx64-packages/mariadb-12.2.2-winx64.zip",
-            "filename": "mariadb-12.2.2-winx64.zip",
-            "sha256": "b34bb91f0dd4bd184f420288a12aace2b5fcb20734f2b880075c36150d4641c6"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.2/winx64-packages/mariadb-12.3.2-winx64.zip",
+            "filename": "mariadb-12.3.2-winx64.zip",
+            "sha256": "67347c129eb9c5923d002ea34fbfa27c60eb95d36dd73b85af2651cdeceecac5"
           },
           "linux": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-12.2.2/bintar-linux-systemd-x86_64/mariadb-12.2.2-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-12.2.2-linux-systemd-x86_64.tar.gz",
-            "sha256": "2f1d4740e618b6990f28209b889f257e17ef2c66900e6bd7ce21a5718668a230"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.2/bintar-linux-systemd-x86_64/mariadb-12.3.2-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-12.3.2-linux-systemd-x86_64.tar.gz",
+            "sha256": "ba909d9e77e5c69066ec031ff4191b2d10930d8248fc146bd34c057c3142dcd8"
           },
           "macos_arm64": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-12.2.2/macos-system-arm64/mariadb-12.2.2-macos13-arm64.tar.gz",
-            "filename": "mariadb-12.2.2-macos13-arm64.tar.gz"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.2/macos-system-arm64/mariadb-12.3.2-macos13-arm64.tar.gz",
+            "filename": "mariadb-12.3.2-macos13-arm64.tar.gz"
           }
         },
         "11.8": {
-          "latest": "11.8.7",
+          "latest": "11.8.8",
+          "windows": {
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.8/winx64-packages/mariadb-11.8.8-winx64.zip",
+            "filename": "mariadb-11.8.8-winx64.zip",
+            "sha256": "20871a79964e1819ddaad9247b676b9d08c958c345e5e3d4748242b2b2965ff1"
+          },
           "linux": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.7/bintar-linux-systemd-x86_64/mariadb-11.8.7-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-11.8.7-linux-systemd-x86_64.tar.gz",
-            "sha256": "2763b3f21a79732dea55eb093ce6d1c1bd323182d2bc75f40fd0c52fe65e2462"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.8/bintar-linux-systemd-x86_64/mariadb-11.8.8-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-11.8.8-linux-systemd-x86_64.tar.gz",
+            "sha256": "fbd4e8d05946c974b0560c94f01ce4c687291b6528074c2e001fb8f35c0d2762"
           },
           "macos_arm64": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.7/macos-system-arm64/mariadb-11.8.7-macos13-arm64.tar.gz",
-            "filename": "mariadb-11.8.7-macos13-arm64.tar.gz"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.8/macos-system-arm64/mariadb-11.8.8-macos13-arm64.tar.gz",
+            "filename": "mariadb-11.8.8-macos13-arm64.tar.gz"
           }
         },
         "11.4": {
-          "latest": "11.4.11",
+          "latest": "11.4.12",
+          "windows": {
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.4.12/winx64-packages/mariadb-11.4.12-winx64.zip",
+            "filename": "mariadb-11.4.12-winx64.zip",
+            "sha256": "4db7f8003d4a64ac8042b771c6d34ed04c7ffae8cf52775275b72f2bd4dd17a9"
+          },
           "linux": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.4.11/bintar-linux-systemd-x86_64/mariadb-11.4.11-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-11.4.11-linux-systemd-x86_64.tar.gz",
-            "sha256": "aceffff76d478d462ceb6f4e5f7807c83cf3087f6953c75e0473f9d5aa3cf63e"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.4.12/bintar-linux-systemd-x86_64/mariadb-11.4.12-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-11.4.12-linux-systemd-x86_64.tar.gz",
+            "sha256": "afb81282f977c599ecbb0390588b0005b304b4e87d64615a2649ecd2bd1dc16f"
           },
           "macos_arm64": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.4.11/macos-system-arm64/mariadb-11.4.11-macos13-arm64.tar.gz",
-            "filename": "mariadb-11.4.11-macos13-arm64.tar.gz"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.4.12/macos-system-arm64/mariadb-11.4.12-macos13-arm64.tar.gz",
+            "filename": "mariadb-11.4.12-macos13-arm64.tar.gz"
           }
         },
         "10.11": {
