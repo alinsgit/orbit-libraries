@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-06-01T03:28:20.398Z",
+  "updated": "2026-06-02T02:58:14.649Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -283,54 +283,22 @@
       "name": "PostgreSQL",
       "description": "Advanced open source relational database",
       "availableVersions": [
-        "16",
-        "15",
-        "14"
+        "16"
       ],
       "versions": {
-        "14": {
-          "latest": "14.23",
-          "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.23-1-windows-x64-binaries.zip",
-            "filename": "postgresql-14.23-windows-x64.zip"
-          },
-          "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.23-1-osx-binaries.zip",
-            "filename": "postgresql-14.23-osx.zip"
-          },
-          "macos_x64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.23-1-osx-binaries.zip",
-            "filename": "postgresql-14.23-osx.zip"
-          }
-        },
-        "15": {
-          "latest": "15.18",
-          "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.18-1-windows-x64-binaries.zip",
-            "filename": "postgresql-15.18-windows-x64.zip"
-          },
-          "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.18-1-osx-binaries.zip",
-            "filename": "postgresql-15.18-osx.zip"
-          },
-          "macos_x64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.18-1-osx-binaries.zip",
-            "filename": "postgresql-15.18-osx.zip"
-          }
-        },
         "16": {
-          "latest": "16.14",
+          "latest": "16.2",
           "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.14-1-windows-x64-binaries.zip",
-            "filename": "postgresql-16.14-windows-x64.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-windows-x64-binaries.zip",
+            "filename": "postgresql-16.2-1-windows-x64-binaries.zip"
           },
           "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.14-1-osx-binaries.zip",
-            "filename": "postgresql-16.14-osx.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-osx-binaries.zip",
+            "filename": "postgresql-16.2-1-osx-binaries.zip"
           },
-          "macos_x64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.14-1-osx-binaries.zip",
-            "filename": "postgresql-16.14-osx.zip"
+          "linux": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-linux-x64-binaries.tar.gz",
+            "filename": "postgresql-16.2-1-linux-x64-binaries.tar.gz"
           }
         }
       }
@@ -440,22 +408,22 @@
           }
         },
         "26": {
-          "latest": "26.2.0",
+          "latest": "26.3.0",
           "windows": {
-            "url": "https://nodejs.org/dist/v26.2.0/node-v26.2.0-win-x64.zip",
-            "filename": "node-v26.2.0-win-x64.zip"
+            "url": "https://nodejs.org/dist/v26.3.0/node-v26.3.0-win-x64.zip",
+            "filename": "node-v26.3.0-win-x64.zip"
           },
           "linux": {
-            "url": "https://nodejs.org/dist/v26.2.0/node-v26.2.0-linux-x64.tar.gz",
-            "filename": "node-v26.2.0-linux-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v26.3.0/node-v26.3.0-linux-x64.tar.gz",
+            "filename": "node-v26.3.0-linux-x64.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nodejs.org/dist/v26.2.0/node-v26.2.0-darwin-arm64.tar.gz",
-            "filename": "node-v26.2.0-darwin-arm64.tar.gz"
+            "url": "https://nodejs.org/dist/v26.3.0/node-v26.3.0-darwin-arm64.tar.gz",
+            "filename": "node-v26.3.0-darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://nodejs.org/dist/v26.2.0/node-v26.2.0-darwin-x64.tar.gz",
-            "filename": "node-v26.2.0-darwin-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v26.3.0/node-v26.3.0-darwin-x64.tar.gz",
+            "filename": "node-v26.3.0-darwin-x64.tar.gz"
           }
         }
       }
