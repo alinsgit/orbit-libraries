@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-06-02T02:58:14.649Z",
+  "updated": "2026-06-03T03:33:31.991Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -15,17 +15,17 @@
       ],
       "versions": {
         "8.5": {
-          "latest": "8.5.6",
+          "latest": "8.5.7",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.5.6-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.5.6-nts-Win32-vs17-x64.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.5.7-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.5.7-nts-Win32-vs17-x64.zip"
           }
         },
         "8.4": {
-          "latest": "8.4.21",
+          "latest": "8.4.22",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.4.21-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.4.21-nts-Win32-vs17-x64.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.4.22-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.4.22-nts-Win32-vs17-x64.zip"
           }
         },
         "8.3": {
@@ -283,22 +283,54 @@
       "name": "PostgreSQL",
       "description": "Advanced open source relational database",
       "availableVersions": [
-        "16"
+        "16",
+        "15",
+        "14"
       ],
       "versions": {
-        "16": {
-          "latest": "16.2",
+        "14": {
+          "latest": "14.23",
           "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-windows-x64-binaries.zip",
-            "filename": "postgresql-16.2-1-windows-x64-binaries.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.23-1-windows-x64-binaries.zip",
+            "filename": "postgresql-14.23-windows-x64.zip"
           },
           "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-osx-binaries.zip",
-            "filename": "postgresql-16.2-1-osx-binaries.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.23-1-osx-binaries.zip",
+            "filename": "postgresql-14.23-osx.zip"
           },
-          "linux": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-linux-x64-binaries.tar.gz",
-            "filename": "postgresql-16.2-1-linux-x64-binaries.tar.gz"
+          "macos_x64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.23-1-osx-binaries.zip",
+            "filename": "postgresql-14.23-osx.zip"
+          }
+        },
+        "15": {
+          "latest": "15.18",
+          "windows": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.18-1-windows-x64-binaries.zip",
+            "filename": "postgresql-15.18-windows-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.18-1-osx-binaries.zip",
+            "filename": "postgresql-15.18-osx.zip"
+          },
+          "macos_x64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.18-1-osx-binaries.zip",
+            "filename": "postgresql-15.18-osx.zip"
+          }
+        },
+        "16": {
+          "latest": "16.14",
+          "windows": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.14-1-windows-x64-binaries.zip",
+            "filename": "postgresql-16.14-windows-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.14-1-osx-binaries.zip",
+            "filename": "postgresql-16.14-osx.zip"
+          },
+          "macos_x64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.14-1-osx-binaries.zip",
+            "filename": "postgresql-16.14-osx.zip"
           }
         }
       }
@@ -561,41 +593,41 @@
       ],
       "versions": {
         "1.26": {
-          "latest": "1.26.3",
+          "latest": "1.26.4",
           "windows": {
-            "url": "https://dl.google.com/go/go1.26.3.windows-amd64.zip",
-            "filename": "go1.26.3.windows-amd64.zip"
+            "url": "https://dl.google.com/go/go1.26.4.windows-amd64.zip",
+            "filename": "go1.26.4.windows-amd64.zip"
           },
           "macos_arm64": {
-            "url": "https://dl.google.com/go/go1.26.3.darwin-arm64.tar.gz",
-            "filename": "go1.26.3.darwin-arm64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.4.darwin-arm64.tar.gz",
+            "filename": "go1.26.4.darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://dl.google.com/go/go1.26.3.darwin-amd64.tar.gz",
-            "filename": "go1.26.3.darwin-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.4.darwin-amd64.tar.gz",
+            "filename": "go1.26.4.darwin-amd64.tar.gz"
           },
           "linux": {
-            "url": "https://dl.google.com/go/go1.26.3.linux-amd64.tar.gz",
-            "filename": "go1.26.3.linux-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.4.linux-amd64.tar.gz",
+            "filename": "go1.26.4.linux-amd64.tar.gz"
           }
         },
         "1.25": {
-          "latest": "1.25.10",
+          "latest": "1.25.11",
           "windows": {
-            "url": "https://dl.google.com/go/go1.25.10.windows-amd64.zip",
-            "filename": "go1.25.10.windows-amd64.zip"
+            "url": "https://dl.google.com/go/go1.25.11.windows-amd64.zip",
+            "filename": "go1.25.11.windows-amd64.zip"
           },
           "macos_arm64": {
-            "url": "https://dl.google.com/go/go1.25.10.darwin-arm64.tar.gz",
-            "filename": "go1.25.10.darwin-arm64.tar.gz"
+            "url": "https://dl.google.com/go/go1.25.11.darwin-arm64.tar.gz",
+            "filename": "go1.25.11.darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://dl.google.com/go/go1.25.10.darwin-amd64.tar.gz",
-            "filename": "go1.25.10.darwin-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.25.11.darwin-amd64.tar.gz",
+            "filename": "go1.25.11.darwin-amd64.tar.gz"
           },
           "linux": {
-            "url": "https://dl.google.com/go/go1.25.10.linux-amd64.tar.gz",
-            "filename": "go1.25.10.linux-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.25.11.linux-amd64.tar.gz",
+            "filename": "go1.25.11.linux-amd64.tar.gz"
           }
         }
       }
@@ -671,17 +703,17 @@
     "meilisearch": {
       "name": "Meilisearch",
       "description": "Fast, typo-tolerant search engine",
-      "latest": "1.45.1",
+      "latest": "1.45.2",
       "windows": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.45.1/meilisearch-windows-amd64.exe",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.45.2/meilisearch-windows-amd64.exe",
         "filename": "meilisearch-windows-amd64.exe"
       },
       "macos_arm64": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.45.1/meilisearch-macos-apple-silicon",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.45.2/meilisearch-macos-apple-silicon",
         "filename": "meilisearch-macos-apple-silicon"
       },
       "linux": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.45.1/meilisearch-linux-amd64",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.45.2/meilisearch-linux-amd64",
         "filename": "meilisearch-linux-amd64"
       }
     },
