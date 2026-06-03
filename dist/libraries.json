@@ -26,6 +26,21 @@
           "windows": {
             "url": "https://windows.php.net/downloads/releases/php-8.4.22-nts-Win32-vs17-x64.zip",
             "filename": "php-8.4.22-nts-Win32-vs17-x64.zip"
+          },
+          "linux": {
+            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.22/php-8.4.22-linux-x86_64.tar.gz",
+            "filename": "php-8.4.22-linux-x86_64.tar.gz",
+            "sha256": "ff1fe4c52338b1eed8769f5f01631e400f3339f9078a22235d59c9aaa74c5999"
+          },
+          "macos_arm64": {
+            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.22/php-8.4.22-macos-arm64.tar.gz",
+            "filename": "php-8.4.22-macos-arm64.tar.gz",
+            "sha256": "7b10e352b0e870340dfc06f0c983928728e21c3042a8d960911ca20b80c8186e"
+          },
+          "macos_x64": {
+            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.22/php-8.4.22-macos-x86_64.tar.gz",
+            "filename": "php-8.4.22-macos-x86_64.tar.gz",
+            "sha256": ""
           }
         },
         "8.3": {
