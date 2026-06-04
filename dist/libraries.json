@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-06-03T03:33:31.991Z",
+  "updated": "2026-06-04T03:28:22.292Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -36,11 +36,6 @@
             "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.22/php-8.4.22-macos-arm64.tar.gz",
             "filename": "php-8.4.22-macos-arm64.tar.gz",
             "sha256": "7b10e352b0e870340dfc06f0c983928728e21c3042a8d960911ca20b80c8186e"
-          },
-          "macos_x64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.22/php-8.4.22-macos-x86_64.tar.gz",
-            "filename": "php-8.4.22-macos-x86_64.tar.gz",
-            "sha256": ""
           }
         },
         "8.3": {
@@ -650,21 +645,21 @@
     "deno": {
       "name": "Deno",
       "description": "Next-generation JavaScript runtime",
-      "latest": "2.8.1",
+      "latest": "2.8.2",
       "windows": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.8.1/deno-x86_64-pc-windows-msvc.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.8.2/deno-x86_64-pc-windows-msvc.zip",
         "filename": "deno-x86_64-pc-windows-msvc.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.8.1/deno-aarch64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.8.2/deno-aarch64-apple-darwin.zip",
         "filename": "deno-aarch64-apple-darwin.zip"
       },
       "macos_x64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.8.1/deno-x86_64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.8.2/deno-x86_64-apple-darwin.zip",
         "filename": "deno-x86_64-apple-darwin.zip"
       },
       "linux": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.8.1/deno-x86_64-unknown-linux-gnu.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.8.2/deno-x86_64-unknown-linux-gnu.zip",
         "filename": "deno-x86_64-unknown-linux-gnu.zip"
       }
     },
