@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-06-10T02:50:39.939Z",
+  "updated": "2026-06-11T03:21:49.718Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -171,15 +171,15 @@
       "name": "Apache HTTP Server",
       "description": "The most widely used web server",
       "availableVersions": [
-        "2.4.67-VS18",
+        "2.4.68-VS18",
         "2.4.66-VS17"
       ],
       "versions": {
-        "2.4.67-VS18": {
-          "latest": "2.4.67",
+        "2.4.68-VS18": {
+          "latest": "2.4.68",
           "windows": {
-            "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.67-260504-Win64-VS18.zip",
-            "filename": "httpd-2.4.67-260504-Win64-VS18.zip"
+            "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.68-260610-Win64-VS18.zip",
+            "filename": "httpd-2.4.68-260610-Win64-VS18.zip"
           }
         },
         "2.4.66-VS17": {
@@ -481,33 +481,33 @@
       ],
       "versions": {
         "3.14": {
-          "latest": "3.14.5",
+          "latest": "3.14.6",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5-embed-amd64.zip",
-            "filename": "python-3.14.5-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.14.6/python-3.14.6-embed-amd64.zip",
+            "filename": "python-3.14.6-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5.tgz",
-            "filename": "Python-3.14.5.tgz"
+            "url": "https://www.python.org/ftp/python/3.14.6/Python-3.14.6.tgz",
+            "filename": "Python-3.14.6.tgz"
           },
           "macos_arm64": {
-            "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5-macos11.pkg",
-            "filename": "python-3.14.5-macos11.pkg"
+            "url": "https://www.python.org/ftp/python/3.14.6/python-3.14.6-macos11.pkg",
+            "filename": "python-3.14.6-macos11.pkg"
           }
         },
         "3.13": {
-          "latest": "3.13.13",
+          "latest": "3.13.14",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.13.13/python-3.13.13-embed-amd64.zip",
-            "filename": "python-3.13.13-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.13.14/python-3.13.14-embed-amd64.zip",
+            "filename": "python-3.13.14-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://www.python.org/ftp/python/3.13.13/Python-3.13.13.tgz",
-            "filename": "Python-3.13.13.tgz"
+            "url": "https://www.python.org/ftp/python/3.13.14/Python-3.13.14.tgz",
+            "filename": "Python-3.13.14.tgz"
           },
           "macos_arm64": {
-            "url": "https://www.python.org/ftp/python/3.13.13/python-3.13.13-macos11.pkg",
-            "filename": "python-3.13.13-macos11.pkg"
+            "url": "https://www.python.org/ftp/python/3.13.14/python-3.13.14-macos11.pkg",
+            "filename": "python-3.13.14-macos11.pkg"
           }
         },
         "3.12": {
