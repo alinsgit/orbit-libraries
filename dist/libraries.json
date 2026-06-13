@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-06-12T02:56:56.587Z",
+  "updated": "2026-06-13T02:49:32.213Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -293,54 +293,22 @@
       "name": "PostgreSQL",
       "description": "Advanced open source relational database",
       "availableVersions": [
-        "16",
-        "15",
-        "14"
+        "16"
       ],
       "versions": {
-        "14": {
-          "latest": "14.23",
-          "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.23-1-windows-x64-binaries.zip",
-            "filename": "postgresql-14.23-windows-x64.zip"
-          },
-          "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.23-1-osx-binaries.zip",
-            "filename": "postgresql-14.23-osx.zip"
-          },
-          "macos_x64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.23-1-osx-binaries.zip",
-            "filename": "postgresql-14.23-osx.zip"
-          }
-        },
-        "15": {
-          "latest": "15.18",
-          "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.18-1-windows-x64-binaries.zip",
-            "filename": "postgresql-15.18-windows-x64.zip"
-          },
-          "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.18-1-osx-binaries.zip",
-            "filename": "postgresql-15.18-osx.zip"
-          },
-          "macos_x64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.18-1-osx-binaries.zip",
-            "filename": "postgresql-15.18-osx.zip"
-          }
-        },
         "16": {
-          "latest": "16.14",
+          "latest": "16.2",
           "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.14-1-windows-x64-binaries.zip",
-            "filename": "postgresql-16.14-windows-x64.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-windows-x64-binaries.zip",
+            "filename": "postgresql-16.2-1-windows-x64-binaries.zip"
           },
           "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.14-1-osx-binaries.zip",
-            "filename": "postgresql-16.14-osx.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-osx-binaries.zip",
+            "filename": "postgresql-16.2-1-osx-binaries.zip"
           },
-          "macos_x64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.14-1-osx-binaries.zip",
-            "filename": "postgresql-16.14-osx.zip"
+          "linux": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-linux-x64-binaries.tar.gz",
+            "filename": "postgresql-16.2-1-linux-x64-binaries.tar.gz"
           }
         }
       }
