@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-06-23T02:42:04.040Z",
+  "updated": "2026-06-24T02:42:40.838Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -412,41 +412,41 @@
       ],
       "versions": {
         "22": {
-          "latest": "22.23.0",
+          "latest": "22.23.1",
           "windows": {
-            "url": "https://nodejs.org/dist/v22.23.0/node-v22.23.0-win-x64.zip",
-            "filename": "node-v22.23.0-win-x64.zip"
+            "url": "https://nodejs.org/dist/v22.23.1/node-v22.23.1-win-x64.zip",
+            "filename": "node-v22.23.1-win-x64.zip"
           },
           "linux": {
-            "url": "https://nodejs.org/dist/v22.23.0/node-v22.23.0-linux-x64.tar.gz",
-            "filename": "node-v22.23.0-linux-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v22.23.1/node-v22.23.1-linux-x64.tar.gz",
+            "filename": "node-v22.23.1-linux-x64.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nodejs.org/dist/v22.23.0/node-v22.23.0-darwin-arm64.tar.gz",
-            "filename": "node-v22.23.0-darwin-arm64.tar.gz"
+            "url": "https://nodejs.org/dist/v22.23.1/node-v22.23.1-darwin-arm64.tar.gz",
+            "filename": "node-v22.23.1-darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://nodejs.org/dist/v22.23.0/node-v22.23.0-darwin-x64.tar.gz",
-            "filename": "node-v22.23.0-darwin-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v22.23.1/node-v22.23.1-darwin-x64.tar.gz",
+            "filename": "node-v22.23.1-darwin-x64.tar.gz"
           }
         },
         "24": {
-          "latest": "24.17.0",
+          "latest": "24.18.0",
           "windows": {
-            "url": "https://nodejs.org/dist/v24.17.0/node-v24.17.0-win-x64.zip",
-            "filename": "node-v24.17.0-win-x64.zip"
+            "url": "https://nodejs.org/dist/v24.18.0/node-v24.18.0-win-x64.zip",
+            "filename": "node-v24.18.0-win-x64.zip"
           },
           "linux": {
-            "url": "https://nodejs.org/dist/v24.17.0/node-v24.17.0-linux-x64.tar.gz",
-            "filename": "node-v24.17.0-linux-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v24.18.0/node-v24.18.0-linux-x64.tar.gz",
+            "filename": "node-v24.18.0-linux-x64.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nodejs.org/dist/v24.17.0/node-v24.17.0-darwin-arm64.tar.gz",
-            "filename": "node-v24.17.0-darwin-arm64.tar.gz"
+            "url": "https://nodejs.org/dist/v24.18.0/node-v24.18.0-darwin-arm64.tar.gz",
+            "filename": "node-v24.18.0-darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://nodejs.org/dist/v24.17.0/node-v24.17.0-darwin-x64.tar.gz",
-            "filename": "node-v24.17.0-darwin-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v24.18.0/node-v24.18.0-darwin-x64.tar.gz",
+            "filename": "node-v24.18.0-darwin-x64.tar.gz"
           }
         },
         "26": {
