@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-06-25T02:43:17.241Z",
+  "updated": "2026-06-26T02:47:25.418Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -388,18 +388,18 @@
     "mongosh": {
       "name": "MongoDB Shell",
       "description": "MongoDB interactive shell (mongosh) - required for database management",
-      "latest": "2.8.3",
+      "latest": "2.9.0",
       "windows": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.8.3-win32-x64.zip",
-        "filename": "mongosh-2.8.3-win32-x64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.9.0-win32-x64.zip",
+        "filename": "mongosh-2.9.0-win32-x64.zip"
       },
       "macos_arm64": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.8.3-darwin-arm64.zip",
-        "filename": "mongosh-2.8.3-darwin-arm64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.9.0-darwin-arm64.zip",
+        "filename": "mongosh-2.9.0-darwin-arm64.zip"
       },
       "linux": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.8.3-linux-x64.tgz",
-        "filename": "mongosh-2.8.3-linux-x64.tgz"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.9.0-linux-x64.tgz",
+        "filename": "mongosh-2.9.0-linux-x64.tgz"
       }
     },
     "nodejs": {
@@ -645,21 +645,21 @@
     "deno": {
       "name": "Deno",
       "description": "Next-generation JavaScript runtime",
-      "latest": "2.8.3",
+      "latest": "2.9.0",
       "windows": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.8.3/deno-x86_64-pc-windows-msvc.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.0/deno-x86_64-pc-windows-msvc.zip",
         "filename": "deno-x86_64-pc-windows-msvc.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.8.3/deno-aarch64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.0/deno-aarch64-apple-darwin.zip",
         "filename": "deno-aarch64-apple-darwin.zip"
       },
       "macos_x64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.8.3/deno-x86_64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.0/deno-x86_64-apple-darwin.zip",
         "filename": "deno-x86_64-apple-darwin.zip"
       },
       "linux": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.8.3/deno-x86_64-unknown-linux-gnu.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.0/deno-x86_64-unknown-linux-gnu.zip",
         "filename": "deno-x86_64-unknown-linux-gnu.zip"
       }
     },
