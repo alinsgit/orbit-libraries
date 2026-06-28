@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-06-27T02:38:24.024Z",
+  "updated": "2026-06-28T02:52:40.151Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -696,17 +696,17 @@
     "mailpit": {
       "name": "Mailpit",
       "description": "Email testing tool for developers",
-      "latest": "1.30.2",
+      "latest": "1.30.3",
       "windows": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.2/mailpit-windows-amd64.zip",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.3/mailpit-windows-amd64.zip",
         "filename": "mailpit-windows-amd64.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.2/mailpit-darwin-arm64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.3/mailpit-darwin-arm64.tar.gz",
         "filename": "mailpit-darwin-arm64.tar.gz"
       },
       "linux": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.2/mailpit-linux-amd64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.3/mailpit-linux-amd64.tar.gz",
         "filename": "mailpit-linux-amd64.tar.gz"
       }
     },
