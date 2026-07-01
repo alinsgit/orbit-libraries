@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-06-30T02:47:29.482Z",
+  "updated": "2026-07-01T02:53:08.260Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -83,86 +83,22 @@
       "name": "Nginx",
       "description": "High-performance HTTP server",
       "availableVersions": [
-        "1.31",
-        "1.30",
-        "1.28",
-        "1.26",
-        "1.24"
+        "1.29",
+        "1.28"
       ],
       "versions": {
-        "1.31": {
-          "latest": "1.31.2",
+        "1.29": {
+          "latest": "1.29.5",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.31.2.zip",
-            "filename": "nginx-1.31.2.zip"
-          },
-          "linux": {
-            "url": "https://nginx.org/download/nginx-1.31.2.tar.gz",
-            "filename": "nginx-1.31.2.tar.gz"
-          },
-          "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.31.2.tar.gz",
-            "filename": "nginx-1.31.2.tar.gz"
-          }
-        },
-        "1.30": {
-          "latest": "1.30.3",
-          "windows": {
-            "url": "https://nginx.org/download/nginx-1.30.3.zip",
-            "filename": "nginx-1.30.3.zip"
-          },
-          "linux": {
-            "url": "https://nginx.org/download/nginx-1.30.3.tar.gz",
-            "filename": "nginx-1.30.3.tar.gz"
-          },
-          "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.30.3.tar.gz",
-            "filename": "nginx-1.30.3.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.29.5.zip",
+            "filename": "nginx-1.29.5.zip"
           }
         },
         "1.28": {
-          "latest": "1.28.3",
+          "latest": "1.28.2",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.28.3.zip",
-            "filename": "nginx-1.28.3.zip"
-          },
-          "linux": {
-            "url": "https://nginx.org/download/nginx-1.28.3.tar.gz",
-            "filename": "nginx-1.28.3.tar.gz"
-          },
-          "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.28.3.tar.gz",
-            "filename": "nginx-1.28.3.tar.gz"
-          }
-        },
-        "1.26": {
-          "latest": "1.26.3",
-          "windows": {
-            "url": "https://nginx.org/download/nginx-1.26.3.zip",
-            "filename": "nginx-1.26.3.zip"
-          },
-          "linux": {
-            "url": "https://nginx.org/download/nginx-1.26.3.tar.gz",
-            "filename": "nginx-1.26.3.tar.gz"
-          },
-          "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.26.3.tar.gz",
-            "filename": "nginx-1.26.3.tar.gz"
-          }
-        },
-        "1.24": {
-          "latest": "1.24.0",
-          "windows": {
-            "url": "https://nginx.org/download/nginx-1.24.0.zip",
-            "filename": "nginx-1.24.0.zip"
-          },
-          "linux": {
-            "url": "https://nginx.org/download/nginx-1.24.0.tar.gz",
-            "filename": "nginx-1.24.0.tar.gz"
-          },
-          "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.24.0.tar.gz",
-            "filename": "nginx-1.24.0.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.28.2.zip",
+            "filename": "nginx-1.28.2.zip"
           }
         }
       }
@@ -388,18 +324,18 @@
     "mongosh": {
       "name": "MongoDB Shell",
       "description": "MongoDB interactive shell (mongosh) - required for database management",
-      "latest": "2.9.1",
+      "latest": "2.9.2",
       "windows": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.9.1-win32-x64.zip",
-        "filename": "mongosh-2.9.1-win32-x64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.9.2-win32-x64.zip",
+        "filename": "mongosh-2.9.2-win32-x64.zip"
       },
       "macos_arm64": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.9.1-darwin-arm64.zip",
-        "filename": "mongosh-2.9.1-darwin-arm64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.9.2-darwin-arm64.zip",
+        "filename": "mongosh-2.9.2-darwin-arm64.zip"
       },
       "linux": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.9.1-linux-x64.tgz",
-        "filename": "mongosh-2.9.1-linux-x64.tgz"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.9.2-linux-x64.tgz",
+        "filename": "mongosh-2.9.2-linux-x64.tgz"
       }
     },
     "nodejs": {
