@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-07-01T02:53:08.260Z",
+  "updated": "2026-07-02T02:43:02.673Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -15,51 +15,31 @@
       ],
       "versions": {
         "8.5": {
-          "latest": "8.5.7",
+          "latest": "8.5.8",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.5.7-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.5.7-nts-Win32-vs17-x64.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.5.8-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.5.8-nts-Win32-vs17-x64.zip"
           }
         },
         "8.4": {
-          "latest": "8.4.22",
+          "latest": "8.4.23",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.4.22-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.4.22-nts-Win32-vs17-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.22/php-8.4.22-linux-x86_64.tar.gz",
-            "filename": "php-8.4.22-linux-x86_64.tar.gz",
-            "sha256": "ff1fe4c52338b1eed8769f5f01631e400f3339f9078a22235d59c9aaa74c5999"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.22/php-8.4.22-macos-arm64.tar.gz",
-            "filename": "php-8.4.22-macos-arm64.tar.gz",
-            "sha256": "7b10e352b0e870340dfc06f0c983928728e21c3042a8d960911ca20b80c8186e"
+            "url": "https://windows.php.net/downloads/releases/php-8.4.23-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.4.23-nts-Win32-vs17-x64.zip"
           }
         },
         "8.3": {
-          "latest": "8.3.31",
+          "latest": "8.3.32",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.3.31-nts-Win32-vs16-x64.zip",
-            "filename": "php-8.3.31-nts-Win32-vs16-x64.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.3.32-nts-Win32-vs16-x64.zip",
+            "filename": "php-8.3.32-nts-Win32-vs16-x64.zip"
           }
         },
         "8.2": {
-          "latest": "8.2.31",
+          "latest": "8.2.32",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.2.31-nts-Win32-vs16-x64.zip",
-            "filename": "php-8.2.31-nts-Win32-vs16-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.2.31/php-8.2.31-linux-x86_64.tar.gz",
-            "filename": "php-8.2.31-linux-x86_64.tar.gz",
-            "sha256": "5fcc544742a2096765b13c894a38bda35fcc4d0601d30d2fec07afd64394d479"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.2.31/php-8.2.31-macos-arm64.tar.gz",
-            "filename": "php-8.2.31-macos-arm64.tar.gz",
-            "sha256": "802fe5c4292842f091bc853fcfb45fcbf4424539ea6906b6a3ece21339e78e7f"
+            "url": "https://windows.php.net/downloads/releases/php-8.2.32-nts-Win32-vs16-x64.zip",
+            "filename": "php-8.2.32-nts-Win32-vs16-x64.zip"
           }
         },
         "8.1": {
@@ -83,22 +63,86 @@
       "name": "Nginx",
       "description": "High-performance HTTP server",
       "availableVersions": [
-        "1.29",
-        "1.28"
+        "1.31",
+        "1.30",
+        "1.28",
+        "1.26",
+        "1.24"
       ],
       "versions": {
-        "1.29": {
-          "latest": "1.29.5",
+        "1.31": {
+          "latest": "1.31.2",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.29.5.zip",
-            "filename": "nginx-1.29.5.zip"
+            "url": "https://nginx.org/download/nginx-1.31.2.zip",
+            "filename": "nginx-1.31.2.zip"
+          },
+          "linux": {
+            "url": "https://nginx.org/download/nginx-1.31.2.tar.gz",
+            "filename": "nginx-1.31.2.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nginx.org/download/nginx-1.31.2.tar.gz",
+            "filename": "nginx-1.31.2.tar.gz"
+          }
+        },
+        "1.30": {
+          "latest": "1.30.3",
+          "windows": {
+            "url": "https://nginx.org/download/nginx-1.30.3.zip",
+            "filename": "nginx-1.30.3.zip"
+          },
+          "linux": {
+            "url": "https://nginx.org/download/nginx-1.30.3.tar.gz",
+            "filename": "nginx-1.30.3.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nginx.org/download/nginx-1.30.3.tar.gz",
+            "filename": "nginx-1.30.3.tar.gz"
           }
         },
         "1.28": {
-          "latest": "1.28.2",
+          "latest": "1.28.3",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.28.2.zip",
-            "filename": "nginx-1.28.2.zip"
+            "url": "https://nginx.org/download/nginx-1.28.3.zip",
+            "filename": "nginx-1.28.3.zip"
+          },
+          "linux": {
+            "url": "https://nginx.org/download/nginx-1.28.3.tar.gz",
+            "filename": "nginx-1.28.3.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nginx.org/download/nginx-1.28.3.tar.gz",
+            "filename": "nginx-1.28.3.tar.gz"
+          }
+        },
+        "1.26": {
+          "latest": "1.26.3",
+          "windows": {
+            "url": "https://nginx.org/download/nginx-1.26.3.zip",
+            "filename": "nginx-1.26.3.zip"
+          },
+          "linux": {
+            "url": "https://nginx.org/download/nginx-1.26.3.tar.gz",
+            "filename": "nginx-1.26.3.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nginx.org/download/nginx-1.26.3.tar.gz",
+            "filename": "nginx-1.26.3.tar.gz"
+          }
+        },
+        "1.24": {
+          "latest": "1.24.0",
+          "windows": {
+            "url": "https://nginx.org/download/nginx-1.24.0.zip",
+            "filename": "nginx-1.24.0.zip"
+          },
+          "linux": {
+            "url": "https://nginx.org/download/nginx-1.24.0.tar.gz",
+            "filename": "nginx-1.24.0.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nginx.org/download/nginx-1.24.0.tar.gz",
+            "filename": "nginx-1.24.0.tar.gz"
           }
         }
       }
@@ -581,21 +625,21 @@
     "deno": {
       "name": "Deno",
       "description": "Next-generation JavaScript runtime",
-      "latest": "2.9.0",
+      "latest": "2.9.1",
       "windows": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.0/deno-x86_64-pc-windows-msvc.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.1/deno-x86_64-pc-windows-msvc.zip",
         "filename": "deno-x86_64-pc-windows-msvc.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.0/deno-aarch64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.1/deno-aarch64-apple-darwin.zip",
         "filename": "deno-aarch64-apple-darwin.zip"
       },
       "macos_x64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.0/deno-x86_64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.1/deno-x86_64-apple-darwin.zip",
         "filename": "deno-x86_64-apple-darwin.zip"
       },
       "linux": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.0/deno-x86_64-unknown-linux-gnu.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.1/deno-x86_64-unknown-linux-gnu.zip",
         "filename": "deno-x86_64-unknown-linux-gnu.zip"
       }
     },
@@ -666,9 +710,9 @@
     "composer": {
       "name": "Composer",
       "description": "PHP dependency manager",
-      "latest": "2.10.1",
+      "latest": "2.10.2",
       "all_platforms": {
-        "url": "https://getcomposer.org/download/2.10.1/composer.phar",
+        "url": "https://getcomposer.org/download/2.10.2/composer.phar",
         "filename": "composer.phar"
       }
     },
