@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-07-15T01:51:50.514Z",
+  "updated": "2026-07-16T02:02:37.925Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -81,33 +81,33 @@
       ],
       "versions": {
         "1.31": {
-          "latest": "1.31.2",
+          "latest": "1.31.3",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.31.2.zip",
-            "filename": "nginx-1.31.2.zip"
+            "url": "https://nginx.org/download/nginx-1.31.3.zip",
+            "filename": "nginx-1.31.3.zip"
           },
           "linux": {
-            "url": "https://nginx.org/download/nginx-1.31.2.tar.gz",
-            "filename": "nginx-1.31.2.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.31.3.tar.gz",
+            "filename": "nginx-1.31.3.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.31.2.tar.gz",
-            "filename": "nginx-1.31.2.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.31.3.tar.gz",
+            "filename": "nginx-1.31.3.tar.gz"
           }
         },
         "1.30": {
-          "latest": "1.30.3",
+          "latest": "1.30.4",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.30.3.zip",
-            "filename": "nginx-1.30.3.zip"
+            "url": "https://nginx.org/download/nginx-1.30.4.zip",
+            "filename": "nginx-1.30.4.zip"
           },
           "linux": {
-            "url": "https://nginx.org/download/nginx-1.30.3.tar.gz",
-            "filename": "nginx-1.30.3.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.30.4.tar.gz",
+            "filename": "nginx-1.30.4.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.30.3.tar.gz",
-            "filename": "nginx-1.30.3.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.30.4.tar.gz",
+            "filename": "nginx-1.30.4.tar.gz"
           }
         },
         "1.28": {
@@ -635,21 +635,21 @@
     "deno": {
       "name": "Deno",
       "description": "Next-generation JavaScript runtime",
-      "latest": "2.9.2",
+      "latest": "2.9.3",
       "windows": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.2/deno-x86_64-pc-windows-msvc.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.3/deno-x86_64-pc-windows-msvc.zip",
         "filename": "deno-x86_64-pc-windows-msvc.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.2/deno-aarch64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.3/deno-aarch64-apple-darwin.zip",
         "filename": "deno-aarch64-apple-darwin.zip"
       },
       "macos_x64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.2/deno-x86_64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.3/deno-x86_64-apple-darwin.zip",
         "filename": "deno-x86_64-apple-darwin.zip"
       },
       "linux": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.2/deno-x86_64-unknown-linux-gnu.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.3/deno-x86_64-unknown-linux-gnu.zip",
         "filename": "deno-x86_64-unknown-linux-gnu.zip"
       }
     },
