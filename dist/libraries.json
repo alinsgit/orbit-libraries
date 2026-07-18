@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-07-17T02:06:11.492Z",
+  "updated": "2026-07-18T01:54:57.340Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -464,54 +464,22 @@
       "name": "Python",
       "description": "General-purpose programming language",
       "availableVersions": [
-        "3.14",
         "3.13",
-        "3.12",
-        "3.11"
+        "3.12"
       ],
       "versions": {
-        "3.14": {
-          "latest": "3.14.6",
-          "windows": {
-            "url": "https://www.python.org/ftp/python/3.14.6/python-3.14.6-embed-amd64.zip",
-            "filename": "python-3.14.6-embed-amd64.zip"
-          },
-          "linux": {
-            "url": "https://www.python.org/ftp/python/3.14.6/Python-3.14.6.tgz",
-            "filename": "Python-3.14.6.tgz"
-          },
-          "macos_arm64": {
-            "url": "https://www.python.org/ftp/python/3.14.6/python-3.14.6-macos11.pkg",
-            "filename": "python-3.14.6-macos11.pkg"
-          }
-        },
         "3.13": {
-          "latest": "3.13.14",
+          "latest": "3.13.12",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.13.14/python-3.13.14-embed-amd64.zip",
-            "filename": "python-3.13.14-embed-amd64.zip"
-          },
-          "linux": {
-            "url": "https://www.python.org/ftp/python/3.13.14/Python-3.13.14.tgz",
-            "filename": "Python-3.13.14.tgz"
-          },
-          "macos_arm64": {
-            "url": "https://www.python.org/ftp/python/3.13.14/python-3.13.14-macos11.pkg",
-            "filename": "python-3.13.14-macos11.pkg"
+            "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-embed-amd64.zip",
+            "filename": "python-3.13.12-embed-amd64.zip"
           }
         },
         "3.12": {
-          "latest": "3.12.10",
+          "latest": "3.12.8",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip",
-            "filename": "python-3.12.10-embed-amd64.zip"
-          }
-        },
-        "3.11": {
-          "latest": "3.11.9",
-          "windows": {
-            "url": "https://www.python.org/ftp/python/3.11.9/python-3.11.9-embed-amd64.zip",
-            "filename": "python-3.11.9-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-embed-amd64.zip",
+            "filename": "python-3.12.8-embed-amd64.zip"
           }
         }
       }
