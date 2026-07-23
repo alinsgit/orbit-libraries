@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-07-22T02:03:20.595Z",
+  "updated": "2026-07-23T02:10:01.621Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -344,33 +344,33 @@
       ],
       "versions": {
         "8.0": {
-          "latest": "8.0.26",
+          "latest": "8.0.28",
           "windows": {
-            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.26.zip",
-            "filename": "mongodb-8.0.26-win.zip"
+            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.28.zip",
+            "filename": "mongodb-8.0.28-win.zip"
           },
           "macos_arm64": {
-            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-8.0.26.tgz",
-            "filename": "mongodb-8.0.26-mac.tgz"
+            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-8.0.28.tgz",
+            "filename": "mongodb-8.0.28-mac.tgz"
           },
           "linux": {
-            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-8.0.26.tgz",
-            "filename": "mongodb-8.0.26-linux.tgz"
+            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-8.0.28.tgz",
+            "filename": "mongodb-8.0.28-linux.tgz"
           }
         },
         "7.0": {
-          "latest": "7.0.37",
+          "latest": "7.0.39",
           "windows": {
-            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.37.zip",
-            "filename": "mongodb-7.0.37-win.zip"
+            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.39.zip",
+            "filename": "mongodb-7.0.39-win.zip"
           },
           "macos_arm64": {
-            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-7.0.37.tgz",
-            "filename": "mongodb-7.0.37-mac.tgz"
+            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-7.0.39.tgz",
+            "filename": "mongodb-7.0.39-mac.tgz"
           },
           "linux": {
-            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-7.0.37.tgz",
-            "filename": "mongodb-7.0.37-linux.tgz"
+            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-7.0.39.tgz",
+            "filename": "mongodb-7.0.39-linux.tgz"
           }
         }
       }
