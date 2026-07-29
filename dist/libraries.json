@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-07-28T01:59:13.341Z",
+  "updated": "2026-07-29T02:01:49.148Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -15,10 +15,10 @@
       ],
       "versions": {
         "8.5": {
-          "latest": "8.5.8",
+          "latest": "8.5.9",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.5.8-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.5.8-nts-Win32-vs17-x64.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.5.9-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.5.9-nts-Win32-vs17-x64.zip"
           }
         },
         "8.4": {
@@ -39,17 +39,17 @@
           }
         },
         "8.3": {
-          "latest": "8.3.32",
+          "latest": "8.3.33",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.3.32-nts-Win32-vs16-x64.zip",
-            "filename": "php-8.3.32-nts-Win32-vs16-x64.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.3.33-nts-Win32-vs16-x64.zip",
+            "filename": "php-8.3.33-nts-Win32-vs16-x64.zip"
           }
         },
         "8.2": {
-          "latest": "8.2.32",
+          "latest": "8.2.33",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.2.32-nts-Win32-vs16-x64.zip",
-            "filename": "php-8.2.32-nts-Win32-vs16-x64.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.2.33-nts-Win32-vs16-x64.zip",
+            "filename": "php-8.2.33-nts-Win32-vs16-x64.zip"
           }
         },
         "8.1": {
@@ -686,17 +686,17 @@
     "mailpit": {
       "name": "Mailpit",
       "description": "Email testing tool for developers",
-      "latest": "1.30.5",
+      "latest": "1.30.6",
       "windows": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.5/mailpit-windows-amd64.zip",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.6/mailpit-windows-amd64.zip",
         "filename": "mailpit-windows-amd64.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.5/mailpit-darwin-arm64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.6/mailpit-darwin-arm64.tar.gz",
         "filename": "mailpit-darwin-arm64.tar.gz"
       },
       "linux": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.5/mailpit-linux-amd64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.30.6/mailpit-linux-amd64.tar.gz",
         "filename": "mailpit-linux-amd64.tar.gz"
       }
     },
