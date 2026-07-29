@@ -19,6 +19,21 @@
           "windows": {
             "url": "https://windows.php.net/downloads/releases/php-8.5.9-nts-Win32-vs17-x64.zip",
             "filename": "php-8.5.9-nts-Win32-vs17-x64.zip"
+          },
+          "linux": {
+            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.9/php-8.5.9-linux-x86_64.tar.gz",
+            "filename": "php-8.5.9-linux-x86_64.tar.gz",
+            "sha256": "884ff340f2a91af7ab7199af2c6d78ffd74412c155e31e9b25d192e69402e6ea"
+          },
+          "macos_arm64": {
+            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.9/php-8.5.9-macos-arm64.tar.gz",
+            "filename": "php-8.5.9-macos-arm64.tar.gz",
+            "sha256": "86e3c7d60bb064f12cc014171ae222a4ce9074f1a2f53a3ab63bfa5a7035520e"
+          },
+          "macos_x64": {
+            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.9/php-8.5.9-macos-x86_64.tar.gz",
+            "filename": "php-8.5.9-macos-x86_64.tar.gz",
+            "sha256": ""
           }
         },
         "8.4": {
