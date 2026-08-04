@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-08-03T02:11:32.675Z",
+  "updated": "2026-08-04T01:57:25.160Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -431,41 +431,41 @@
           }
         },
         "24": {
-          "latest": "24.18.1",
+          "latest": "24.19.0",
           "windows": {
-            "url": "https://nodejs.org/dist/v24.18.1/node-v24.18.1-win-x64.zip",
-            "filename": "node-v24.18.1-win-x64.zip"
+            "url": "https://nodejs.org/dist/v24.19.0/node-v24.19.0-win-x64.zip",
+            "filename": "node-v24.19.0-win-x64.zip"
           },
           "linux": {
-            "url": "https://nodejs.org/dist/v24.18.1/node-v24.18.1-linux-x64.tar.gz",
-            "filename": "node-v24.18.1-linux-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v24.19.0/node-v24.19.0-linux-x64.tar.gz",
+            "filename": "node-v24.19.0-linux-x64.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nodejs.org/dist/v24.18.1/node-v24.18.1-darwin-arm64.tar.gz",
-            "filename": "node-v24.18.1-darwin-arm64.tar.gz"
+            "url": "https://nodejs.org/dist/v24.19.0/node-v24.19.0-darwin-arm64.tar.gz",
+            "filename": "node-v24.19.0-darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://nodejs.org/dist/v24.18.1/node-v24.18.1-darwin-x64.tar.gz",
-            "filename": "node-v24.18.1-darwin-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v24.19.0/node-v24.19.0-darwin-x64.tar.gz",
+            "filename": "node-v24.19.0-darwin-x64.tar.gz"
           }
         },
         "26": {
-          "latest": "26.5.1",
+          "latest": "26.6.0",
           "windows": {
-            "url": "https://nodejs.org/dist/v26.5.1/node-v26.5.1-win-x64.zip",
-            "filename": "node-v26.5.1-win-x64.zip"
+            "url": "https://nodejs.org/dist/v26.6.0/node-v26.6.0-win-x64.zip",
+            "filename": "node-v26.6.0-win-x64.zip"
           },
           "linux": {
-            "url": "https://nodejs.org/dist/v26.5.1/node-v26.5.1-linux-x64.tar.gz",
-            "filename": "node-v26.5.1-linux-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v26.6.0/node-v26.6.0-linux-x64.tar.gz",
+            "filename": "node-v26.6.0-linux-x64.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nodejs.org/dist/v26.5.1/node-v26.5.1-darwin-arm64.tar.gz",
-            "filename": "node-v26.5.1-darwin-arm64.tar.gz"
+            "url": "https://nodejs.org/dist/v26.6.0/node-v26.6.0-darwin-arm64.tar.gz",
+            "filename": "node-v26.6.0-darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://nodejs.org/dist/v26.5.1/node-v26.5.1-darwin-x64.tar.gz",
-            "filename": "node-v26.5.1-darwin-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v26.6.0/node-v26.6.0-darwin-x64.tar.gz",
+            "filename": "node-v26.6.0-darwin-x64.tar.gz"
           }
         }
       }
@@ -713,17 +713,17 @@
     "meilisearch": {
       "name": "Meilisearch",
       "description": "Fast, typo-tolerant search engine",
-      "latest": "1.51.0",
+      "latest": "1.52.0",
       "windows": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.51.0/meilisearch-windows-amd64.exe",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.52.0/meilisearch-windows-amd64.exe",
         "filename": "meilisearch-windows-amd64.exe"
       },
       "macos_arm64": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.51.0/meilisearch-macos-apple-silicon",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.52.0/meilisearch-macos-apple-silicon",
         "filename": "meilisearch-macos-apple-silicon"
       },
       "linux": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.51.0/meilisearch-linux-amd64",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.52.0/meilisearch-linux-amd64",
         "filename": "meilisearch-linux-amd64"
       }
     },
