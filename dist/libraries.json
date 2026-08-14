@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-08-13T01:23:10.676Z",
+  "updated": "2026-08-14T01:22:29.839Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -271,20 +271,20 @@
           }
         },
         "10.6": {
-          "latest": "10.6.27",
+          "latest": "10.6.28",
           "windows": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.27/winx64-packages/mariadb-10.6.27-winx64.zip",
-            "filename": "mariadb-10.6.27-winx64.zip",
-            "sha256": "cc18bc6a0d42df6990ed91d1d7695e893b15168779272df43adf45dd75705a50"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.28/winx64-packages/mariadb-10.6.28-winx64.zip",
+            "filename": "mariadb-10.6.28-winx64.zip",
+            "sha256": "a4e5cd01587d1662728f0cf0d8bb3d1aaedc6861b272cec18f504ab4ba8b2f72"
           },
           "linux": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.27/bintar-linux-systemd-x86_64/mariadb-10.6.27-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-10.6.27-linux-systemd-x86_64.tar.gz",
-            "sha256": "dd5dd6b7d123a95db5bbd929ab66d18bd6d9c12d5ec85bd9577c03dd33ef8900"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.28/bintar-linux-systemd-x86_64/mariadb-10.6.28-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-10.6.28-linux-systemd-x86_64.tar.gz",
+            "sha256": "80ca39575e5dd9670d9015b674835cd1d37548576547425763694d1bcc686ce2"
           },
           "macos_arm64": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.27/macos-system-arm64/mariadb-10.6.27-macos13-arm64.tar.gz",
-            "filename": "mariadb-10.6.27-macos13-arm64.tar.gz"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.28/macos-system-arm64/mariadb-10.6.28-macos13-arm64.tar.gz",
+            "filename": "mariadb-10.6.28-macos13-arm64.tar.gz"
           }
         }
       }
@@ -293,22 +293,54 @@
       "name": "PostgreSQL",
       "description": "Advanced open source relational database",
       "availableVersions": [
-        "16"
+        "16",
+        "15",
+        "14"
       ],
       "versions": {
-        "16": {
-          "latest": "16.2",
+        "14": {
+          "latest": "14.24",
           "windows": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-windows-x64-binaries.zip",
-            "filename": "postgresql-16.2-1-windows-x64-binaries.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.24-1-windows-x64-binaries.zip",
+            "filename": "postgresql-14.24-windows-x64.zip"
           },
           "macos_arm64": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-osx-binaries.zip",
-            "filename": "postgresql-16.2-1-osx-binaries.zip"
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.24-1-osx-binaries.zip",
+            "filename": "postgresql-14.24-osx.zip"
           },
-          "linux": {
-            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.2-1-linux-x64-binaries.tar.gz",
-            "filename": "postgresql-16.2-1-linux-x64-binaries.tar.gz"
+          "macos_x64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-14.24-1-osx-binaries.zip",
+            "filename": "postgresql-14.24-osx.zip"
+          }
+        },
+        "15": {
+          "latest": "15.19",
+          "windows": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.19-1-windows-x64-binaries.zip",
+            "filename": "postgresql-15.19-windows-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.19-1-osx-binaries.zip",
+            "filename": "postgresql-15.19-osx.zip"
+          },
+          "macos_x64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-15.19-1-osx-binaries.zip",
+            "filename": "postgresql-15.19-osx.zip"
+          }
+        },
+        "16": {
+          "latest": "16.15",
+          "windows": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.15-1-windows-x64-binaries.zip",
+            "filename": "postgresql-16.15-windows-x64.zip"
+          },
+          "macos_arm64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.15-1-osx-binaries.zip",
+            "filename": "postgresql-16.15-osx.zip"
+          },
+          "macos_x64": {
+            "url": "https://get.enterprisedb.com/postgresql/postgresql-16.15-1-osx-binaries.zip",
+            "filename": "postgresql-16.15-osx.zip"
           }
         }
       }
@@ -356,18 +388,18 @@
     "mongosh": {
       "name": "MongoDB Shell",
       "description": "MongoDB interactive shell (mongosh) - required for database management",
-      "latest": "2.9.2",
+      "latest": "2.10.0",
       "windows": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.9.2-win32-x64.zip",
-        "filename": "mongosh-2.9.2-win32-x64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.10.0-win32-x64.zip",
+        "filename": "mongosh-2.10.0-win32-x64.zip"
       },
       "macos_arm64": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.9.2-darwin-arm64.zip",
-        "filename": "mongosh-2.9.2-darwin-arm64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.10.0-darwin-arm64.zip",
+        "filename": "mongosh-2.10.0-darwin-arm64.zip"
       },
       "linux": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.9.2-linux-x64.tgz",
-        "filename": "mongosh-2.9.2-linux-x64.tgz"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.10.0-linux-x64.tgz",
+        "filename": "mongosh-2.10.0-linux-x64.tgz"
       }
     },
     "nodejs": {
@@ -442,22 +474,54 @@
       "name": "Python",
       "description": "General-purpose programming language",
       "availableVersions": [
+        "3.14",
         "3.13",
-        "3.12"
+        "3.12",
+        "3.11"
       ],
       "versions": {
-        "3.13": {
-          "latest": "3.13.12",
+        "3.14": {
+          "latest": "3.14.7",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.13.12/python-3.13.12-embed-amd64.zip",
-            "filename": "python-3.13.12-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.14.7/python-3.14.7-embed-amd64.zip",
+            "filename": "python-3.14.7-embed-amd64.zip"
+          },
+          "linux": {
+            "url": "https://www.python.org/ftp/python/3.14.7/Python-3.14.7.tgz",
+            "filename": "Python-3.14.7.tgz"
+          },
+          "macos_arm64": {
+            "url": "https://www.python.org/ftp/python/3.14.7/python-3.14.7-macos11.pkg",
+            "filename": "python-3.14.7-macos11.pkg"
+          }
+        },
+        "3.13": {
+          "latest": "3.13.15",
+          "windows": {
+            "url": "https://www.python.org/ftp/python/3.13.15/python-3.13.15-embed-amd64.zip",
+            "filename": "python-3.13.15-embed-amd64.zip"
+          },
+          "linux": {
+            "url": "https://www.python.org/ftp/python/3.13.15/Python-3.13.15.tgz",
+            "filename": "Python-3.13.15.tgz"
+          },
+          "macos_arm64": {
+            "url": "https://www.python.org/ftp/python/3.13.15/python-3.13.15-macos11.pkg",
+            "filename": "python-3.13.15-macos11.pkg"
           }
         },
         "3.12": {
-          "latest": "3.12.8",
+          "latest": "3.12.10",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-embed-amd64.zip",
-            "filename": "python-3.12.8-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip",
+            "filename": "python-3.12.10-embed-amd64.zip"
+          }
+        },
+        "3.11": {
+          "latest": "3.11.9",
+          "windows": {
+            "url": "https://www.python.org/ftp/python/3.11.9/python-3.11.9-embed-amd64.zip",
+            "filename": "python-3.11.9-embed-amd64.zip"
           }
         }
       }
@@ -539,41 +603,41 @@
       ],
       "versions": {
         "1.26": {
-          "latest": "1.26.5",
+          "latest": "1.26.6",
           "windows": {
-            "url": "https://dl.google.com/go/go1.26.5.windows-amd64.zip",
-            "filename": "go1.26.5.windows-amd64.zip"
+            "url": "https://dl.google.com/go/go1.26.6.windows-amd64.zip",
+            "filename": "go1.26.6.windows-amd64.zip"
           },
           "macos_arm64": {
-            "url": "https://dl.google.com/go/go1.26.5.darwin-arm64.tar.gz",
-            "filename": "go1.26.5.darwin-arm64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.6.darwin-arm64.tar.gz",
+            "filename": "go1.26.6.darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://dl.google.com/go/go1.26.5.darwin-amd64.tar.gz",
-            "filename": "go1.26.5.darwin-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.6.darwin-amd64.tar.gz",
+            "filename": "go1.26.6.darwin-amd64.tar.gz"
           },
           "linux": {
-            "url": "https://dl.google.com/go/go1.26.5.linux-amd64.tar.gz",
-            "filename": "go1.26.5.linux-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.6.linux-amd64.tar.gz",
+            "filename": "go1.26.6.linux-amd64.tar.gz"
           }
         },
         "1.25": {
-          "latest": "1.25.12",
+          "latest": "1.25.13",
           "windows": {
-            "url": "https://dl.google.com/go/go1.25.12.windows-amd64.zip",
-            "filename": "go1.25.12.windows-amd64.zip"
+            "url": "https://dl.google.com/go/go1.25.13.windows-amd64.zip",
+            "filename": "go1.25.13.windows-amd64.zip"
           },
           "macos_arm64": {
-            "url": "https://dl.google.com/go/go1.25.12.darwin-arm64.tar.gz",
-            "filename": "go1.25.12.darwin-arm64.tar.gz"
+            "url": "https://dl.google.com/go/go1.25.13.darwin-arm64.tar.gz",
+            "filename": "go1.25.13.darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://dl.google.com/go/go1.25.12.darwin-amd64.tar.gz",
-            "filename": "go1.25.12.darwin-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.25.13.darwin-amd64.tar.gz",
+            "filename": "go1.25.13.darwin-amd64.tar.gz"
           },
           "linux": {
-            "url": "https://dl.google.com/go/go1.25.12.linux-amd64.tar.gz",
-            "filename": "go1.25.12.linux-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.25.13.linux-amd64.tar.gz",
+            "filename": "go1.25.13.linux-amd64.tar.gz"
           }
         }
       }
@@ -649,17 +713,17 @@
     "meilisearch": {
       "name": "Meilisearch",
       "description": "Fast, typo-tolerant search engine",
-      "latest": "1.53.0",
+      "latest": "1.53.1",
       "windows": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.53.0/meilisearch-windows-amd64.exe",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.53.1/meilisearch-windows-amd64.exe",
         "filename": "meilisearch-windows-amd64.exe"
       },
       "macos_arm64": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.53.0/meilisearch-macos-apple-silicon",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.53.1/meilisearch-macos-apple-silicon",
         "filename": "meilisearch-macos-apple-silicon"
       },
       "linux": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.53.0/meilisearch-linux-amd64",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.53.1/meilisearch-linux-amd64",
         "filename": "meilisearch-linux-amd64"
       }
     },
