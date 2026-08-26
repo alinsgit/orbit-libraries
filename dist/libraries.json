@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-08-25T00:54:53.008Z",
+  "updated": "2026-08-26T00:55:53.622Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -15,37 +15,17 @@
       ],
       "versions": {
         "8.5": {
-          "latest": "8.5.9",
+          "latest": "8.5.10",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.5.9-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.5.9-nts-Win32-vs17-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.9/php-8.5.9-linux-x86_64.tar.gz",
-            "filename": "php-8.5.9-linux-x86_64.tar.gz",
-            "sha256": "884ff340f2a91af7ab7199af2c6d78ffd74412c155e31e9b25d192e69402e6ea"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.9/php-8.5.9-macos-arm64.tar.gz",
-            "filename": "php-8.5.9-macos-arm64.tar.gz",
-            "sha256": "86e3c7d60bb064f12cc014171ae222a4ce9074f1a2f53a3ab63bfa5a7035520e"
+            "url": "https://windows.php.net/downloads/releases/php-8.5.10-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.5.10-nts-Win32-vs17-x64.zip"
           }
         },
         "8.4": {
-          "latest": "8.4.24",
+          "latest": "8.4.25",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.4.24-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.4.24-nts-Win32-vs17-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.24/php-8.4.24-linux-x86_64.tar.gz",
-            "filename": "php-8.4.24-linux-x86_64.tar.gz",
-            "sha256": "6e9e17edceafa75b564039082a3942d37154fe001850ea11b479995644daf4e4"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.24/php-8.4.24-macos-arm64.tar.gz",
-            "filename": "php-8.4.24-macos-arm64.tar.gz",
-            "sha256": "1f62104af5b1bb0cc853961a9f18dc4ac5c0d734150cd25bf27c65ae21e667ef"
+            "url": "https://windows.php.net/downloads/releases/php-8.4.25-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.4.25-nts-Win32-vs17-x64.zip"
           }
         },
         "8.3": {
