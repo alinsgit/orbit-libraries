@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-08-27T06:42:17.786Z",
+  "updated": "2026-08-28T08:32:28.785Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -168,8 +168,8 @@
         "2.4.68-VS18": {
           "latest": "2.4.68",
           "windows": {
-            "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.68-260617-Win64-VS18.zip",
-            "filename": "httpd-2.4.68-260617-Win64-VS18.zip"
+            "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.68-260827-Win64-VS18.zip",
+            "filename": "httpd-2.4.68-260827-Win64-VS18.zip"
           }
         },
         "2.4.66-VS17": {
@@ -655,21 +655,21 @@
     "deno": {
       "name": "Deno",
       "description": "Next-generation JavaScript runtime",
-      "latest": "2.9.5",
+      "latest": "2.9.6",
       "windows": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.5/deno-x86_64-pc-windows-msvc.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.6/deno-x86_64-pc-windows-msvc.zip",
         "filename": "deno-x86_64-pc-windows-msvc.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.5/deno-aarch64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.6/deno-aarch64-apple-darwin.zip",
         "filename": "deno-aarch64-apple-darwin.zip"
       },
       "macos_x64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.5/deno-x86_64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.6/deno-x86_64-apple-darwin.zip",
         "filename": "deno-x86_64-apple-darwin.zip"
       },
       "linux": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.5/deno-x86_64-unknown-linux-gnu.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.6/deno-x86_64-unknown-linux-gnu.zip",
         "filename": "deno-x86_64-unknown-linux-gnu.zip"
       }
     },
@@ -740,9 +740,9 @@
     "composer": {
       "name": "Composer",
       "description": "PHP dependency manager",
-      "latest": "2.10.2",
+      "latest": "2.10.3",
       "all_platforms": {
-        "url": "https://getcomposer.org/download/2.10.2/composer.phar",
+        "url": "https://getcomposer.org/download/2.10.3/composer.phar",
         "filename": "composer.phar"
       }
     },
