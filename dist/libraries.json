@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-09-01T03:05:30.700Z",
+  "updated": "2026-09-02T02:25:21.588Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -613,41 +613,41 @@
       ],
       "versions": {
         "1.27": {
-          "latest": "1.27.0",
+          "latest": "1.27.1",
           "windows": {
-            "url": "https://dl.google.com/go/go1.27.0.windows-amd64.zip",
-            "filename": "go1.27.0.windows-amd64.zip"
+            "url": "https://dl.google.com/go/go1.27.1.windows-amd64.zip",
+            "filename": "go1.27.1.windows-amd64.zip"
           },
           "macos_arm64": {
-            "url": "https://dl.google.com/go/go1.27.0.darwin-arm64.tar.gz",
-            "filename": "go1.27.0.darwin-arm64.tar.gz"
+            "url": "https://dl.google.com/go/go1.27.1.darwin-arm64.tar.gz",
+            "filename": "go1.27.1.darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://dl.google.com/go/go1.27.0.darwin-amd64.tar.gz",
-            "filename": "go1.27.0.darwin-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.27.1.darwin-amd64.tar.gz",
+            "filename": "go1.27.1.darwin-amd64.tar.gz"
           },
           "linux": {
-            "url": "https://dl.google.com/go/go1.27.0.linux-amd64.tar.gz",
-            "filename": "go1.27.0.linux-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.27.1.linux-amd64.tar.gz",
+            "filename": "go1.27.1.linux-amd64.tar.gz"
           }
         },
         "1.26": {
-          "latest": "1.26.7",
+          "latest": "1.26.8",
           "windows": {
-            "url": "https://dl.google.com/go/go1.26.7.windows-amd64.zip",
-            "filename": "go1.26.7.windows-amd64.zip"
+            "url": "https://dl.google.com/go/go1.26.8.windows-amd64.zip",
+            "filename": "go1.26.8.windows-amd64.zip"
           },
           "macos_arm64": {
-            "url": "https://dl.google.com/go/go1.26.7.darwin-arm64.tar.gz",
-            "filename": "go1.26.7.darwin-arm64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.8.darwin-arm64.tar.gz",
+            "filename": "go1.26.8.darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://dl.google.com/go/go1.26.7.darwin-amd64.tar.gz",
-            "filename": "go1.26.7.darwin-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.8.darwin-amd64.tar.gz",
+            "filename": "go1.26.8.darwin-amd64.tar.gz"
           },
           "linux": {
-            "url": "https://dl.google.com/go/go1.26.7.linux-amd64.tar.gz",
-            "filename": "go1.26.7.linux-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.8.linux-amd64.tar.gz",
+            "filename": "go1.26.8.linux-amd64.tar.gz"
           }
         }
       }
