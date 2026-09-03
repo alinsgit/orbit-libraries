@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-09-02T02:25:21.588Z",
+  "updated": "2026-09-03T02:32:04.926Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -81,18 +81,18 @@
       ],
       "versions": {
         "1.31": {
-          "latest": "1.31.4",
+          "latest": "1.31.5",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.31.4.zip",
-            "filename": "nginx-1.31.4.zip"
+            "url": "https://nginx.org/download/nginx-1.31.5.zip",
+            "filename": "nginx-1.31.5.zip"
           },
           "linux": {
-            "url": "https://nginx.org/download/nginx-1.31.4.tar.gz",
-            "filename": "nginx-1.31.4.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.31.5.tar.gz",
+            "filename": "nginx-1.31.5.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.31.4.tar.gz",
-            "filename": "nginx-1.31.4.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.31.5.tar.gz",
+            "filename": "nginx-1.31.5.tar.gz"
           }
         },
         "1.30": {
