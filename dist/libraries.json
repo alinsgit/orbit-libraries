@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-09-05T02:29:13.595Z",
+  "updated": "2026-09-06T02:25:44.546Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -527,21 +527,21 @@
       ],
       "versions": {
         "1.4": {
-          "latest": "1.4.1",
+          "latest": "1.4.2",
           "windows": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.1/bun-windows-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.2/bun-windows-x64.zip",
             "filename": "bun-windows-x64.zip"
           },
           "linux": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.1/bun-linux-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.2/bun-linux-x64.zip",
             "filename": "bun-linux-x64.zip"
           },
           "macos_arm64": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.1/bun-darwin-aarch64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.2/bun-darwin-aarch64.zip",
             "filename": "bun-darwin-aarch64.zip"
           },
           "macos_x64": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.1/bun-darwin-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.2/bun-darwin-x64.zip",
             "filename": "bun-darwin-x64.zip"
           }
         },
@@ -706,17 +706,17 @@
     "mailpit": {
       "name": "Mailpit",
       "description": "Email testing tool for developers",
-      "latest": "1.31.0",
+      "latest": "1.31.1",
       "windows": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.0/mailpit-windows-amd64.zip",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.1/mailpit-windows-amd64.zip",
         "filename": "mailpit-windows-amd64.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.0/mailpit-darwin-arm64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.1/mailpit-darwin-arm64.tar.gz",
         "filename": "mailpit-darwin-arm64.tar.gz"
       },
       "linux": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.0/mailpit-linux-amd64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.1/mailpit-linux-amd64.tar.gz",
         "filename": "mailpit-linux-amd64.tar.gz"
       }
     },
