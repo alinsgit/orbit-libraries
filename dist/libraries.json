@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-09-15T02:56:51.706Z",
+  "updated": "2026-09-16T02:52:26.980Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -81,33 +81,33 @@
       ],
       "versions": {
         "1.31": {
-          "latest": "1.31.5",
+          "latest": "1.31.6",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.31.5.zip",
-            "filename": "nginx-1.31.5.zip"
+            "url": "https://nginx.org/download/nginx-1.31.6.zip",
+            "filename": "nginx-1.31.6.zip"
           },
           "linux": {
-            "url": "https://nginx.org/download/nginx-1.31.5.tar.gz",
-            "filename": "nginx-1.31.5.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.31.6.tar.gz",
+            "filename": "nginx-1.31.6.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.31.5.tar.gz",
-            "filename": "nginx-1.31.5.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.31.6.tar.gz",
+            "filename": "nginx-1.31.6.tar.gz"
           }
         },
         "1.30": {
-          "latest": "1.30.4",
+          "latest": "1.30.5",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.30.4.zip",
-            "filename": "nginx-1.30.4.zip"
+            "url": "https://nginx.org/download/nginx-1.30.5.zip",
+            "filename": "nginx-1.30.5.zip"
           },
           "linux": {
-            "url": "https://nginx.org/download/nginx-1.30.4.tar.gz",
-            "filename": "nginx-1.30.4.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.30.5.tar.gz",
+            "filename": "nginx-1.30.5.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.30.4.tar.gz",
-            "filename": "nginx-1.30.4.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.30.5.tar.gz",
+            "filename": "nginx-1.30.5.tar.gz"
           }
         },
         "1.28": {
@@ -185,13 +185,30 @@
       "name": "MariaDB",
       "description": "Community-developed MySQL fork",
       "availableVersions": [
+        "13.0",
         "12.3",
         "11.8",
         "11.4",
-        "10.11",
-        "10.6"
+        "10.11"
       ],
       "versions": {
+        "13.0": {
+          "latest": "13.0.2",
+          "windows": {
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-13.0.2/winx64-packages/mariadb-13.0.2-winx64.zip",
+            "filename": "mariadb-13.0.2-winx64.zip",
+            "sha256": "ba9cefd6674b3f2f7bc67334c05305dc7c919643d76836e10767e70db0b5fb74"
+          },
+          "linux": {
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-13.0.2/bintar-linux-systemd-x86_64/mariadb-13.0.2-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-13.0.2-linux-systemd-x86_64.tar.gz",
+            "sha256": "e1b15581cfb2441fb7f3df2cc559998980406999e4c4a150ca303289f58b673c"
+          },
+          "macos_arm64": {
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-13.0.2/macos-system-arm64/mariadb-13.0.2-macos13-arm64.tar.gz",
+            "filename": "mariadb-13.0.2-macos13-arm64.tar.gz"
+          }
+        },
         "12.3": {
           "latest": "12.3.3",
           "windows": {
@@ -258,23 +275,6 @@
           "macos_arm64": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.19/macos-system-arm64/mariadb-10.11.19-macos13-arm64.tar.gz",
             "filename": "mariadb-10.11.19-macos13-arm64.tar.gz"
-          }
-        },
-        "10.6": {
-          "latest": "10.6.28",
-          "windows": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.28/winx64-packages/mariadb-10.6.28-winx64.zip",
-            "filename": "mariadb-10.6.28-winx64.zip",
-            "sha256": "a4e5cd01587d1662728f0cf0d8bb3d1aaedc6861b272cec18f504ab4ba8b2f72"
-          },
-          "linux": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.28/bintar-linux-systemd-x86_64/mariadb-10.6.28-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-10.6.28-linux-systemd-x86_64.tar.gz",
-            "sha256": "80ca39575e5dd9670d9015b674835cd1d37548576547425763694d1bcc686ce2"
-          },
-          "macos_arm64": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.6.28/macos-system-arm64/mariadb-10.6.28-macos13-arm64.tar.gz",
-            "filename": "mariadb-10.6.28-macos13-arm64.tar.gz"
           }
         }
       }
@@ -378,18 +378,18 @@
     "mongosh": {
       "name": "MongoDB Shell",
       "description": "MongoDB interactive shell (mongosh) - required for database management",
-      "latest": "2.10.0",
+      "latest": "2.11.1",
       "windows": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.10.0-win32-x64.zip",
-        "filename": "mongosh-2.10.0-win32-x64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.11.1-win32-x64.zip",
+        "filename": "mongosh-2.11.1-win32-x64.zip"
       },
       "macos_arm64": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.10.0-darwin-arm64.zip",
-        "filename": "mongosh-2.10.0-darwin-arm64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.11.1-darwin-arm64.zip",
+        "filename": "mongosh-2.11.1-darwin-arm64.zip"
       },
       "linux": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.10.0-linux-x64.tgz",
-        "filename": "mongosh-2.10.0-linux-x64.tgz"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.11.1-linux-x64.tgz",
+        "filename": "mongosh-2.11.1-linux-x64.tgz"
       }
     },
     "nodejs": {
