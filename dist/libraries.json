@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-09-16T02:52:26.980Z",
+  "updated": "2026-09-17T02:56:35.640Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -440,22 +440,22 @@
           }
         },
         "26": {
-          "latest": "26.8.2",
+          "latest": "26.9.0",
           "windows": {
-            "url": "https://nodejs.org/dist/v26.8.2/node-v26.8.2-win-x64.zip",
-            "filename": "node-v26.8.2-win-x64.zip"
+            "url": "https://nodejs.org/dist/v26.9.0/node-v26.9.0-win-x64.zip",
+            "filename": "node-v26.9.0-win-x64.zip"
           },
           "linux": {
-            "url": "https://nodejs.org/dist/v26.8.2/node-v26.8.2-linux-x64.tar.gz",
-            "filename": "node-v26.8.2-linux-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v26.9.0/node-v26.9.0-linux-x64.tar.gz",
+            "filename": "node-v26.9.0-linux-x64.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nodejs.org/dist/v26.8.2/node-v26.8.2-darwin-arm64.tar.gz",
-            "filename": "node-v26.8.2-darwin-arm64.tar.gz"
+            "url": "https://nodejs.org/dist/v26.9.0/node-v26.9.0-darwin-arm64.tar.gz",
+            "filename": "node-v26.9.0-darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://nodejs.org/dist/v26.8.2/node-v26.8.2-darwin-x64.tar.gz",
-            "filename": "node-v26.8.2-darwin-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v26.9.0/node-v26.9.0-darwin-x64.tar.gz",
+            "filename": "node-v26.9.0-darwin-x64.tar.gz"
           }
         }
       }
