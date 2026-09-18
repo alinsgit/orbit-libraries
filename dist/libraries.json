@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-09-17T02:56:35.640Z",
+  "updated": "2026-09-18T02:43:10.294Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -655,21 +655,21 @@
     "deno": {
       "name": "Deno",
       "description": "Next-generation JavaScript runtime",
-      "latest": "2.9.6",
+      "latest": "2.9.7",
       "windows": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.6/deno-x86_64-pc-windows-msvc.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.7/deno-x86_64-pc-windows-msvc.zip",
         "filename": "deno-x86_64-pc-windows-msvc.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.6/deno-aarch64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.7/deno-aarch64-apple-darwin.zip",
         "filename": "deno-aarch64-apple-darwin.zip"
       },
       "macos_x64": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.6/deno-x86_64-apple-darwin.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.7/deno-x86_64-apple-darwin.zip",
         "filename": "deno-x86_64-apple-darwin.zip"
       },
       "linux": {
-        "url": "https://github.com/denoland/deno/releases/download/v2.9.6/deno-x86_64-unknown-linux-gnu.zip",
+        "url": "https://github.com/denoland/deno/releases/download/v2.9.7/deno-x86_64-unknown-linux-gnu.zip",
         "filename": "deno-x86_64-unknown-linux-gnu.zip"
       }
     },
@@ -697,10 +697,10 @@
     "redis": {
       "name": "Redis",
       "description": "In-memory data structure store",
-      "latest": "8.10.1",
+      "latest": "8.10.2",
       "windows": {
-        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.10.1/Redis-8.10.1-Windows-x64-cygwin-with-Service.zip",
-        "filename": "Redis-8.10.1-Windows-x64-cygwin-with-Service.zip"
+        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.10.2/Redis-8.10.2-Windows-x64-cygwin-with-Service.zip",
+        "filename": "Redis-8.10.2-Windows-x64-cygwin-with-Service.zip"
       }
     },
     "mailpit": {
