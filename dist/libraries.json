@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-09-18T02:43:10.294Z",
+  "updated": "2026-09-19T02:41:53.349Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -378,18 +378,18 @@
     "mongosh": {
       "name": "MongoDB Shell",
       "description": "MongoDB interactive shell (mongosh) - required for database management",
-      "latest": "2.11.1",
+      "latest": "2.12.0",
       "windows": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.11.1-win32-x64.zip",
-        "filename": "mongosh-2.11.1-win32-x64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.12.0-win32-x64.zip",
+        "filename": "mongosh-2.12.0-win32-x64.zip"
       },
       "macos_arm64": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.11.1-darwin-arm64.zip",
-        "filename": "mongosh-2.11.1-darwin-arm64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.12.0-darwin-arm64.zip",
+        "filename": "mongosh-2.12.0-darwin-arm64.zip"
       },
       "linux": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.11.1-linux-x64.tgz",
-        "filename": "mongosh-2.11.1-linux-x64.tgz"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.12.0-linux-x64.tgz",
+        "filename": "mongosh-2.12.0-linux-x64.tgz"
       }
     },
     "nodejs": {
