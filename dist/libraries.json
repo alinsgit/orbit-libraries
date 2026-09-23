@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-09-22T02:51:58.129Z",
+  "updated": "2026-09-23T02:52:24.822Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -15,41 +15,31 @@
       ],
       "versions": {
         "8.5": {
-          "latest": "8.5.10",
+          "latest": "8.5.11",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.5.10-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.5.10-nts-Win32-vs17-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.10/php-8.5.10-linux-x86_64.tar.gz",
-            "filename": "php-8.5.10-linux-x86_64.tar.gz",
-            "sha256": "3b03edbfbbd8dd654837cc2a7034c28e983d43f1899f665da6fe87daf89594e8"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.5.10/php-8.5.10-macos-arm64.tar.gz",
-            "filename": "php-8.5.10-macos-arm64.tar.gz",
-            "sha256": "33d93300e6a2cb8544d693417e5ac3a8966c7240b659353a14a1ef95656d0b1f"
+            "url": "https://windows.php.net/downloads/releases/php-8.5.11-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.5.11-nts-Win32-vs17-x64.zip"
           }
         },
         "8.4": {
-          "latest": "8.4.25",
+          "latest": "8.4.26",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.4.25-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.4.25-nts-Win32-vs17-x64.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.4.26-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.4.26-nts-Win32-vs17-x64.zip"
           }
         },
         "8.3": {
-          "latest": "8.3.33",
+          "latest": "8.3.35",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.3.33-nts-Win32-vs16-x64.zip",
-            "filename": "php-8.3.33-nts-Win32-vs16-x64.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.3.35-nts-Win32-vs16-x64.zip",
+            "filename": "php-8.3.35-nts-Win32-vs16-x64.zip"
           }
         },
         "8.2": {
-          "latest": "8.2.33",
+          "latest": "8.2.34",
           "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.2.33-nts-Win32-vs16-x64.zip",
-            "filename": "php-8.2.33-nts-Win32-vs16-x64.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.2.34-nts-Win32-vs16-x64.zip",
+            "filename": "php-8.2.34-nts-Win32-vs16-x64.zip"
           }
         },
         "8.1": {
@@ -440,22 +430,22 @@
           }
         },
         "26": {
-          "latest": "26.9.0",
+          "latest": "26.10.0",
           "windows": {
-            "url": "https://nodejs.org/dist/v26.9.0/node-v26.9.0-win-x64.zip",
-            "filename": "node-v26.9.0-win-x64.zip"
+            "url": "https://nodejs.org/dist/v26.10.0/node-v26.10.0-win-x64.zip",
+            "filename": "node-v26.10.0-win-x64.zip"
           },
           "linux": {
-            "url": "https://nodejs.org/dist/v26.9.0/node-v26.9.0-linux-x64.tar.gz",
-            "filename": "node-v26.9.0-linux-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v26.10.0/node-v26.10.0-linux-x64.tar.gz",
+            "filename": "node-v26.10.0-linux-x64.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nodejs.org/dist/v26.9.0/node-v26.9.0-darwin-arm64.tar.gz",
-            "filename": "node-v26.9.0-darwin-arm64.tar.gz"
+            "url": "https://nodejs.org/dist/v26.10.0/node-v26.10.0-darwin-arm64.tar.gz",
+            "filename": "node-v26.10.0-darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://nodejs.org/dist/v26.9.0/node-v26.9.0-darwin-x64.tar.gz",
-            "filename": "node-v26.9.0-darwin-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v26.10.0/node-v26.10.0-darwin-x64.tar.gz",
+            "filename": "node-v26.10.0-darwin-x64.tar.gz"
           }
         }
       }
