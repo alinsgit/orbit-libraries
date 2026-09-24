@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-09-23T02:52:24.822Z",
+  "updated": "2026-09-24T02:42:35.593Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -36,11 +36,6 @@
             "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.26/php-8.4.26-macos-arm64.tar.gz",
             "filename": "php-8.4.26-macos-arm64.tar.gz",
             "sha256": "483f38bfd717ccf031554d34c9bff4065061bc235930a23c7d39823a8836a046"
-          },
-          "macos_x64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.26/php-8.4.26-macos-x86_64.tar.gz",
-            "filename": "php-8.4.26-macos-x86_64.tar.gz",
-            "sha256": ""
           }
         },
         "8.3": {
@@ -407,22 +402,22 @@
       ],
       "versions": {
         "22": {
-          "latest": "22.23.2",
+          "latest": "22.23.3",
           "windows": {
-            "url": "https://nodejs.org/dist/v22.23.2/node-v22.23.2-win-x64.zip",
-            "filename": "node-v22.23.2-win-x64.zip"
+            "url": "https://nodejs.org/dist/v22.23.3/node-v22.23.3-win-x64.zip",
+            "filename": "node-v22.23.3-win-x64.zip"
           },
           "linux": {
-            "url": "https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz",
-            "filename": "node-v22.23.2-linux-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.gz",
+            "filename": "node-v22.23.3-linux-x64.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz",
-            "filename": "node-v22.23.2-darwin-arm64.tar.gz"
+            "url": "https://nodejs.org/dist/v22.23.3/node-v22.23.3-darwin-arm64.tar.gz",
+            "filename": "node-v22.23.3-darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-x64.tar.gz",
-            "filename": "node-v22.23.2-darwin-x64.tar.gz"
+            "url": "https://nodejs.org/dist/v22.23.3/node-v22.23.3-darwin-x64.tar.gz",
+            "filename": "node-v22.23.3-darwin-x64.tar.gz"
           }
         },
         "24": {
