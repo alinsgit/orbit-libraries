@@ -408,20 +408,12 @@ async function fetchPythonVersions() {
             const entry = data.find(e => e.cycle === series);
             if (entry && entry.latest) {
                 const v = entry.latest;
-                // Python embed (Windows-only) + cpython tarballs (Linux/macOS)
+                // Python embed (Windows-only); Linux/macOS are added below
                 versions[series] = {
                     latest: v,
                     windows: {
                         url: `https://www.python.org/ftp/python/${v}/python-${v}-embed-amd64.zip`,
                         filename: `python-${v}-embed-amd64.zip`
-                    },
-                    linux: {
-                        url: `https://www.python.org/ftp/python/${v}/Python-${v}.tgz`,
-                        filename: `Python-${v}.tgz`
-                    },
-                    macos_arm64: {
-                        url: `https://www.python.org/ftp/python/${v}/python-${v}-macos11.pkg`,
-                        filename: `python-${v}-macos11.pkg`
                     }
                 };
                 console.log(`  Python ${series}: ${v}`);
@@ -456,6 +448,30 @@ async function fetchPythonVersions() {
         } catch {
             // HEAD check failed, keep current version
         }
+    }
+
+    // Linux/macOS: relocatable python-build-standalone builds of the same
+    // version (python.org only ships source tarballs / a system-wide .pkg).
+    // Release tags are dates; take the newest one that has this version.
+    try {
+        const res = await fetch('https://api.github.com/repos/astral-sh/python-build-standalone/tags?per_page=100');
+        const tags = (await res.json()).map(t => t.name).filter(t => /^\d{8}$/.test(t)).sort().reverse();
+        const pbs = (tag, v, triple) => {
+            const filename = `cpython-${v}+${tag}-${triple}-install_only.tar.gz`;
+            return { url: `https://github.com/astral-sh/python-build-standalone/releases/download/${tag}/${filename}`, filename };
+        };
+        for (const [series, info] of Object.entries(versions)) {
+            for (const tag of tags) {
+                const linux = pbs(tag, info.latest, 'x86_64-unknown-linux-gnu');
+                if (!(await fetch(linux.url, { method: 'HEAD' })).ok) continue;
+                info.linux = linux;
+                info.macos_arm64 = pbs(tag, info.latest, 'aarch64-apple-darwin');
+                console.log(`  Python ${series}: linux/macOS from python-build-standalone ${tag}`);
+                break;
+            }
+        }
+    } catch (err) {
+        console.error('  Error fetching python-build-standalone:', err.message);
     }
 
     if (Object.keys(versions).length === 0) {
