@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-09-29T03:44:22.886Z",
+  "updated": "2026-09-30T03:32:25.614Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -477,12 +477,12 @@
             "filename": "python-3.14.7-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260924/cpython-3.14.7+20260924-x86_64-unknown-linux-gnu-install_only.tar.gz",
-            "filename": "cpython-3.14.7+20260924-x86_64-unknown-linux-gnu-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260929/cpython-3.14.7+20260929-x86_64-unknown-linux-gnu-install_only.tar.gz",
+            "filename": "cpython-3.14.7+20260929-x86_64-unknown-linux-gnu-install_only.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260924/cpython-3.14.7+20260924-aarch64-apple-darwin-install_only.tar.gz",
-            "filename": "cpython-3.14.7+20260924-aarch64-apple-darwin-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260929/cpython-3.14.7+20260929-aarch64-apple-darwin-install_only.tar.gz",
+            "filename": "cpython-3.14.7+20260929-aarch64-apple-darwin-install_only.tar.gz"
           }
         },
         "3.13": {
@@ -492,12 +492,12 @@
             "filename": "python-3.13.15-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260924/cpython-3.13.15+20260924-x86_64-unknown-linux-gnu-install_only.tar.gz",
-            "filename": "cpython-3.13.15+20260924-x86_64-unknown-linux-gnu-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260929/cpython-3.13.15+20260929-x86_64-unknown-linux-gnu-install_only.tar.gz",
+            "filename": "cpython-3.13.15+20260929-x86_64-unknown-linux-gnu-install_only.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260924/cpython-3.13.15+20260924-aarch64-apple-darwin-install_only.tar.gz",
-            "filename": "cpython-3.13.15+20260924-aarch64-apple-darwin-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260929/cpython-3.13.15+20260929-aarch64-apple-darwin-install_only.tar.gz",
+            "filename": "cpython-3.13.15+20260929-aarch64-apple-darwin-install_only.tar.gz"
           }
         },
         "3.12": {
@@ -739,17 +739,17 @@
     "meilisearch": {
       "name": "Meilisearch",
       "description": "Fast, typo-tolerant search engine",
-      "latest": "1.54.1",
+      "latest": "1.54.2",
       "windows": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.54.1/meilisearch-windows-amd64.exe",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.54.2/meilisearch-windows-amd64.exe",
         "filename": "meilisearch-windows-amd64.exe"
       },
       "macos_arm64": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.54.1/meilisearch-macos-apple-silicon",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.54.2/meilisearch-macos-apple-silicon",
         "filename": "meilisearch-macos-apple-silicon"
       },
       "linux": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.54.1/meilisearch-linux-amd64",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.54.2/meilisearch-linux-amd64",
         "filename": "meilisearch-linux-amd64"
       }
     },
