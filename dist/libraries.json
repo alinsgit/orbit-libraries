@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-10-02T03:37:21.723Z",
+  "updated": "2026-10-03T03:21:46.830Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -161,15 +161,15 @@
       "name": "Apache HTTP Server",
       "description": "The most widely used web server",
       "availableVersions": [
-        "2.4.68-VS18",
+        "2.4.69-VS18",
         "2.4.66-VS17"
       ],
       "versions": {
-        "2.4.68-VS18": {
-          "latest": "2.4.68",
+        "2.4.69-VS18": {
+          "latest": "2.4.69",
           "windows": {
-            "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.68-260920-Win64-VS18.zip",
-            "filename": "httpd-2.4.68-260920-Win64-VS18.zip"
+            "url": "https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.69-261002-Win64-VS18.zip",
+            "filename": "httpd-2.4.69-261002-Win64-VS18.zip"
           }
         },
         "2.4.66-VS17": {
