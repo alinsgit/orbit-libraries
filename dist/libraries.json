@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-10-03T03:21:46.830Z",
+  "updated": "2026-10-04T03:49:21.480Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -477,12 +477,12 @@
             "filename": "python-3.14.8-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261001/cpython-3.14.8+20261001-x86_64-unknown-linux-gnu-install_only.tar.gz",
-            "filename": "cpython-3.14.8+20261001-x86_64-unknown-linux-gnu-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261003/cpython-3.14.8+20261003-x86_64-unknown-linux-gnu-install_only.tar.gz",
+            "filename": "cpython-3.14.8+20261003-x86_64-unknown-linux-gnu-install_only.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261001/cpython-3.14.8+20261001-aarch64-apple-darwin-install_only.tar.gz",
-            "filename": "cpython-3.14.8+20261001-aarch64-apple-darwin-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261003/cpython-3.14.8+20261003-aarch64-apple-darwin-install_only.tar.gz",
+            "filename": "cpython-3.14.8+20261003-aarch64-apple-darwin-install_only.tar.gz"
           }
         },
         "3.13": {
@@ -492,12 +492,12 @@
             "filename": "python-3.13.16-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261001/cpython-3.13.16+20261001-x86_64-unknown-linux-gnu-install_only.tar.gz",
-            "filename": "cpython-3.13.16+20261001-x86_64-unknown-linux-gnu-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261003/cpython-3.13.16+20261003-x86_64-unknown-linux-gnu-install_only.tar.gz",
+            "filename": "cpython-3.13.16+20261003-x86_64-unknown-linux-gnu-install_only.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261001/cpython-3.13.16+20261001-aarch64-apple-darwin-install_only.tar.gz",
-            "filename": "cpython-3.13.16+20261001-aarch64-apple-darwin-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261003/cpython-3.13.16+20261003-aarch64-apple-darwin-install_only.tar.gz",
+            "filename": "cpython-3.13.16+20261003-aarch64-apple-darwin-install_only.tar.gz"
           }
         },
         "3.12": {
@@ -722,17 +722,17 @@
     "mailpit": {
       "name": "Mailpit",
       "description": "Email testing tool for developers",
-      "latest": "1.31.3",
+      "latest": "1.31.4",
       "windows": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.3/mailpit-windows-amd64.zip",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.4/mailpit-windows-amd64.zip",
         "filename": "mailpit-windows-amd64.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.3/mailpit-darwin-arm64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.4/mailpit-darwin-arm64.tar.gz",
         "filename": "mailpit-darwin-arm64.tar.gz"
       },
       "linux": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.3/mailpit-linux-amd64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.4/mailpit-linux-amd64.tar.gz",
         "filename": "mailpit-linux-amd64.tar.gz"
       }
     },
