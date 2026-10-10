@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-10-09T04:07:08.081Z",
+  "updated": "2026-10-10T03:52:21.743Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -477,12 +477,12 @@
             "filename": "python-3.14.8-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261003/cpython-3.14.8+20261003-x86_64-unknown-linux-gnu-install_only.tar.gz",
-            "filename": "cpython-3.14.8+20261003-x86_64-unknown-linux-gnu-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261009/cpython-3.14.8+20261009-x86_64-unknown-linux-gnu-install_only.tar.gz",
+            "filename": "cpython-3.14.8+20261009-x86_64-unknown-linux-gnu-install_only.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261003/cpython-3.14.8+20261003-aarch64-apple-darwin-install_only.tar.gz",
-            "filename": "cpython-3.14.8+20261003-aarch64-apple-darwin-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261009/cpython-3.14.8+20261009-aarch64-apple-darwin-install_only.tar.gz",
+            "filename": "cpython-3.14.8+20261009-aarch64-apple-darwin-install_only.tar.gz"
           }
         },
         "3.13": {
@@ -492,12 +492,12 @@
             "filename": "python-3.13.16-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261003/cpython-3.13.16+20261003-x86_64-unknown-linux-gnu-install_only.tar.gz",
-            "filename": "cpython-3.13.16+20261003-x86_64-unknown-linux-gnu-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261009/cpython-3.13.16+20261009-x86_64-unknown-linux-gnu-install_only.tar.gz",
+            "filename": "cpython-3.13.16+20261009-x86_64-unknown-linux-gnu-install_only.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261003/cpython-3.13.16+20261003-aarch64-apple-darwin-install_only.tar.gz",
-            "filename": "cpython-3.13.16+20261003-aarch64-apple-darwin-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261009/cpython-3.13.16+20261009-aarch64-apple-darwin-install_only.tar.gz",
+            "filename": "cpython-3.13.16+20261009-aarch64-apple-darwin-install_only.tar.gz"
           }
         },
         "3.12": {
