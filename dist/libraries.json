@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-10-13T05:00:42.274Z",
+  "updated": "2026-10-14T03:07:30.922Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -344,33 +344,33 @@
       ],
       "versions": {
         "8.0": {
-          "latest": "8.0.32",
+          "latest": "8.0.34",
           "windows": {
-            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.32.zip",
-            "filename": "mongodb-8.0.32-win.zip"
+            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.34.zip",
+            "filename": "mongodb-8.0.34-win.zip"
           },
           "macos_arm64": {
-            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-8.0.32.tgz",
-            "filename": "mongodb-8.0.32-mac.tgz"
+            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-8.0.34.tgz",
+            "filename": "mongodb-8.0.34-mac.tgz"
           },
           "linux": {
-            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-8.0.32.tgz",
-            "filename": "mongodb-8.0.32-linux.tgz"
+            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-8.0.34.tgz",
+            "filename": "mongodb-8.0.34-linux.tgz"
           }
         },
         "7.0": {
-          "latest": "7.0.43",
+          "latest": "7.0.45",
           "windows": {
-            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.43.zip",
-            "filename": "mongodb-7.0.43-win.zip"
+            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.45.zip",
+            "filename": "mongodb-7.0.45-win.zip"
           },
           "macos_arm64": {
-            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-7.0.43.tgz",
-            "filename": "mongodb-7.0.43-mac.tgz"
+            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-7.0.45.tgz",
+            "filename": "mongodb-7.0.45-mac.tgz"
           },
           "linux": {
-            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-7.0.43.tgz",
-            "filename": "mongodb-7.0.43-linux.tgz"
+            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-7.0.45.tgz",
+            "filename": "mongodb-7.0.45-linux.tgz"
           }
         }
       }
@@ -477,12 +477,12 @@
             "filename": "python-3.14.8-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261009/cpython-3.14.8+20261009-x86_64-unknown-linux-gnu-install_only.tar.gz",
-            "filename": "cpython-3.14.8+20261009-x86_64-unknown-linux-gnu-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261013/cpython-3.14.8+20261013-x86_64-unknown-linux-gnu-install_only.tar.gz",
+            "filename": "cpython-3.14.8+20261013-x86_64-unknown-linux-gnu-install_only.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261009/cpython-3.14.8+20261009-aarch64-apple-darwin-install_only.tar.gz",
-            "filename": "cpython-3.14.8+20261009-aarch64-apple-darwin-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261013/cpython-3.14.8+20261013-aarch64-apple-darwin-install_only.tar.gz",
+            "filename": "cpython-3.14.8+20261013-aarch64-apple-darwin-install_only.tar.gz"
           }
         },
         "3.13": {
@@ -492,12 +492,12 @@
             "filename": "python-3.13.16-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261009/cpython-3.13.16+20261009-x86_64-unknown-linux-gnu-install_only.tar.gz",
-            "filename": "cpython-3.13.16+20261009-x86_64-unknown-linux-gnu-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261013/cpython-3.13.16+20261013-x86_64-unknown-linux-gnu-install_only.tar.gz",
+            "filename": "cpython-3.13.16+20261013-x86_64-unknown-linux-gnu-install_only.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261009/cpython-3.13.16+20261009-aarch64-apple-darwin-install_only.tar.gz",
-            "filename": "cpython-3.13.16+20261009-aarch64-apple-darwin-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261013/cpython-3.13.16+20261013-aarch64-apple-darwin-install_only.tar.gz",
+            "filename": "cpython-3.13.16+20261013-aarch64-apple-darwin-install_only.tar.gz"
           }
         },
         "3.12": {
