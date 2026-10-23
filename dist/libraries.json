@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-10-22T02:53:41.640Z",
+  "updated": "2026-10-23T02:57:18.717Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -36,11 +36,6 @@
             "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.27/php-8.4.27-macos-arm64.tar.gz",
             "filename": "php-8.4.27-macos-arm64.tar.gz",
             "sha256": "2df8692c488d8c7d7ae7ed1458940be22a49c301e9866f7fe93f1e3dc7a813a2"
-          },
-          "macos_x64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.27/php-8.4.27-macos-x86_64.tar.gz",
-            "filename": "php-8.4.27-macos-x86_64.tar.gz",
-            "sha256": ""
           }
         },
         "8.3": {
@@ -548,21 +543,21 @@
       ],
       "versions": {
         "1.4": {
-          "latest": "1.4.3",
+          "latest": "1.4.4",
           "windows": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.3/bun-windows-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-windows-x64.zip",
             "filename": "bun-windows-x64.zip"
           },
           "linux": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.3/bun-linux-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-linux-x64.zip",
             "filename": "bun-linux-x64.zip"
           },
           "macos_arm64": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.3/bun-darwin-aarch64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-darwin-aarch64.zip",
             "filename": "bun-darwin-aarch64.zip"
           },
           "macos_x64": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.3/bun-darwin-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-darwin-x64.zip",
             "filename": "bun-darwin-x64.zip"
           }
         },
@@ -727,17 +722,17 @@
     "mailpit": {
       "name": "Mailpit",
       "description": "Email testing tool for developers",
-      "latest": "1.31.6",
+      "latest": "1.32.0",
       "windows": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.6/mailpit-windows-amd64.zip",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.32.0/mailpit-windows-amd64.zip",
         "filename": "mailpit-windows-amd64.zip"
       },
       "macos_arm64": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.6/mailpit-darwin-arm64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.32.0/mailpit-darwin-arm64.tar.gz",
         "filename": "mailpit-darwin-arm64.tar.gz"
       },
       "linux": {
-        "url": "https://github.com/axllent/mailpit/releases/download/v1.31.6/mailpit-linux-amd64.tar.gz",
+        "url": "https://github.com/axllent/mailpit/releases/download/v1.32.0/mailpit-linux-amd64.tar.gz",
         "filename": "mailpit-linux-amd64.tar.gz"
       }
     },
