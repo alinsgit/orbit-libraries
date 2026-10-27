@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-10-26T02:44:45.937Z",
+  "updated": "2026-10-27T03:18:53.822Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -14,44 +14,6 @@
         "8.1"
       ],
       "versions": {
-        "8.5": {
-          "latest": "8.5.12",
-          "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.5.12-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.5.12-nts-Win32-vs17-x64.zip"
-          }
-        },
-        "8.4": {
-          "latest": "8.4.27",
-          "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.4.27-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.4.27-nts-Win32-vs17-x64.zip"
-          },
-          "linux": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.27/php-8.4.27-linux-x86_64.tar.gz",
-            "filename": "php-8.4.27-linux-x86_64.tar.gz",
-            "sha256": "af28a40508e5bb3a6d2de4f77a319040ffc100de289fdaebadb78eba6dfbe070"
-          },
-          "macos_arm64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.4.27/php-8.4.27-macos-arm64.tar.gz",
-            "filename": "php-8.4.27-macos-arm64.tar.gz",
-            "sha256": "2df8692c488d8c7d7ae7ed1458940be22a49c301e9866f7fe93f1e3dc7a813a2"
-          }
-        },
-        "8.3": {
-          "latest": "8.3.36",
-          "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.3.36-nts-Win32-vs16-x64.zip",
-            "filename": "php-8.3.36-nts-Win32-vs16-x64.zip"
-          }
-        },
-        "8.2": {
-          "latest": "8.2.35",
-          "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.2.35-nts-Win32-vs16-x64.zip",
-            "filename": "php-8.2.35-nts-Win32-vs16-x64.zip"
-          }
-        },
         "8.1": {
           "latest": "8.1.34",
           "windows": {
@@ -65,6 +27,34 @@
           "macos_arm64": {
             "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.1.34/php-8.1.34-macos-arm64.tar.gz",
             "filename": "php-8.1.34-macos-arm64.tar.gz"
+          }
+        },
+        "8.5": {
+          "latest": "8.5.1",
+          "windows": {
+            "url": "https://windows.php.net/downloads/releases/php-8.5.1-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.5.1-nts-Win32-vs17-x64.zip"
+          }
+        },
+        "8.4": {
+          "latest": "8.4.16",
+          "windows": {
+            "url": "https://windows.php.net/downloads/releases/php-8.4.16-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.4.16-nts-Win32-vs17-x64.zip"
+          }
+        },
+        "8.3": {
+          "latest": "8.3.29",
+          "windows": {
+            "url": "https://windows.php.net/downloads/releases/php-8.3.29-nts-Win32-vs16-x64.zip",
+            "filename": "php-8.3.29-nts-Win32-vs16-x64.zip"
+          }
+        },
+        "8.2": {
+          "latest": "8.2.30",
+          "windows": {
+            "url": "https://windows.php.net/downloads/releases/php-8.2.30-nts-Win32-vs16-x64.zip",
+            "filename": "php-8.2.30-nts-Win32-vs16-x64.zip"
           }
         }
       }
@@ -471,18 +461,18 @@
       ],
       "versions": {
         "3.14": {
-          "latest": "3.14.9",
+          "latest": "3.14.10",
           "windows": {
-            "url": "https://www.python.org/ftp/python/3.14.9/python-3.14.9-embed-amd64.zip",
-            "filename": "python-3.14.9-embed-amd64.zip"
+            "url": "https://www.python.org/ftp/python/3.14.10/python-3.14.10-embed-amd64.zip",
+            "filename": "python-3.14.10-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261021/cpython-3.14.9+20261021-x86_64-unknown-linux-gnu-install_only.tar.gz",
-            "filename": "cpython-3.14.9+20261021-x86_64-unknown-linux-gnu-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.14.10+20261026-x86_64-unknown-linux-gnu-install_only.tar.gz",
+            "filename": "cpython-3.14.10+20261026-x86_64-unknown-linux-gnu-install_only.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261021/cpython-3.14.9+20261021-aarch64-apple-darwin-install_only.tar.gz",
-            "filename": "cpython-3.14.9+20261021-aarch64-apple-darwin-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.14.10+20261026-aarch64-apple-darwin-install_only.tar.gz",
+            "filename": "cpython-3.14.10+20261026-aarch64-apple-darwin-install_only.tar.gz"
           }
         },
         "3.13": {
@@ -713,10 +703,10 @@
     "redis": {
       "name": "Redis",
       "description": "In-memory data structure store",
-      "latest": "8.10.2",
+      "latest": "8.10.3",
       "windows": {
-        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.10.2/Redis-8.10.2-Windows-x64-cygwin-with-Service.zip",
-        "filename": "Redis-8.10.2-Windows-x64-cygwin-with-Service.zip"
+        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.10.3/Redis-8.10.3-Windows-x64-cygwin-with-Service.zip",
+        "filename": "Redis-8.10.3-Windows-x64-cygwin-with-Service.zip"
       }
     },
     "mailpit": {
@@ -739,17 +729,17 @@
     "meilisearch": {
       "name": "Meilisearch",
       "description": "Fast, typo-tolerant search engine",
-      "latest": "1.55.0",
+      "latest": "1.56.0",
       "windows": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.55.0/meilisearch-windows-amd64.exe",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.56.0/meilisearch-windows-amd64.exe",
         "filename": "meilisearch-windows-amd64.exe"
       },
       "macos_arm64": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.55.0/meilisearch-macos-apple-silicon",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.56.0/meilisearch-macos-apple-silicon",
         "filename": "meilisearch-macos-apple-silicon"
       },
       "linux": {
-        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.55.0/meilisearch-linux-amd64",
+        "url": "https://github.com/meilisearch/meilisearch/releases/download/v1.56.0/meilisearch-linux-amd64",
         "filename": "meilisearch-linux-amd64"
       }
     },
