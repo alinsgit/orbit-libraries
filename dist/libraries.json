@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-10-29T03:55:51.776Z",
+  "updated": "2026-10-30T03:57:16.225Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -368,24 +368,25 @@
     "mongosh": {
       "name": "MongoDB Shell",
       "description": "MongoDB interactive shell (mongosh) - required for database management",
-      "latest": "2.14.0",
+      "latest": "2.14.1",
       "windows": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.14.0-win32-x64.zip",
-        "filename": "mongosh-2.14.0-win32-x64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.14.1-win32-x64.zip",
+        "filename": "mongosh-2.14.1-win32-x64.zip"
       },
       "macos_arm64": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.14.0-darwin-arm64.zip",
-        "filename": "mongosh-2.14.0-darwin-arm64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.14.1-darwin-arm64.zip",
+        "filename": "mongosh-2.14.1-darwin-arm64.zip"
       },
       "linux": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.14.0-linux-x64.tgz",
-        "filename": "mongosh-2.14.0-linux-x64.tgz"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.14.1-linux-x64.tgz",
+        "filename": "mongosh-2.14.1-linux-x64.tgz"
       }
     },
     "nodejs": {
       "name": "Node.js",
       "description": "JavaScript runtime built on V8",
       "availableVersions": [
+        "27",
         "26",
         "24",
         "22"
@@ -446,6 +447,25 @@
           "macos_x64": {
             "url": "https://nodejs.org/dist/v26.13.0/node-v26.13.0-darwin-x64.tar.gz",
             "filename": "node-v26.13.0-darwin-x64.tar.gz"
+          }
+        },
+        "27": {
+          "latest": "27.0.0-alpha.0.0.0",
+          "windows": {
+            "url": "https://nodejs.org/dist/v27.0.0-alpha.0.0.0/node-v27.0.0-alpha.0.0.0-win-x64.zip",
+            "filename": "node-v27.0.0-alpha.0.0.0-win-x64.zip"
+          },
+          "linux": {
+            "url": "https://nodejs.org/dist/v27.0.0-alpha.0.0.0/node-v27.0.0-alpha.0.0.0-linux-x64.tar.gz",
+            "filename": "node-v27.0.0-alpha.0.0.0-linux-x64.tar.gz"
+          },
+          "macos_arm64": {
+            "url": "https://nodejs.org/dist/v27.0.0-alpha.0.0.0/node-v27.0.0-alpha.0.0.0-darwin-arm64.tar.gz",
+            "filename": "node-v27.0.0-alpha.0.0.0-darwin-arm64.tar.gz"
+          },
+          "macos_x64": {
+            "url": "https://nodejs.org/dist/v27.0.0-alpha.0.0.0/node-v27.0.0-alpha.0.0.0-darwin-x64.tar.gz",
+            "filename": "node-v27.0.0-alpha.0.0.0-darwin-x64.tar.gz"
           }
         }
       }
@@ -746,9 +766,9 @@
     "composer": {
       "name": "Composer",
       "description": "PHP dependency manager",
-      "latest": "2.10.3",
+      "latest": "2.11.0",
       "all_platforms": {
-        "url": "https://getcomposer.org/download/2.10.3/composer.phar",
+        "url": "https://getcomposer.org/download/2.11.0/composer.phar",
         "filename": "composer.phar"
       }
     },
