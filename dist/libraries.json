@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-11-10T05:38:25.020Z",
+  "updated": "2026-11-11T04:11:40.693Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -334,33 +334,33 @@
       ],
       "versions": {
         "8.0": {
-          "latest": "8.0.34",
+          "latest": "8.0.38",
           "windows": {
-            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.34.zip",
-            "filename": "mongodb-8.0.34-win.zip"
+            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.38.zip",
+            "filename": "mongodb-8.0.38-win.zip"
           },
           "macos_arm64": {
-            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-8.0.34.tgz",
-            "filename": "mongodb-8.0.34-mac.tgz"
+            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-8.0.38.tgz",
+            "filename": "mongodb-8.0.38-mac.tgz"
           },
           "linux": {
-            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-8.0.34.tgz",
-            "filename": "mongodb-8.0.34-linux.tgz"
+            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-8.0.38.tgz",
+            "filename": "mongodb-8.0.38-linux.tgz"
           }
         },
         "7.0": {
-          "latest": "7.0.45",
+          "latest": "7.0.48",
           "windows": {
-            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.45.zip",
-            "filename": "mongodb-7.0.45-win.zip"
+            "url": "https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.48.zip",
+            "filename": "mongodb-7.0.48-win.zip"
           },
           "macos_arm64": {
-            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-7.0.45.tgz",
-            "filename": "mongodb-7.0.45-mac.tgz"
+            "url": "https://downloads.mongodb.com/osx/mongodb-macos-arm64-enterprise-7.0.48.tgz",
+            "filename": "mongodb-7.0.48-mac.tgz"
           },
           "linux": {
-            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-7.0.45.tgz",
-            "filename": "mongodb-7.0.45-linux.tgz"
+            "url": "https://downloads.mongodb.com/linux/mongodb-linux-x86_64-enterprise-ubuntu2204-7.0.48.tgz",
+            "filename": "mongodb-7.0.48-linux.tgz"
           }
         }
       }
@@ -487,12 +487,12 @@
             "filename": "python-3.14.10-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.14.10+20261026-x86_64-unknown-linux-gnu-install_only.tar.gz",
-            "filename": "cpython-3.14.10+20261026-x86_64-unknown-linux-gnu-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.14.10+20261110-x86_64-unknown-linux-gnu-install_only.tar.gz",
+            "filename": "cpython-3.14.10+20261110-x86_64-unknown-linux-gnu-install_only.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.14.10+20261026-aarch64-apple-darwin-install_only.tar.gz",
-            "filename": "cpython-3.14.10+20261026-aarch64-apple-darwin-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.14.10+20261110-aarch64-apple-darwin-install_only.tar.gz",
+            "filename": "cpython-3.14.10+20261110-aarch64-apple-darwin-install_only.tar.gz"
           }
         },
         "3.13": {
@@ -639,41 +639,41 @@
       ],
       "versions": {
         "1.27": {
-          "latest": "1.27.3",
+          "latest": "1.27.4",
           "windows": {
-            "url": "https://dl.google.com/go/go1.27.3.windows-amd64.zip",
-            "filename": "go1.27.3.windows-amd64.zip"
+            "url": "https://dl.google.com/go/go1.27.4.windows-amd64.zip",
+            "filename": "go1.27.4.windows-amd64.zip"
           },
           "macos_arm64": {
-            "url": "https://dl.google.com/go/go1.27.3.darwin-arm64.tar.gz",
-            "filename": "go1.27.3.darwin-arm64.tar.gz"
+            "url": "https://dl.google.com/go/go1.27.4.darwin-arm64.tar.gz",
+            "filename": "go1.27.4.darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://dl.google.com/go/go1.27.3.darwin-amd64.tar.gz",
-            "filename": "go1.27.3.darwin-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.27.4.darwin-amd64.tar.gz",
+            "filename": "go1.27.4.darwin-amd64.tar.gz"
           },
           "linux": {
-            "url": "https://dl.google.com/go/go1.27.3.linux-amd64.tar.gz",
-            "filename": "go1.27.3.linux-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.27.4.linux-amd64.tar.gz",
+            "filename": "go1.27.4.linux-amd64.tar.gz"
           }
         },
         "1.26": {
-          "latest": "1.26.10",
+          "latest": "1.26.11",
           "windows": {
-            "url": "https://dl.google.com/go/go1.26.10.windows-amd64.zip",
-            "filename": "go1.26.10.windows-amd64.zip"
+            "url": "https://dl.google.com/go/go1.26.11.windows-amd64.zip",
+            "filename": "go1.26.11.windows-amd64.zip"
           },
           "macos_arm64": {
-            "url": "https://dl.google.com/go/go1.26.10.darwin-arm64.tar.gz",
-            "filename": "go1.26.10.darwin-arm64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.11.darwin-arm64.tar.gz",
+            "filename": "go1.26.11.darwin-arm64.tar.gz"
           },
           "macos_x64": {
-            "url": "https://dl.google.com/go/go1.26.10.darwin-amd64.tar.gz",
-            "filename": "go1.26.10.darwin-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.11.darwin-amd64.tar.gz",
+            "filename": "go1.26.11.darwin-amd64.tar.gz"
           },
           "linux": {
-            "url": "https://dl.google.com/go/go1.26.10.linux-amd64.tar.gz",
-            "filename": "go1.26.10.linux-amd64.tar.gz"
+            "url": "https://dl.google.com/go/go1.26.11.linux-amd64.tar.gz",
+            "filename": "go1.26.11.linux-amd64.tar.gz"
           }
         }
       }
@@ -766,9 +766,9 @@
     "composer": {
       "name": "Composer",
       "description": "PHP dependency manager",
-      "latest": "2.11.1",
+      "latest": "2.11.2",
       "all_platforms": {
-        "url": "https://getcomposer.org/download/2.11.1/composer.phar",
+        "url": "https://getcomposer.org/download/2.11.2/composer.phar",
         "filename": "composer.phar"
       }
     },
