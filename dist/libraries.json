@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-11-18T05:33:13.552Z",
+  "updated": "2026-11-19T05:31:05.344Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -71,33 +71,33 @@
       ],
       "versions": {
         "1.31": {
-          "latest": "1.31.8",
+          "latest": "1.31.9",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.31.8.zip",
-            "filename": "nginx-1.31.8.zip"
+            "url": "https://nginx.org/download/nginx-1.31.9.zip",
+            "filename": "nginx-1.31.9.zip"
           },
           "linux": {
-            "url": "https://nginx.org/download/nginx-1.31.8.tar.gz",
-            "filename": "nginx-1.31.8.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.31.9.tar.gz",
+            "filename": "nginx-1.31.9.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.31.8.tar.gz",
-            "filename": "nginx-1.31.8.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.31.9.tar.gz",
+            "filename": "nginx-1.31.9.tar.gz"
           }
         },
         "1.30": {
-          "latest": "1.30.6",
+          "latest": "1.30.7",
           "windows": {
-            "url": "https://nginx.org/download/nginx-1.30.6.zip",
-            "filename": "nginx-1.30.6.zip"
+            "url": "https://nginx.org/download/nginx-1.30.7.zip",
+            "filename": "nginx-1.30.7.zip"
           },
           "linux": {
-            "url": "https://nginx.org/download/nginx-1.30.6.tar.gz",
-            "filename": "nginx-1.30.6.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.30.7.tar.gz",
+            "filename": "nginx-1.30.7.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://nginx.org/download/nginx-1.30.6.tar.gz",
-            "filename": "nginx-1.30.6.tar.gz"
+            "url": "https://nginx.org/download/nginx-1.30.7.tar.gz",
+            "filename": "nginx-1.30.7.tar.gz"
           }
         },
         "1.28": {
@@ -209,7 +209,7 @@
           "linux": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.4/bintar-linux-systemd-x86_64/mariadb-12.3.4-linux-systemd-x86_64.tar.gz",
             "filename": "mariadb-12.3.4-linux-systemd-x86_64.tar.gz",
-            "sha256": "6f67a5b933336e455f89495d020b1a8c26f45d665ad1eec24d4a288dc7df812a"
+            "sha256": "26868ab54e3fffa822ffe433537e9c6dde0bdaa45f45a83ef43bd72e29b58baa"
           },
           "macos_arm64": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.4/macos-system-arm64/mariadb-12.3.4-macos13-arm64.tar.gz",
@@ -226,7 +226,7 @@
           "linux": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.10/bintar-linux-systemd-x86_64/mariadb-11.8.10-linux-systemd-x86_64.tar.gz",
             "filename": "mariadb-11.8.10-linux-systemd-x86_64.tar.gz",
-            "sha256": "89df35ea4a8df709550fc49ba77bb8443f27f32fce27bafb984ca20422dbfd74"
+            "sha256": "df95aaa8fee6d84fda1b3d98cee724559a3c6b70544db9e21f00ce789720d68d"
           },
           "macos_arm64": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.10/macos-system-arm64/mariadb-11.8.10-macos13-arm64.tar.gz",
