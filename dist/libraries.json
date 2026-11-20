@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-11-19T05:31:05.344Z",
+  "updated": "2026-11-20T05:18:56.189Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -14,6 +14,34 @@
         "8.1"
       ],
       "versions": {
+        "8.5": {
+          "latest": "8.5.13",
+          "windows": {
+            "url": "https://windows.php.net/downloads/releases/php-8.5.13-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.5.13-nts-Win32-vs17-x64.zip"
+          }
+        },
+        "8.4": {
+          "latest": "8.4.28",
+          "windows": {
+            "url": "https://windows.php.net/downloads/releases/php-8.4.28-nts-Win32-vs17-x64.zip",
+            "filename": "php-8.4.28-nts-Win32-vs17-x64.zip"
+          }
+        },
+        "8.3": {
+          "latest": "8.3.37",
+          "windows": {
+            "url": "https://windows.php.net/downloads/releases/php-8.3.37-nts-Win32-vs16-x64.zip",
+            "filename": "php-8.3.37-nts-Win32-vs16-x64.zip"
+          }
+        },
+        "8.2": {
+          "latest": "8.2.36",
+          "windows": {
+            "url": "https://windows.php.net/downloads/releases/php-8.2.36-nts-Win32-vs16-x64.zip",
+            "filename": "php-8.2.36-nts-Win32-vs16-x64.zip"
+          }
+        },
         "8.1": {
           "latest": "8.1.34",
           "windows": {
@@ -27,34 +55,6 @@
           "macos_arm64": {
             "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.1.34/php-8.1.34-macos-arm64.tar.gz",
             "filename": "php-8.1.34-macos-arm64.tar.gz"
-          }
-        },
-        "8.5": {
-          "latest": "8.5.1",
-          "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.5.1-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.5.1-nts-Win32-vs17-x64.zip"
-          }
-        },
-        "8.4": {
-          "latest": "8.4.16",
-          "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.4.16-nts-Win32-vs17-x64.zip",
-            "filename": "php-8.4.16-nts-Win32-vs17-x64.zip"
-          }
-        },
-        "8.3": {
-          "latest": "8.3.29",
-          "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.3.29-nts-Win32-vs16-x64.zip",
-            "filename": "php-8.3.29-nts-Win32-vs16-x64.zip"
-          }
-        },
-        "8.2": {
-          "latest": "8.2.30",
-          "windows": {
-            "url": "https://windows.php.net/downloads/releases/php-8.2.30-nts-Win32-vs16-x64.zip",
-            "filename": "php-8.2.30-nts-Win32-vs16-x64.zip"
           }
         }
       }
@@ -200,71 +200,71 @@
           }
         },
         "12.3": {
-          "latest": "12.3.4",
+          "latest": "12.3.3",
           "windows": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.4/winx64-packages/mariadb-12.3.4-winx64.zip",
-            "filename": "mariadb-12.3.4-winx64.zip",
-            "sha256": "178020ae8ff7d0caf77b5a3ad7e33e574e13001352d31b02503f97224e4b1f77"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.3/winx64-packages/mariadb-12.3.3-winx64.zip",
+            "filename": "mariadb-12.3.3-winx64.zip",
+            "sha256": "4b5706b47148b47c8f36963c8352d1ddee37a1287b4690428f631a74b09b85a0"
           },
           "linux": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.4/bintar-linux-systemd-x86_64/mariadb-12.3.4-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-12.3.4-linux-systemd-x86_64.tar.gz",
-            "sha256": "26868ab54e3fffa822ffe433537e9c6dde0bdaa45f45a83ef43bd72e29b58baa"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.3/bintar-linux-systemd-x86_64/mariadb-12.3.3-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-12.3.3-linux-systemd-x86_64.tar.gz",
+            "sha256": "a12bf7bce08a896cdd01f174f04b4ce1d5da43ec250a5e7fceb9972119514329"
           },
           "macos_arm64": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.4/macos-system-arm64/mariadb-12.3.4-macos13-arm64.tar.gz",
-            "filename": "mariadb-12.3.4-macos13-arm64.tar.gz"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.3/macos-system-arm64/mariadb-12.3.3-macos13-arm64.tar.gz",
+            "filename": "mariadb-12.3.3-macos13-arm64.tar.gz"
           }
         },
         "11.8": {
-          "latest": "11.8.10",
+          "latest": "11.8.9",
           "windows": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.10/winx64-packages/mariadb-11.8.10-winx64.zip",
-            "filename": "mariadb-11.8.10-winx64.zip",
-            "sha256": "05d04b46763ea3dc9111bfc82dc061e0a158c682a73d31ba34b13f2653c88d17"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.9/winx64-packages/mariadb-11.8.9-winx64.zip",
+            "filename": "mariadb-11.8.9-winx64.zip",
+            "sha256": "830c46727d9278eae212ae3eca44eeb9e71b2a68704e95f344a64fba7b1963f5"
           },
           "linux": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.10/bintar-linux-systemd-x86_64/mariadb-11.8.10-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-11.8.10-linux-systemd-x86_64.tar.gz",
-            "sha256": "df95aaa8fee6d84fda1b3d98cee724559a3c6b70544db9e21f00ce789720d68d"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.9/bintar-linux-systemd-x86_64/mariadb-11.8.9-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-11.8.9-linux-systemd-x86_64.tar.gz",
+            "sha256": "32f8871a2aa38b36aa418b7f4abc6fc0c6ef1ba5a45798cacb2afa52c8a6113b"
           },
           "macos_arm64": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.10/macos-system-arm64/mariadb-11.8.10-macos13-arm64.tar.gz",
-            "filename": "mariadb-11.8.10-macos13-arm64.tar.gz"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.9/macos-system-arm64/mariadb-11.8.9-macos13-arm64.tar.gz",
+            "filename": "mariadb-11.8.9-macos13-arm64.tar.gz"
           }
         },
         "11.4": {
-          "latest": "11.4.14",
+          "latest": "11.4.13",
           "windows": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.4.14/winx64-packages/mariadb-11.4.14-winx64.zip",
-            "filename": "mariadb-11.4.14-winx64.zip",
-            "sha256": "9d9b410eb7b65f6616f29d933d76ee90cf7af4ba179a2d437e0f09f5bf6650df"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.4.13/winx64-packages/mariadb-11.4.13-winx64.zip",
+            "filename": "mariadb-11.4.13-winx64.zip",
+            "sha256": "d62986d433eeebfde218560b276103831604a61e929e87f1a17f5aebd80257e2"
           },
           "linux": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.4.14/bintar-linux-systemd-x86_64/mariadb-11.4.14-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-11.4.14-linux-systemd-x86_64.tar.gz",
-            "sha256": "6fa13ea11d07a53ae4795c8c3736dc5aa99c2ef22ece754cff07363dc1faba0d"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.4.13/bintar-linux-systemd-x86_64/mariadb-11.4.13-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-11.4.13-linux-systemd-x86_64.tar.gz",
+            "sha256": "3cebf63914df3154b7cb6d548337eb2be42c773aeb641110446b72e2746cfed7"
           },
           "macos_arm64": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.4.14/macos-system-arm64/mariadb-11.4.14-macos13-arm64.tar.gz",
-            "filename": "mariadb-11.4.14-macos13-arm64.tar.gz"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-11.4.13/macos-system-arm64/mariadb-11.4.13-macos13-arm64.tar.gz",
+            "filename": "mariadb-11.4.13-macos13-arm64.tar.gz"
           }
         },
         "10.11": {
-          "latest": "10.11.20",
+          "latest": "10.11.19",
           "windows": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.20/winx64-packages/mariadb-10.11.20-winx64.zip",
-            "filename": "mariadb-10.11.20-winx64.zip",
-            "sha256": "aad30008fd9ce30c12366edc6414920d8596e69d7db94de50c63642a6e2982c3"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.19/winx64-packages/mariadb-10.11.19-winx64.zip",
+            "filename": "mariadb-10.11.19-winx64.zip",
+            "sha256": "398ea30e5036010bbebe01d2b1804280424dcc2626e36d8e95155c04d25a0490"
           },
           "linux": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.20/bintar-linux-systemd-x86_64/mariadb-10.11.20-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-10.11.20-linux-systemd-x86_64.tar.gz",
-            "sha256": "3e28539f79de3ca9df72f4a4b93f9092eb4f05a9648391ddf37c44fb4ed84727"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.19/bintar-linux-systemd-x86_64/mariadb-10.11.19-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-10.11.19-linux-systemd-x86_64.tar.gz",
+            "sha256": "7efb257927f31f4422f496246b32590d0b7617f3d9dd900e575de761b302d919"
           },
           "macos_arm64": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.20/macos-system-arm64/mariadb-10.11.20-macos13-arm64.tar.gz",
-            "filename": "mariadb-10.11.20-macos13-arm64.tar.gz"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-10.11.19/macos-system-arm64/mariadb-10.11.19-macos13-arm64.tar.gz",
+            "filename": "mariadb-10.11.19-macos13-arm64.tar.gz"
           }
         }
       }
@@ -368,18 +368,18 @@
     "mongosh": {
       "name": "MongoDB Shell",
       "description": "MongoDB interactive shell (mongosh) - required for database management",
-      "latest": "2.14.2",
+      "latest": "2.14.3",
       "windows": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.14.2-win32-x64.zip",
-        "filename": "mongosh-2.14.2-win32-x64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.14.3-win32-x64.zip",
+        "filename": "mongosh-2.14.3-win32-x64.zip"
       },
       "macos_arm64": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.14.2-darwin-arm64.zip",
-        "filename": "mongosh-2.14.2-darwin-arm64.zip"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.14.3-darwin-arm64.zip",
+        "filename": "mongosh-2.14.3-darwin-arm64.zip"
       },
       "linux": {
-        "url": "https://downloads.mongodb.com/compass/mongosh-2.14.2-linux-x64.tgz",
-        "filename": "mongosh-2.14.2-linux-x64.tgz"
+        "url": "https://downloads.mongodb.com/compass/mongosh-2.14.3-linux-x64.tgz",
+        "filename": "mongosh-2.14.3-linux-x64.tgz"
       }
     },
     "nodejs": {
@@ -553,21 +553,21 @@
       ],
       "versions": {
         "1.4": {
-          "latest": "1.4.4",
+          "latest": "1.4.5",
           "windows": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-windows-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-windows-x64.zip",
             "filename": "bun-windows-x64.zip"
           },
           "linux": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-linux-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-linux-x64.zip",
             "filename": "bun-linux-x64.zip"
           },
           "macos_arm64": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-darwin-aarch64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-darwin-aarch64.zip",
             "filename": "bun-darwin-aarch64.zip"
           },
           "macos_x64": {
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-darwin-x64.zip",
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-darwin-x64.zip",
             "filename": "bun-darwin-x64.zip"
           }
         },
