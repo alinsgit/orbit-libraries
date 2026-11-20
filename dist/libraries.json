@@ -33,6 +33,21 @@
           "windows": {
             "url": "https://windows.php.net/downloads/releases/php-8.3.37-nts-Win32-vs16-x64.zip",
             "filename": "php-8.3.37-nts-Win32-vs16-x64.zip"
+          },
+          "linux": {
+            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.3.37/php-8.3.37-linux-x86_64.tar.gz",
+            "filename": "php-8.3.37-linux-x86_64.tar.gz",
+            "sha256": "f63fee18672ec6649f2653e3c84af4adddf46aefb66060b9d18c8b01923b9923"
+          },
+          "macos_arm64": {
+            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.3.37/php-8.3.37-macos-arm64.tar.gz",
+            "filename": "php-8.3.37-macos-arm64.tar.gz",
+            "sha256": ""
+          },
+          "macos_x64": {
+            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.3.37/php-8.3.37-macos-x86_64.tar.gz",
+            "filename": "php-8.3.37-macos-x86_64.tar.gz",
+            "sha256": ""
           }
         },
         "8.2": {
