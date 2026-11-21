@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-11-20T05:18:56.189Z",
+  "updated": "2026-11-21T05:11:35.495Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -42,11 +42,6 @@
           "macos_arm64": {
             "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.3.37/php-8.3.37-macos-arm64.tar.gz",
             "filename": "php-8.3.37-macos-arm64.tar.gz",
-            "sha256": ""
-          },
-          "macos_x64": {
-            "url": "https://github.com/alinsgit/orbit-libraries/releases/download/php-8.3.37/php-8.3.37-macos-x86_64.tar.gz",
-            "filename": "php-8.3.37-macos-x86_64.tar.gz",
             "sha256": ""
           }
         },
