@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-11-24T07:57:00.823Z",
+  "updated": "2026-11-25T06:33:05.278Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -185,28 +185,28 @@
       "name": "MariaDB",
       "description": "Community-developed MySQL fork",
       "availableVersions": [
-        "13.0",
+        "13.1",
         "12.3",
         "11.8",
         "11.4",
         "10.11"
       ],
       "versions": {
-        "13.0": {
-          "latest": "13.0.2",
+        "13.1": {
+          "latest": "13.1.2",
           "windows": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-13.0.2/winx64-packages/mariadb-13.0.2-winx64.zip",
-            "filename": "mariadb-13.0.2-winx64.zip",
-            "sha256": "ba9cefd6674b3f2f7bc67334c05305dc7c919643d76836e10767e70db0b5fb74"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-13.1.2/winx64-packages/mariadb-13.1.2-winx64.zip",
+            "filename": "mariadb-13.1.2-winx64.zip",
+            "sha256": "199c17101936a5802731b3268e36a57c479c0c6eef0c85494a53c8668047ff90"
           },
           "linux": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-13.0.2/bintar-linux-systemd-x86_64/mariadb-13.0.2-linux-systemd-x86_64.tar.gz",
-            "filename": "mariadb-13.0.2-linux-systemd-x86_64.tar.gz",
-            "sha256": "e1b15581cfb2441fb7f3df2cc559998980406999e4c4a150ca303289f58b673c"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-13.1.2/bintar-linux-systemd-x86_64/mariadb-13.1.2-linux-systemd-x86_64.tar.gz",
+            "filename": "mariadb-13.1.2-linux-systemd-x86_64.tar.gz",
+            "sha256": "3fd9372ac5d1f73759e13f05f96105cc8463fa26320d1c124d515c668d4c4dc5"
           },
           "macos_arm64": {
-            "url": "https://mirror.kumi.systems/mariadb/mariadb-13.0.2/macos-system-arm64/mariadb-13.0.2-macos13-arm64.tar.gz",
-            "filename": "mariadb-13.0.2-macos13-arm64.tar.gz"
+            "url": "https://mirror.kumi.systems/mariadb/mariadb-13.1.2/macos-system-arm64/mariadb-13.1.2-macos13-arm64.tar.gz",
+            "filename": "mariadb-13.1.2-macos13-arm64.tar.gz"
           }
         },
         "12.3": {
@@ -219,7 +219,7 @@
           "linux": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.4/bintar-linux-systemd-x86_64/mariadb-12.3.4-linux-systemd-x86_64.tar.gz",
             "filename": "mariadb-12.3.4-linux-systemd-x86_64.tar.gz",
-            "sha256": "26868ab54e3fffa822ffe433537e9c6dde0bdaa45f45a83ef43bd72e29b58baa"
+            "sha256": "990078b43ef83a352e5833a69fbdcabb55ca4bd4d1ee63a9a11313572fa84dd4"
           },
           "macos_arm64": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.4/macos-system-arm64/mariadb-12.3.4-macos13-arm64.tar.gz",
@@ -236,7 +236,7 @@
           "linux": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.10/bintar-linux-systemd-x86_64/mariadb-11.8.10-linux-systemd-x86_64.tar.gz",
             "filename": "mariadb-11.8.10-linux-systemd-x86_64.tar.gz",
-            "sha256": "15ca40274597af84fa8f89f8248b37740c5a712c003df80b4c7b32a4486e2027"
+            "sha256": "89df35ea4a8df709550fc49ba77bb8443f27f32fce27bafb984ca20422dbfd74"
           },
           "macos_arm64": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-11.8.10/macos-system-arm64/mariadb-11.8.10-macos13-arm64.tar.gz",
@@ -497,12 +497,12 @@
             "filename": "python-3.14.10-embed-amd64.zip"
           },
           "linux": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261123/cpython-3.14.10+20261123-x86_64-unknown-linux-gnu-install_only.tar.gz",
-            "filename": "cpython-3.14.10+20261123-x86_64-unknown-linux-gnu-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261124/cpython-3.14.10+20261124-x86_64-unknown-linux-gnu-install_only.tar.gz",
+            "filename": "cpython-3.14.10+20261124-x86_64-unknown-linux-gnu-install_only.tar.gz"
           },
           "macos_arm64": {
-            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261123/cpython-3.14.10+20261123-aarch64-apple-darwin-install_only.tar.gz",
-            "filename": "cpython-3.14.10+20261123-aarch64-apple-darwin-install_only.tar.gz"
+            "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261124/cpython-3.14.10+20261124-aarch64-apple-darwin-install_only.tar.gz",
+            "filename": "cpython-3.14.10+20261124-aarch64-apple-darwin-install_only.tar.gz"
           }
         },
         "3.13": {
@@ -776,9 +776,9 @@
     "composer": {
       "name": "Composer",
       "description": "PHP dependency manager",
-      "latest": "2.11.2",
+      "latest": "2.11.3",
       "all_platforms": {
-        "url": "https://getcomposer.org/download/2.11.2/composer.phar",
+        "url": "https://getcomposer.org/download/2.11.3/composer.phar",
         "filename": "composer.phar"
       }
     },
