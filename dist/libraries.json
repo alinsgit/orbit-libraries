@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-11-25T06:33:05.278Z",
+  "updated": "2026-11-26T06:24:43.904Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -202,7 +202,7 @@
           "linux": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-13.1.2/bintar-linux-systemd-x86_64/mariadb-13.1.2-linux-systemd-x86_64.tar.gz",
             "filename": "mariadb-13.1.2-linux-systemd-x86_64.tar.gz",
-            "sha256": "3fd9372ac5d1f73759e13f05f96105cc8463fa26320d1c124d515c668d4c4dc5"
+            "sha256": "16ef2e59a4184bbd6dda37826fd195ce45b4576c8c5f1afa3b37c8c5dd7072ae"
           },
           "macos_arm64": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-13.1.2/macos-system-arm64/mariadb-13.1.2-macos13-arm64.tar.gz",
