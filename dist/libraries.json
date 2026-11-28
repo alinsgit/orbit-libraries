@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/alinsgit/orbit-libraries/main/schema.json",
-  "updated": "2026-11-27T06:14:20.293Z",
+  "updated": "2026-11-28T05:54:00.773Z",
   "version": "1.2.0",
   "services": {
     "php": {
@@ -202,7 +202,7 @@
           "linux": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-13.1.2/bintar-linux-systemd-x86_64/mariadb-13.1.2-linux-systemd-x86_64.tar.gz",
             "filename": "mariadb-13.1.2-linux-systemd-x86_64.tar.gz",
-            "sha256": "16ef2e59a4184bbd6dda37826fd195ce45b4576c8c5f1afa3b37c8c5dd7072ae"
+            "sha256": "e3318ca5c4be5aaa5d9152a164db7b1e40f9b69a6d3c91342318eb3238964301"
           },
           "macos_arm64": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-13.1.2/macos-system-arm64/mariadb-13.1.2-macos13-arm64.tar.gz",
@@ -219,7 +219,7 @@
           "linux": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.4/bintar-linux-systemd-x86_64/mariadb-12.3.4-linux-systemd-x86_64.tar.gz",
             "filename": "mariadb-12.3.4-linux-systemd-x86_64.tar.gz",
-            "sha256": "990078b43ef83a352e5833a69fbdcabb55ca4bd4d1ee63a9a11313572fa84dd4"
+            "sha256": "26868ab54e3fffa822ffe433537e9c6dde0bdaa45f45a83ef43bd72e29b58baa"
           },
           "macos_arm64": {
             "url": "https://mirror.kumi.systems/mariadb/mariadb-12.3.4/macos-system-arm64/mariadb-12.3.4-macos13-arm64.tar.gz",
@@ -733,10 +733,10 @@
     "redis": {
       "name": "Redis",
       "description": "In-memory data structure store",
-      "latest": "8.10.3",
+      "latest": "8.12.0",
       "windows": {
-        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.10.3/Redis-8.10.3-Windows-x64-cygwin-with-Service.zip",
-        "filename": "Redis-8.10.3-Windows-x64-cygwin-with-Service.zip"
+        "url": "https://github.com/redis-windows/redis-windows/releases/download/8.12.0/Redis-8.12.0-Windows-x64-cygwin-with-Service.zip",
+        "filename": "Redis-8.12.0-Windows-x64-cygwin-with-Service.zip"
       }
     },
     "mailpit": {
